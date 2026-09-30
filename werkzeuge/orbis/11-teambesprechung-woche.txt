@@ -1,0 +1,40 @@
+PKT – TEAMBESPRECHUNG (OPS 8-97d, je Behandlungswoche)
+@PATVNAME@ @PATNNAME@ – Fallnummer @FALLNR@ – Aufnahme @AUFNDAT@
+
+Behandlungswoche: #[L1,2,3]Behandlungswoche# – Teambesprechung am #[D]Datum Teambesprechung#
+Leitung: #Name Leitung Teambesprechung# (Oberärztin oder Oberarzt)
+Vorbereitet durch: #[LPhysician Assistance am Vortag,Assistenzärztin oder Assistenzarzt]Vorbereitung#
+Protokoll: #[LPhysician Assistance,Assistenzärztin oder Assistenzarzt]Protokoll#
+Teilnehmende Berufsgruppen: #[M{G|, | und }Ärztlicher Dienst,Physician Assistance,Pflege,Physiotherapie,Ergotherapie,Logopädie,Neuropsychologie,Psychotherapie,Sporttherapie,Kunst- oder Musiktherapie,Sozialdienst,Klinische Pharmazie]Teilnehmende#
+
+1. BISHERIGE BEHANDLUNGSERGEBNISSE – GAS-ZWISCHENSTAND
+Anzahl Ziele laut Zielmatrix: #[L3,4,5]Anzahl Ziele Woche#
+Ziel 1: #[L-2,-1,0,+1,+2]GAS Woche Ziel 1# – Kommentar: #Kommentar Ziel 1#
+Ziel 2: #[L-2,-1,0,+1,+2]GAS Woche Ziel 2# – Kommentar: #Kommentar Ziel 2#
+Ziel 3: #[L-2,-1,0,+1,+2]GAS Woche Ziel 3# – Kommentar: #Kommentar Ziel 3#
+$IF @Anzahl Ziele Woche@ == 4 OR @Anzahl Ziele Woche@ == 5 $Ziel 4: #[L-2,-1,0,+1,+2]GAS Woche Ziel 4# – Kommentar: #Kommentar Ziel 4#
+$
+$IF @Anzahl Ziele Woche@ == 5 $Ziel 5: #[L-2,-1,0,+1,+2]GAS Woche Ziel 5# – Kommentar: #Kommentar Ziel 5#
+$
+Zusammenfassung der Ergebnisse dieser Woche: #[T3]Ergebnisse der Woche#
+
+2. OPS-NACHWEIS DIESER BEHANDLUNGSWOCHE
+Eingesetzte Therapiebereiche: #[M{G|, | und }Physiotherapie,Ergotherapie,Logopädie,Sporttherapie,Kunst- oder Musiktherapie,Psychotherapie]Therapiebereiche Woche#
+Therapiestunden gesamt: #Stunden gesamt# – davon Einzeltherapie: #Stunden Einzel#
+(Mindestens 7,5 Stunden je Woche und mindestens 5 Stunden Einzeltherapie. Mindestens 3 Therapiebereiche und darunter Physiotherapie oder Ergotherapie.)
+Mindestmerkmale erfüllt: #[Lja,nein]OPS erfüllt#
+$IF "@OPS erfüllt@" == "nein" $Begründung und Ausgleich an den verbleibenden Werktagen: #[T2]Ausgleich OPS#$
+
+3. MEDIKATION
+Änderungen dieser Woche und Effekt: #[T3]Medikation Woche#
+
+4. DIAGNOSTIK
+Offene Punkte der Arbeitsliste: #[T2]Offene Diagnostik#
+
+5. WEITERE BEHANDLUNGSZIELE UND ENTLASSPERSPEKTIVE
+Weitere Behandlungsziele: #[T3]Weitere Ziele#
+Geplantes Entlassdatum: #[D]Geplantes Entlassdatum#
+
+6. BESCHLÜSSE
+(je Zeile: Beschluss – verantwortlich – bis wann)
+#[T4]Beschlüsse#

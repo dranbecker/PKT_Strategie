@@ -1,0 +1,57 @@
+Sehr geehrte Kolleginnen und Kollegen,
+
+wir berichten über ^Herrn^~Frau~ @PATTITEL@ @PATVNAME@ @PATNNAME@, geb. @GEBDAT@, ^der^~die~ sich vom @AUFNDAT@ bis @ENTLDAT@ in unserer stationären Behandlung im Parkinson-Zentrum befand.
+
+DIAGNOSEN
+#[T4]Diagnosen#
+
+BEHANDLUNGSANLASS
+#[T3]Behandlungsanlass#
+
+BEHANDLUNG
+Die Behandlung erfolgte als multimodale Parkinson-Komplexbehandlung (OPS 8-97d) über #Anzahl Behandlungstage# Behandlungstage unter fachärztlich-neurologischer Behandlungsleitung mit wöchentlicher interprofessioneller Teambesprechung. Eingesetzt wurden #[M{G|, | und }Physiotherapie,Ergotherapie,Logopädie,Sporttherapie,Kunst- oder Musiktherapie,Psychotherapie,Neuropsychologie,Parkinson-Pflege]Therapiebereiche Brief#.
+
+Verlauf: #[T6]Verlauf#
+
+BEHANDLUNGSZIELE UND ZIELERREICHUNG
+Die Ziele wurden zu Beginn gemeinsam mit ^dem Patienten^~der Patientin~ ICF-orientiert vereinbart und mit Goal Attainment Scaling bewertet (-1 = Ausgangslage, 0 = erwartetes Ergebnis, +1 und +2 = besser als erwartet).
+Anzahl Ziele: #[L3,4,5]Anzahl Ziele Brief#
+Ziel 1: #[T2]Ziel 1 Kurzform# – erreichte GAS-Stufe: #[L-2,-1,0,+1,+2]GAS Entlassung Ziel 1#
+Ziel 2: #[T2]Ziel 2 Kurzform# – erreichte GAS-Stufe: #[L-2,-1,0,+1,+2]GAS Entlassung Ziel 2#
+Ziel 3: #[T2]Ziel 3 Kurzform# – erreichte GAS-Stufe: #[L-2,-1,0,+1,+2]GAS Entlassung Ziel 3#
+$IF @Anzahl Ziele Brief@ == 4 OR @Anzahl Ziele Brief@ == 5 $Ziel 4: #[T2]Ziel 4 Kurzform# – erreichte GAS-Stufe: #[L-2,-1,0,+1,+2]GAS Entlassung Ziel 4#
+$
+$IF @Anzahl Ziele Brief@ == 5 $Ziel 5: #[T2]Ziel 5 Kurzform# – erreichte GAS-Stufe: #[L-2,-1,0,+1,+2]GAS Entlassung Ziel 5#
+$
+
+VERLAUFSPARAMETER (Aufnahme – Entlassung)
+MDS-UPDRS Teil III (ON): #UPDRS III Aufnahme Brief# – #UPDRS III Entlassung Brief# Punkte
+Timed Up and Go: #TUG Aufnahme Brief# – #TUG Entlassung Brief# Sekunden
+Mini-BESTest: #Mini BESTest Aufnahme Brief# – #Mini BESTest Entlassung Brief# von 28 Punkten
+PDQ-39 Summenindex: #PDQ39 Aufnahme Brief# – #PDQ39 Entlassung Brief#
+WHODAS 2.0: #WHODAS Aufnahme Brief# – #WHODAS Entlassung Brief#
+FOG-Q: #FOGQ Aufnahme Brief# – #FOGQ Entlassung Brief# Punkte
+
+MEDIKATION BEI ENTLASSUNG MIT EINNAHMEZEITEN
+#[T8]Entlassmedikation#
+Wesentliche Änderungen gegenüber der Aufnahme und Begründung: #[T4]Medikationsänderungen#
+
+DEVICE-THERAPIE
+#[Lkeine,Tiefe Hirnstimulation,Apomorphin-Pumpe,Levodopa-Carbidopa-Intestinalgel,Foslevodopa-Foscarbidopa-Pumpe]Devicetherapie Brief#
+$IF "@Devicetherapie Brief@" == "keine" $Keine Device-Therapie.&&Einstellung bei Entlassung: #[T3]Device Einstellung Brief#$
+
+EMPFEHLUNGEN
+Ambulante Weiterbehandlung: #[M{G|, | und }Physiotherapie,Ergotherapie,Logopädie,Neuropsychologie,Psychotherapie,Rehabilitationssport]Ambulante Therapien#
+Heimübungsprogramm wurde mitgegeben und eingeübt: #[Lja,nein]Heimübungsprogramm#
+Kontrollen und weitere Empfehlungen: #[T4]Empfehlungen#
+
+NACHSORGE
+Unser Parkinson-Team meldet sich etwa 1 und 6 Wochen nach der Entlassung telefonisch bei ^dem Patienten^~der Patientin~. Eine Wiedervorstellung in unserer Parkinson-Ambulanz ist #[Lnicht geplant,in 3 Monaten geplant,in 6 Monaten geplant,nach Rücksprache geplant]Wiedervorstellung#.
+Die Weiterbetreuung im ParkinsonNetz Rhein-Neckar PLUS wurde angeboten.
+
+Für Rückfragen stehen wir gerne zur Verfügung.
+
+Mit freundlichen kollegialen Grüßen
+
+#Name Oberärztin oder Oberarzt Brief#          #Name Assistenzärztin oder Assistenzarzt Brief#
+Oberärztin/Oberarzt                             Assistenzärztin/Assistenzarzt

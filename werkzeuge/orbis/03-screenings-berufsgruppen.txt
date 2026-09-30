@@ -1,0 +1,54 @@
+===== BAUSTEIN 03-PT: SCREENING PHYSIOTHERAPIE =====
+PKT – SCREENING PHYSIOTHERAPIE
+Erhoben am #[D]Datum Screening PT# durch #Name Physiotherapie# im #[LON,OFF,wechselnden]Zustand PT#-Zustand
+
+Auffällige Bereiche: #[M{G|, | und }keine,Gehen und funktionelle Mobilität,Gleichgewicht und Sturzrisiko,Freezing of Gait,Transfers und Lagewechsel,Bewegungsamplitude,körperliche Belastbarkeit]Auffällige Bereiche PT#
+Timed Up and Go: #Sekunden TUG# Sekunden
+Mini-BESTest: #Punkte Mini BESTest# von 28 Punkten
+Stürze in den letzten 6 Monaten: #[L0,1,2,3 oder mehr]Stürze 6 Monate#
+Gehhilfe: #[Lkeine,Gehstock,Rollator,Rollstuhl]Gehhilfe#
+Funktioneller Befund mit Situation und Tageszeit: #[T3]Befund PT#
+Zielvorschlag für die ICF-Zielmatrix: #[T2]Zielvorschlag PT#
+
+===== BAUSTEIN 03-ET: SCREENING ERGOTHERAPIE =====
+PKT – SCREENING ERGOTHERAPIE
+Erhoben am #[D]Datum Screening ET# durch #Name Ergotherapie#
+
+Auffällige Bereiche: #[M{G|, | und }keine,Selbstversorgung,Haushalt und instrumentelle Alltagsaktivitäten,Feinmotorik und Schreiben,Kognition und Handlungsorganisation im Alltag,Hilfsmittel und häusliches Umfeld,Fatigue und Energiemanagement]Auffällige Bereiche ET#
+Konkret beeinträchtigte Alltagstätigkeit: #[T2]Beeinträchtigte Alltagstätigkeit#
+Grad der Selbstständigkeit: #[Lselbstständig,selbstständig mit Hilfsmittel,teilweise Hilfe nötig,vollständige Hilfe nötig]Selbstständigkeit ET#
+Hilfsmittelbedarf: #[Lnein,ja]Hilfsmittelbedarf#
+$IF "@Hilfsmittelbedarf@" == "ja" $Benötigte Hilfsmittel: #[T2]Benötigte Hilfsmittel# – Information an den Sozialdienst erfolgt.$
+Zielvorschlag für die ICF-Zielmatrix: #[T2]Zielvorschlag ET#
+
+===== BAUSTEIN 03-LO: SCREENING LOGOPÄDIE =====
+PKT – SCREENING LOGOPÄDIE
+Erhoben am #[D]Datum Screening LO# durch #Name Logopädie#
+
+Auffällige Bereiche: #[M{G|, | und }keine,Stimme und Lautstärke,Artikulation und Verständlichkeit,Schlucken,Speichelfluss,Kommunikation im Alltag]Auffällige Bereiche LO#
+Schluckscreening: #[Lunauffällig,Verdacht auf Dysphagie,nicht durchgeführt]Schluckscreening#
+$IF "@Schluckscreening@" == "Verdacht auf Dysphagie" $Empfohlene Kostform: #[Lnormale Kost,angepasste Konsistenz,nach weiterer Diagnostik]Kostform#. Information an Pflege und Ärztlichen Dienst erfolgt.$
+Befund: #[T3]Befund LO#
+Zielvorschlag für die ICF-Zielmatrix: #[T2]Zielvorschlag LO#
+
+===== BAUSTEIN 03-NP: SCREENING NEUROPSYCHOLOGIE =====
+PKT – SCREENING NEUROPSYCHOLOGIE
+Erhoben am #[D]Datum Screening NP# durch #Name Neuropsychologie#
+Fremdanamnese: #[Lerhoben,nicht verfügbar,nicht erforderlich]Fremdanamnese NP#
+
+Auffällige Bereiche: #[M{G|, | und }keine,Kognition und Alltagskompetenz,Stimmung und Angst,Antrieb und Apathie,Impulskontrolle,Halluzinationen oder psychotische Symptome,akute oder fluktuierende Veränderung]Auffällige Bereiche NP#
+MoCA: #Punkte MoCA# von 30 Punkten
+Vertiefende Diagnostik: #[Lnicht erforderlich,geplant,durchgeführt]Vertiefende Diagnostik NP#
+Zeitnahe ärztliche Rückmeldung erforderlich (Delirverdacht, neue Halluzinationen, Impulskontrollstörung mit Folgen, Gefährdung): #[Lnein,ja]Ärztliche Rückmeldung NP#
+$IF "@Ärztliche Rückmeldung NP@" == "ja" $Ärztliche Rückmeldung erfolgt am #[D]Datum Rückmeldung NP# an #Name informierte Ärztin oder informierter Arzt#.$
+Symptom, Verlauf und Alltagsrelevanz: #[T3]Befund NP#
+Zielvorschlag für die ICF-Zielmatrix: #[T2]Zielvorschlag NP#
+
+===== BAUSTEIN 03-SD: SCREENING SOZIALDIENST =====
+PKT – SCREENING SOZIALDIENST
+Erhoben am #[D]Datum Screening SD# durch #Name Sozialdienst#
+
+Unterstützungsbedarf: #[M{G|, | und }kein Bedarf,häusliche Versorgung,Pflegegrad,Anschlussversorgung oder Rehabilitation,Arbeit und Existenzsicherung,offene Anträge]Bedarf SD#
+Pflegegrad: #[Lkein Pflegegrad,1,2,3,4,5,beantragt]Pflegegrad#
+Bereits geklärt oder eingeleitet: #[T2]Geklärt SD#
+Noch offen, nächste Schritte: #[T2]Offen SD#

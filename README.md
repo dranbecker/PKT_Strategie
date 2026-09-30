@@ -29,6 +29,17 @@ Die einzelnen Dokumente können sowohl etablierte Versorgungsstrukturen
 als auch Konzepte beschreiben, die sich noch in Entwicklung oder
 Erprobung befinden.
 
+## Inhaltsverzeichnis
+
+- [Prozesse: Patient Journey, RACI-Matrix, ICF-Ziele](prozesse/README.md)
+- [Rollenprofile: Oberärzte, Physician Assistance, Parkinson Nurse](rollen/)
+- [Orbis-Textbausteine: Aufnahme, Screenings, Zielmatrix, Teambesprechung, Arztbrief](werkzeuge/orbis/README.md)
+- [Screenings der Berufsgruppen](screening/)
+- [Medikationsmanagement (STRIP-PD)](medikationsmanagement/README.md)
+- [Was ist die ICF?](was_ist_icf.md)
+- [Studienlage](Studienlage.md)
+- [Entscheidungen](ENTSCHEIDUNGEN.md) · [Changelog](CHANGELOG.md)
+
 ## Grundgedanke
 
 Parkinson-Versorgung ist eine interprofessionelle Aufgabe.
@@ -81,7 +92,7 @@ Sofern nicht anders angegeben, stehen die Inhalte dieses Repositorys
 unter der **Creative Commons Attribution-NonCommercial 4.0 International
 (CC BY-NC 4.0)** Lizenz.
 
-© 2026 ParkinsonNetz Rhein-NeckarPlus
+© 2026 SRH Kurpfalzkrankenhaus
 
 Die Inhalte dürfen unter angemessener Namensnennung geteilt und
 bearbeitet werden. Eine kommerzielle Nutzung ist nicht gestattet.

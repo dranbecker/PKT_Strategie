@@ -1,0 +1,29 @@
+PKT – SCREENING PARKINSON NURSE
+(Datenhoheit: Parkinson Nurse, übergangsweise Physician Assistance oder Bezugspflege – ergänzt die Medikationsanamnese, ohne sie zu wiederholen)
+
+Erhoben am #[D]Datum Screening PN# durch #Name Screening PN#
+
+NICHTMOTORISCHE UND AUTONOME SYMPTOME
+Pflegerisch relevante Beschwerden vorhanden: #[Lnein,ja]Autonome Symptome vorhanden#
+$IF "@Autonome Symptome vorhanden@" == "ja" $Es bestehen #[M{|, | und }Schwindel beim Aufstehen,Obstipation,Harndrang oder Nykturie,Inkontinenz,Schlafstörungen,Tagesschläfrigkeit,Schmerzen,Fatigue]Autonome Symptome#. Weiterleitung an #[Lden Ärztlichen Dienst,das interprofessionelle Team]Weiterleitung autonome Symptome#.&&Keine pflegerisch relevanten nichtmotorischen Beschwerden.$
+
+SCHLUCKEN, ESSEN UND TRINKEN
+Hinweise auf Schluckstörung oder Mangelernährung: #[Lnein,ja]Hinweis Schlucken#
+$IF "@Hinweis Schlucken@" == "ja" $Beobachtet: #[M{|, | und }Husten oder Verschlucken,Probleme bei der Tabletteneinnahme,lange Mahlzeiten,Gewichtsverlust,verminderter Appetit,geringe Trinkmenge]Beobachtung Schlucken#. Weiterleitung an Logopädie und Ernährungsberatung erfolgt.&&Keine Hinweise auf Schluckstörung oder Mangelernährung.$
+
+MOBILITÄT UND SICHERHEIT IM PFLEGEALLTAG
+Auffälligkeiten im Pflegealltag: #[Lnein,ja]Mobilität Pflegealltag auffällig#
+$IF "@Mobilität Pflegealltag auffällig@" == "ja" $Beobachtet: #[M{|, | und }Stürze oder Beinahe-Stürze,Freezing,unsichere Transfers,nächtliche Mobilitätsprobleme,Hilfebedarf beim Toilettengang]Beobachtung Mobilität#. Situation und Tageszeit: #[T2]Situation und Tageszeit#&&Keine Auffälligkeiten der Mobilität im Pflegealltag.$
+
+NEUROPSYCHIATRISCHE WARNSIGNALE
+Neue oder relevante Warnsignale: #[Lnein,ja]Warnsignale vorhanden#
+$IF "@Warnsignale vorhanden@" == "ja" $Beobachtet: #[M{|, | und }Halluzinationen,Verwirrtheit oder kognitive Schwankungen,Veränderung der Impulskontrolle,Veränderung von Stimmung oder Antrieb]Warnsignale#. Rückmeldung an Ärztlichen Dienst und Neuropsychologie am #[D]Datum Rückmeldung Warnsignale#.&&Keine neuropsychiatrischen Warnsignale.$
+
+WISSEN, SELBSTMANAGEMENT UND ANGEHÖRIGE
+Beratungsbedarf: #[Lnein,ja]Beratungsbedarf PN#
+$IF "@Beratungsbedarf PN@" == "ja" $Themen: #[M{|, | und }Erkrankung und Symptome,Medikamenteneinnahme,Umgang mit Wirkungsschwankungen,Device-Therapie,Verhalten bei Verschlechterung,Ansprechpartner und Unterstützungsangebote]Beratungsthemen#.&&Kein Beratungsbedarf.$
+Angehörige eingebunden: #[Lja,nein,nicht vorhanden]Angehörige eingebunden#
+$IF "@Angehörige eingebunden@" == "ja" $Informations- oder Unterstützungsbedarf der Angehörigen: #[T2]Bedarf Angehörige#$
+
+Zusammenfassung für die Teambesprechung (Beobachtung – Bezug zu Medikation oder Tageszeit – Maßnahme – weitere Berufsgruppe):
+#[T3]Zusammenfassung PN#

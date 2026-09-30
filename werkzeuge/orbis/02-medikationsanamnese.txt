@@ -1,0 +1,36 @@
+PKT – MEDIKATIONSANAMNESE
+(Datenhoheit: Parkinson Nurse, übergangsweise PA – einmalige Erhebung, wird von Ärztlichem Dienst, PA und Klinischer Pharmazie übernommen)
+
+Erhoben am #[D]Datum Medikationsanamnese# durch #Name Erhebende Person#
+Quelle: #[M{G|, | und }Patient oder Patientin,Angehörige,bundeseinheitlicher Medikationsplan,Hausarzt oder Hausärztin,Pflegedienst,Vorbefund]Quellen Medikation#
+
+PARKINSON-MEDIKATION MIT EXAKTEN EINNAHMEZEITEN
+(je Zeile: Präparat – Wirkstoff – Dosis – Uhrzeiten)
+#[T8]Parkinson Medikation#
+
+Bedarfsmedikation: #[T2]Bedarfsmedikation#
+
+WEITERE MEDIKATION
+#[T6]Nicht Parkinson Medikation#
+Selbstmedikation und Nahrungsergänzung: #[T2]Selbstmedikation#
+Frühere relevante Nebenwirkungen: #[T2]Frühere Nebenwirkungen#
+
+PRAKTISCHE EINNAHME
+Die Medikamente stellt #[Lder Patient oder die Patientin selbst,ein Angehöriger oder eine Angehörige,ein Pflegedienst]Wer stellt Medikamente#.
+Die Einnahmezeiten werden #[Lzuverlässig eingehalten,gelegentlich nicht eingehalten,häufig nicht eingehalten]Einhaltung Einnahmezeiten#.
+Schwierigkeiten beim Schlucken der Tabletten: #[Lnein,ja]Schluckprobleme Tabletten#
+$IF "@Schluckprobleme Tabletten@" == "ja" $Weiterleitung an Logopädie und Ärztlichen Dienst veranlasst.$
+
+WIRKUNGSSCHWANKUNGEN
+#[M{G|, | und }keine,Wearing-off,morgendliches OFF,verzögerter Wirkungseintritt,Dosisversagen,Peak-dose-Dyskinesien,OFF-Dystonie,unvorhersehbare OFF-Phasen]Fluktuationen#
+Zeitbezug und Alltagsauswirkung: #[T3]Zeitbezug Fluktuationen#
+
+MEDIKATIONSBEZOGENE PROBLEME
+Medikationsbezogene Probleme vorhanden: #[Lnein,ja]Medikationsprobleme vorhanden#
+$IF "@Medikationsprobleme vorhanden@" == "ja" $Es bestehen #[M{|, | und }Halluzinationen,Impulskontrollstörung,Tagesmüdigkeit oder Schlafattacken,Orthostase,Übelkeit,Ödeme,Obstipation]Medikationsprobleme#. Ärztliche Rückmeldung am #[D]Datum ärztliche Rückmeldung# erfolgt.&&Keine medikationsbezogenen Probleme berichtet.$
+
+DEVICE-THERAPIE
+#[Lkeine,Tiefe Hirnstimulation,Apomorphin-Pumpe,Levodopa-Carbidopa-Intestinalgel,Foslevodopa-Foscarbidopa-Pumpe]Devicetherapie#
+$IF "@Devicetherapie@" == "keine" $Keine Device-Therapie.&&Aktuelle Einstellung und Handhabung: #[T3]Device Einstellung#$
+
+Übergabe zur STRIP-PD-Analyse an die Klinische Pharmazie am #[D]Datum Übergabe KP#.

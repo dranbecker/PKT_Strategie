@@ -1,0 +1,38 @@
+PKT-AUFNAHME – ÄRZTLICHER AUFNAHMEBEFUND
+(erhoben durch Physician Assistance, oberärztlich freigegeben)
+
+Aufnahme am @AUFNDAT@ – Fallnummer @FALLNR@
+@PATVNAME@ @PATNNAME@, geb. @GEBDAT@
+
+BEHANDLUNGSFRAGESTELLUNG (aus der ANAP)
+#[M{G|, | und }motorische Fluktuationen,Dyskinesien,Gangstörung und Stürze,Freezing,nichtmotorische Symptome,Medikationsoptimierung,Device-Evaluation,kognitive oder psychiatrische Symptome]Fragestellung ANAP#
+Ergänzung: #[T2]Ergänzung zur Fragestellung#
+
+Die Angaben der ANAP sind #[Lunverändert gültig,bei Aufnahme aktualisiert]ANAP Status#.
+$IF "@ANAP Status@" == "bei Aufnahme aktualisiert" $Änderungen gegenüber der ANAP: #[T3]Änderungen zur ANAP#$
+
+DIAGNOSE
+#[LParkinson-Krankheit (idiopathisches Parkinson-Syndrom),Multisystematrophie,progressive supranukleäre Blickparese,kortikobasales Syndrom,anderes Parkinson-Syndrom]Diagnose#
+Klinischer Subtyp: #[Lakinetisch-rigide,tremordominant,Äquivalenztyp]Subtyp#
+Erstdiagnose: #Jahr der Erstdiagnose#
+Hoehn und Yahr (ON): #[L1,1K5,2,2K5,3,4,5]Hoehn und Yahr#
+
+AKTUELLE ANAMNESE
+#[T4]Aktuelle Anamnese#
+
+NEUROLOGISCHER BEFUND
+#[T5]Neurologischer Befund#
+
+MDS-UPDRS Teil III: #Punkte MDS UPDRS III Aufnahme# Punkte im #[LON,OFF]Medikationszustand UPDRS#,
+erhoben um #Uhrzeit UPDRS# Uhr – letzte Levodopa-Einnahme um #Uhrzeit letzte Levodopa Einnahme# Uhr.
+Orthostase-Test (Schellong): #[Lunauffällig,orthostatische Hypotonie,nicht durchgeführt]Schellong#
+
+DIAGNOSTISCHE ARBEITSLISTE
+(je Zeile: Fragestellung – Untersuchung – Priorität – Status)
+#[T6]Diagnostische Arbeitsliste#
+
+SICHERHEITSASPEKTE
+#[M{G|, | und }keine,Sturzgefahr,Orthostase,Dysphagie,Delirrisiko,Halluzinationen,Impulskontrollstörung,Device-Therapie]Sicherheitsaspekte#
+
+Erhoben durch: #Name PA# (Physician Assistance) am #[D]Datum der Erhebung#
+Oberärztlich freigegeben: #Name Oberärztin oder Oberarzt#

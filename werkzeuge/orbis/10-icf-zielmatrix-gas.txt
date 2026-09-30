@@ -1,0 +1,72 @@
+PKT – ICF-ZIELMATRIX MIT GOAL ATTAINMENT SCALING
+@PATVNAME@ @PATNNAME@ – Fallnummer @FALLNR@ – Aufnahme @AUFNDAT@
+
+Vereinbart am #[D]Datum Zielvereinbarung# mit #[Lder behandelten Person allein,der behandelten Person und Angehörigen]Zielvereinbarung mit#
+Moderation: #Name Moderation Zielvereinbarung# – oberärztlich freigegeben: #Name Freigabe Zielmatrix#
+Anzahl vereinbarter Ziele: #[L3,4,5]Anzahl Ziele#
+
+ZIEL 1
+Verantwortliche Berufsgruppe: #[LPhysiotherapie,Ergotherapie,Logopädie,Neuropsychologie,Psychotherapie,Sporttherapie,Kunst- oder Musiktherapie,Pflege oder Parkinson Nurse,Ärztlicher Dienst,Sozialdienst]Verantwortlich Ziel 1#
+Teilhabe – was ^dem Patienten^~der Patientin~ wichtig ist: #[T2]Teilhabe Ziel 1#
+Aktivität (d): #[T2]Aktivität Ziel 1#
+Körperfunktion (b): #Körperfunktion Ziel 1#
+Kontextfaktoren (e und personenbezogen): #Kontext Ziel 1#
+GAS-Skala (konkret und beobachtbar formulieren):
+  -2 schlechter als Ausgangslage: #Stufe minus 2 Ziel 1#
+  -1 Ausgangslage bei Aufnahme: #Stufe minus 1 Ziel 1#
+   0 erwartetes Ergebnis: #Stufe 0 Ziel 1#
+  +1 besser als erwartet: #Stufe plus 1 Ziel 1#
+  +2 deutlich besser als erwartet: #Stufe plus 2 Ziel 1#
+
+ZIEL 2
+Verantwortliche Berufsgruppe: #[LPhysiotherapie,Ergotherapie,Logopädie,Neuropsychologie,Psychotherapie,Sporttherapie,Kunst- oder Musiktherapie,Pflege oder Parkinson Nurse,Ärztlicher Dienst,Sozialdienst]Verantwortlich Ziel 2#
+Teilhabe – was ^dem Patienten^~der Patientin~ wichtig ist: #[T2]Teilhabe Ziel 2#
+Aktivität (d): #[T2]Aktivität Ziel 2#
+Körperfunktion (b): #Körperfunktion Ziel 2#
+Kontextfaktoren (e und personenbezogen): #Kontext Ziel 2#
+GAS-Skala (konkret und beobachtbar formulieren):
+  -2 schlechter als Ausgangslage: #Stufe minus 2 Ziel 2#
+  -1 Ausgangslage bei Aufnahme: #Stufe minus 1 Ziel 2#
+   0 erwartetes Ergebnis: #Stufe 0 Ziel 2#
+  +1 besser als erwartet: #Stufe plus 1 Ziel 2#
+  +2 deutlich besser als erwartet: #Stufe plus 2 Ziel 2#
+
+ZIEL 3
+Verantwortliche Berufsgruppe: #[LPhysiotherapie,Ergotherapie,Logopädie,Neuropsychologie,Psychotherapie,Sporttherapie,Kunst- oder Musiktherapie,Pflege oder Parkinson Nurse,Ärztlicher Dienst,Sozialdienst]Verantwortlich Ziel 3#
+Teilhabe – was ^dem Patienten^~der Patientin~ wichtig ist: #[T2]Teilhabe Ziel 3#
+Aktivität (d): #[T2]Aktivität Ziel 3#
+Körperfunktion (b): #Körperfunktion Ziel 3#
+Kontextfaktoren (e und personenbezogen): #Kontext Ziel 3#
+GAS-Skala (konkret und beobachtbar formulieren):
+  -2 schlechter als Ausgangslage: #Stufe minus 2 Ziel 3#
+  -1 Ausgangslage bei Aufnahme: #Stufe minus 1 Ziel 3#
+   0 erwartetes Ergebnis: #Stufe 0 Ziel 3#
+  +1 besser als erwartet: #Stufe plus 1 Ziel 3#
+  +2 deutlich besser als erwartet: #Stufe plus 2 Ziel 3#
+
+$IF @Anzahl Ziele@ == 4 OR @Anzahl Ziele@ == 5 $ZIEL 4
+Verantwortliche Berufsgruppe: #[LPhysiotherapie,Ergotherapie,Logopädie,Neuropsychologie,Psychotherapie,Sporttherapie,Kunst- oder Musiktherapie,Pflege oder Parkinson Nurse,Ärztlicher Dienst,Sozialdienst]Verantwortlich Ziel 4#
+Teilhabe – was ^dem Patienten^~der Patientin~ wichtig ist: #[T2]Teilhabe Ziel 4#
+Aktivität (d): #[T2]Aktivität Ziel 4#
+Körperfunktion (b): #Körperfunktion Ziel 4#
+Kontextfaktoren (e und personenbezogen): #Kontext Ziel 4#
+GAS-Skala (konkret und beobachtbar formulieren):
+  -2 schlechter als Ausgangslage: #Stufe minus 2 Ziel 4#
+  -1 Ausgangslage bei Aufnahme: #Stufe minus 1 Ziel 4#
+   0 erwartetes Ergebnis: #Stufe 0 Ziel 4#
+  +1 besser als erwartet: #Stufe plus 1 Ziel 4#
+  +2 deutlich besser als erwartet: #Stufe plus 2 Ziel 4#
+$
+$IF @Anzahl Ziele@ == 5 $ZIEL 5
+Verantwortliche Berufsgruppe: #[LPhysiotherapie,Ergotherapie,Logopädie,Neuropsychologie,Psychotherapie,Sporttherapie,Kunst- oder Musiktherapie,Pflege oder Parkinson Nurse,Ärztlicher Dienst,Sozialdienst]Verantwortlich Ziel 5#
+Teilhabe – was ^dem Patienten^~der Patientin~ wichtig ist: #[T2]Teilhabe Ziel 5#
+Aktivität (d): #[T2]Aktivität Ziel 5#
+Körperfunktion (b): #Körperfunktion Ziel 5#
+Kontextfaktoren (e und personenbezogen): #Kontext Ziel 5#
+GAS-Skala (konkret und beobachtbar formulieren):
+  -2 schlechter als Ausgangslage: #Stufe minus 2 Ziel 5#
+  -1 Ausgangslage bei Aufnahme: #Stufe minus 1 Ziel 5#
+   0 erwartetes Ergebnis: #Stufe 0 Ziel 5#
+  +1 besser als erwartet: #Stufe plus 1 Ziel 5#
+  +2 deutlich besser als erwartet: #Stufe plus 2 Ziel 5#
+$
