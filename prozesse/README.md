@@ -67,6 +67,8 @@ Stellen:
 
 ## Verwendete Abkürzungen
 
+Weitere Abkürzungen und Fachbegriffe: [Abkürzungs- und Begriffsverzeichnis](../ABKUERZUNGEN.md)
+
 | Kürzel | Berufsgruppe |
 |---|---|
 | **ÄD** | Ärztlicher Dienst: **Oberärztin/Oberarzt** (Entscheider, „A") und Assistenzärztin/-arzt (Durchführung, „R", unter oberärztlicher Anleitung) |

@@ -31,6 +31,7 @@ Erprobung befinden.
 
 ## Inhaltsverzeichnis
 
+- [Abkürzungs- und Begriffsverzeichnis](ABKUERZUNGEN.md)
 - [Prozesse: Patient Journey, RACI-Matrix, ICF-Ziele](prozesse/README.md)
 - [Rollenprofile: Oberärzte, Physician Assistance, Parkinson Nurse](rollen/)
 - [Orbis-Textbausteine: Aufnahme, Screenings, Zielmatrix, Teambesprechung, Arztbrief](werkzeuge/orbis/README.md)

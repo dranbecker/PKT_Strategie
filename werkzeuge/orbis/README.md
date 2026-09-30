@@ -24,6 +24,8 @@ In `03-screenings-berufsgruppen.txt` ist jeder Abschnitt zwischen
 `===== BAUSTEIN … =====` ein **eigener** Textbaustein; die Trennzeilen
 werden nicht mit eingefügt.
 
+Abkürzungen und Fachbegriffe: [Abkürzungs- und Begriffsverzeichnis](../../ABKUERZUNGEN.md)
+
 ## Verwendete Syntax
 
 - `@PATVNAME@`, `@FALLNR@`, `@AUFNDAT@` … – automatisch aus dem KIS

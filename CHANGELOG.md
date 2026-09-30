@@ -15,6 +15,7 @@
   Medikationsanamnese, Screenings, ICF-Zielmatrix mit GAS, Teambesprechung
   mit OPS-Nachweis und Arztbrief-Vorlage
 - `ENTSCHEIDUNGEN.md`: Konzeptentscheidungen mit Alternativen und Begründung
+- `ABKUERZUNGEN.md`: Abkürzungs- und Begriffsverzeichnis
 
 ### Geändert
 - `README.md`: Inhaltsverzeichnis ergänzt
