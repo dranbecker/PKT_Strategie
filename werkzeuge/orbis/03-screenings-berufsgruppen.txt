@@ -52,3 +52,19 @@ Unterstützungsbedarf: #[M{G|, | und }kein Bedarf,häusliche Versorgung,Pflegegr
 Pflegegrad: #[Lkein Pflegegrad,1,2,3,4,5,beantragt]Pflegegrad#
 Bereits geklärt oder eingeleitet: #[T2]Geklärt SD#
 Noch offen, nächste Schritte: #[T2]Offen SD#
+
+===== BAUSTEIN 03-EB: SCREENING ERNÄHRUNG =====
+PKT – SCREENING ERNÄHRUNG
+Basis-Screening am #[D]Datum Basis Screening EB# durch #Name Basis Screening# (Pflege)
+
+Gewicht bei Aufnahme: #Gewicht kg# kg – Körpergröße: #Größe cm# cm
+Ungewollter Gewichtsverlust in den letzten 3 Monaten: #[Lnein,ja,unbekannt]Gewichtsverlust#
+Risiko für Mangelernährung nach Basis-Screening: #[Lkein Risiko,Risiko vorhanden]Risiko Mangelernährung#
+$IF "@Risiko Mangelernährung@" == "Risiko vorhanden" $Vertiefung durch die Ernährungsberatung am #[D]Datum Vertiefung EB# durch #Name Ernährungsberatung#.&&Keine Vertiefung erforderlich.$
+
+Zusammenhang zwischen Mahlzeiten und Levodopa-Wirkung (laut Medikationsanamnese): #[Lnein,ja]Mahlzeiten und Wirkung#
+$IF "@Mahlzeiten und Wirkung@" == "ja" $Eiweißverteilung nach Rücksprache mit dem Ärztlichen Dienst: #[Lempfohlen,nicht empfohlen,in Klärung]Eiweißverteilung#.$
+Obstipation: #[Lnein,ja]Obstipation EB#
+Trinkmenge ausreichend: #[Lja,nein]Trinkmenge#
+Kostform: #[Lnormale Kost,angepasste Konsistenz nach Logopädie,sonstige Anpassung]Kostform EB#
+Maßnahme und Empfehlung: #[T2]Maßnahme EB#

@@ -55,8 +55,8 @@ Kraft, Gehausdauer, der Einsatz von Cueing-Strategien sowie der Bedarf
 an Gehhilfen berücksichtigt werden.
 
 Bitte dokumentieren Sie die relevanten Befunde **mit einem
-nachvollziehbaren Messwert oder Score, sofern ein standardisiertes
-Verfahren eingesetzt wird, und ergänzen Sie einen kurzen funktionellen
+nachvollziehbaren Messwert oder Score** – mindestens die
+Kernset-Verfahren Timed Up and Go und Mini-BESTest – und ergänzen Sie einen kurzen funktionellen
 beziehungsweise sicherheitsrelevanten Befund**.
 
 Für die multiprofessionelle Teambesprechung sollte erkennbar sein:
@@ -84,6 +84,24 @@ Das Screening legt noch keine konkrete Intervention fest. Die Auswahl
 der Therapie erfolgt auf Grundlage des individuellen
 physiotherapeutischen Assessments und der gemeinsam festgelegten
 Behandlungsziele.
+
+## Einordnung in den Behandlungspfad
+
+| | |
+|---|---|
+| **Zeitpunkt** | Tag 1–2 ([Phase 5 der Patient Journey](../prozesse/patient-journey.md)), Wiederholung vor der Entlassung |
+| **Datenhoheit** | Physiotherapie – Mobilität, Gang, Gleichgewicht, Sturzrisiko ([Datenhoheit](../prozesse/raci-matrix.md#datenhoheit-single-source-of-truth)) |
+| **Kernset** | **Timed Up and Go** und **Mini-BESTest** bei Aufnahme und Entlassung ([Kernset](../prozesse/icf-ziele-und-messung.md)) |
+| **Dokumentation** | Orbis-Baustein 03-PT ([Textbausteine](../werkzeuge/orbis/03-screenings-berufsgruppen.txt)) |
+| **Ergebnis** | Zielvorschlag für die ICF-Zielmatrix, Grundlage für den Therapieplan |
+
+**Schnittstellen – was hier nicht erneut erhoben wird:**
+
+- **FOG-Q:** wird vor der Aufnahme durch die Physician Assistance erhoben und hier genutzt
+- **Beobachtungen aus dem Pflegealltag** (Stürze, Freezing, Tageszeit, Bezug zur Medikation): [Screening Parkinson Nurse](screening_pdnurse.md), Bereich 5
+- **Transfers und Hilfsmittel im Alltag:** [Screening Ergotherapie](screening_ergotherapie.md)
+- **Orthostatische Beschwerden bei der Mobilisation:** Weitergabe an die [Diagnostik](screening_diagnostik.md), Bereich 4
+- **Körperliche Belastbarkeit:** Grundlage für die Indikation zur Sporttherapie (kein eigenes Screening, siehe [Übersicht](README.md))
 
 ## Quellenbasis
 

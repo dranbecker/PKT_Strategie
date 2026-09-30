@@ -16,6 +16,12 @@
   mit OPS-Nachweis und Arztbrief-Vorlage
 - `ENTSCHEIDUNGEN.md`: Konzeptentscheidungen mit Alternativen und Begründung
 - `ABKUERZUNGEN.md`: Abkürzungs- und Begriffsverzeichnis
+- `screening/`: Übersicht mit Prinzip, Weiterleitungen und Berufsgruppen
+  ohne eigenes Screening; neue Screenings Logopädie und Ernährung;
+  alle Screenings um Zeitpunkt, Datenhoheit, Kernset, Orbis-Baustein und
+  Schnittstellen ergänzt und untereinander verlinkt
+- Orbis-Baustein 03-EB (Ernährung)
 
 ### Geändert
 - `README.md`: Inhaltsverzeichnis ergänzt
+- `screening_diagnsotik.md` umbenannt in `screening_diagnostik.md` (Tippfehler)

@@ -2,7 +2,8 @@
 
 > **Status:** Entwurf – vor der Einführung in einem Probelauf zu testen
 
-Diese Textbausteine setzen die [Patient Journey](../../prozesse/patient-journey.md)
+Diese Textbausteine setzen die [Patient Journey](../../prozesse/patient-journey.md),
+die [Screenings](../../screening/README.md)
 und die [Datenhoheit](../../prozesse/raci-matrix.md#datenhoheit-single-source-of-truth)
 im KIS Orbis (Dedalus) um. Jede Berufsgruppe dokumentiert **nur ihren
 Bereich** – Teambesprechung und Arztbrief bauen auf diesen Einträgen
@@ -14,7 +15,7 @@ auf, statt Informationen neu zu erheben.
 |---|---|---|---|
 | `01-aufnahme-aerztlich-pa.txt` | Ärztlicher Aufnahmebefund inkl. ANAP-Abgleich, MDS-UPDRS III, diagnostische Arbeitsliste | PA, Freigabe OA | Tag 1 |
 | `02-medikationsanamnese.txt` | Medikationsanamnese mit exakten Einnahmezeiten, Fluktuationen, Device | PN (übergangsweise PA) | Tag 1 |
-| `03-screenings-berufsgruppen.txt` | 5 Bausteine: Physiotherapie, Ergotherapie, Logopädie, Neuropsychologie, Sozialdienst | jeweilige Berufsgruppe | Tag 1–2 |
+| `03-screenings-berufsgruppen.txt` | 6 Bausteine: Physiotherapie, Ergotherapie, Logopädie, Neuropsychologie, Sozialdienst, Ernährung | jeweilige Berufsgruppe (Ernährung: Basis-Screening durch Pflege) | Tag 1–2 |
 | `04-screening-parkinson-nurse.txt` | Nichtmotorische Symptome, Schlucken, Mobilität im Pflegealltag, Warnsignale, Beratungsbedarf | PN (übergangsweise PA oder Bezugspflege) | Tag 1–2 |
 | `10-icf-zielmatrix-gas.txt` | ICF-Zielmatrix mit GAS-Skala, 3–5 Ziele | PA moderiert, OA gibt frei | bis erste Teambesprechung |
 | `11-teambesprechung-woche.txt` | Teambesprechung je Behandlungswoche inkl. OPS-Nachweis | PA bereitet am Vortag vor, OA leitet | wöchentlich |

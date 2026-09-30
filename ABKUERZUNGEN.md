@@ -57,6 +57,8 @@ Dokumenten dieses Repositorys verwendet werden.
 | **Mini-BESTest** | Mini Balance Evaluation Systems Test – Gleichgewichtstest (0–28 Punkte) |
 | **MoCA** | Montreal Cognitive Assessment – kognitives Screening (0–30 Punkte) |
 | **Hoehn und Yahr** | Stadieneinteilung der Parkinson-Krankheit (1–5) |
+| **NRS 2002** | Nutritional Risk Screening 2002 – standardisiertes Screening auf Mangelernährungsrisiko |
+| **FEES** | Fiberendoskopische Evaluation des Schluckens – instrumentelle Schluckdiagnostik |
 | **Schellong-Test** | Kreislauftest im Liegen und Stehen zur Erkennung einer orthostatischen Hypotonie |
 | **PROM** | Patient-Reported Outcome Measure – von Patientinnen und Patienten selbst berichtetes Ergebnis (z. B. PDQ-39, WHODAS 2.0) |
 | **Kernset** | Kleines, festes Set an Assessments, das bei allen Patientinnen und Patienten zu Aufnahme und Entlassung erhoben wird |
@@ -100,6 +102,8 @@ Dokumenten dieses Repositorys verwendet werden.
 | **Freezing (of Gait)** | Plötzliche Blockade beim Gehen, z. B. beim Starten, Wenden oder an engen Stellen |
 | **Orthostase / orthostatische Hypotonie** | Blutdruckabfall beim Aufstehen mit Schwindel oder Sturzgefahr |
 | **Dysphagie** | Schluckstörung |
+| **Hypophonie** | Leise Stimme |
+| **Hypokinetische Dysarthrie** | Parkinson-typische Sprechstörung mit leiser, monotoner und undeutlicher Aussprache |
 | **Sialorrhoe** | Vermehrter Speichelfluss aus dem Mund |
 | **Mikrographie** | Kleiner werdende Handschrift |
 | **Nykturie** | Nächtlicher Harndrang |

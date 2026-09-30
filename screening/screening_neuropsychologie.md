@@ -179,6 +179,23 @@ neuropsychologischen Verlaufskontrolle, sondern erfordern eine
     relevanten persönlichen, sozialen oder finanziellen Folgen
 -   Hinweise auf eine akute Eigen- oder Fremdgefährdung
 
+## Einordnung in den Behandlungspfad
+
+| | |
+|---|---|
+| **Zeitpunkt** | Tag 1–3 ([Phase 5 der Patient Journey](../prozesse/patient-journey.md)); bei akuten Veränderungen jederzeit |
+| **Datenhoheit** | Neuropsychologie – Kognition, Stimmung, Antrieb, Impulskontrolle, psychotische Symptome ([Datenhoheit](../prozesse/raci-matrix.md#datenhoheit-single-source-of-truth)) |
+| **Kernset** | **MoCA** bei Aufnahme, bei Auffälligkeit vor der Entlassung ([Kernset](../prozesse/icf-ziele-und-messung.md)) |
+| **Dokumentation** | Orbis-Baustein 03-NP ([Textbausteine](../werkzeuge/orbis/03-screenings-berufsgruppen.txt)) |
+| **Ergebnis** | Zielvorschlag für die [ICF-Zielmatrix](../prozesse/icf-ziele-und-messung.md); Indikation für Psychotherapie und kognitive Therapieangebote |
+
+**Schnittstellen – was hier nicht erneut erhoben wird:**
+
+- **Warnsignale aus dem Stationsalltag** (Halluzinationen, Verwirrtheit, Impulskontrolle): [Screening Parkinson Nurse](screening_pdnurse.md), Bereich 6 – die Neuropsychologie vertieft
+- **Kontaktpersonen für die Fremdanamnese:** aus der pflegerischen Aufnahme
+- **Medikamentöse Einordnung** von Impulskontrollstörungen und Halluzinationen: [Parkinson-spezifische Medikationsprüfung](../medikationsmanagement/parkinson-spezifische-pruefung.md) – Entscheidung durch den Ärztlichen Dienst
+- **Psychotherapie:** kein eigenes Screening; die Indikation (z. B. KVT bei Depression oder Angst) ergibt sich aus diesem Screening (siehe [Übersicht](README.md))
+
 ## Quellenbasis
 
 -   Höglinger GU, Trenkwalder C, et al. **Parkinson-Krankheit.

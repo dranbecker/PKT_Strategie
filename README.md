@@ -35,7 +35,7 @@ Erprobung befinden.
 - [Prozesse: Patient Journey, RACI-Matrix, ICF-Ziele](prozesse/README.md)
 - [Rollenprofile: Oberärzte, Physician Assistance, Parkinson Nurse](rollen/)
 - [Orbis-Textbausteine: Aufnahme, Screenings, Zielmatrix, Teambesprechung, Arztbrief](werkzeuge/orbis/README.md)
-- [Screenings der Berufsgruppen](screening/)
+- [Screenings der Berufsgruppen](screening/README.md)
 - [Medikationsmanagement (STRIP-PD)](medikationsmanagement/README.md)
 - [Was ist die ICF?](was_ist_icf.md)
 - [Studienlage](Studienlage.md)

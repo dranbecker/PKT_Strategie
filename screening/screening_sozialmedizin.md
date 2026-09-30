@@ -44,7 +44,6 @@ anderem die Wohnsituation, vorhandene Unterstützung durch Angehörige,
 eine mögliche Überlastung von Bezugspersonen, Hilfsmittel, bestehende
 Versorgungsstrukturen und bereits laufende Anträge genauer erfasst
 werden.
-💡
 
 Bitte dokumentieren Sie **nur den erkannten Unterstützungsbedarf und die
 daraus folgenden nächsten Schritte**. Eine ausführliche
@@ -72,6 +71,21 @@ die Unterstützung bei der Organisation der weiteren Versorgung.
 Die Leitlinie empfiehlt, dass Menschen mit Parkinson und ihre
 Angehörigen in allen Phasen der Erkrankung Zugang zu psychosozialer und
 sozialrechtlicher Beratung erhalten.
+
+## Einordnung in den Behandlungspfad
+
+| | |
+|---|---|
+| **Zeitpunkt** | Triggerfragen bereits vor der Aufnahme (Pre-Admission), Screening Tag 1–2 ([Patient Journey](../prozesse/patient-journey.md)), Umsetzung in der Entlassplanung (Phase 10) |
+| **Datenhoheit** | Sozialdienst – soziale Situation, Pflegegrad, Anschlussversorgung, Anträge ([Datenhoheit](../prozesse/raci-matrix.md#datenhoheit-single-source-of-truth)) |
+| **Dokumentation** | Orbis-Baustein 03-SD ([Textbausteine](../werkzeuge/orbis/03-screenings-berufsgruppen.txt)) |
+| **Ergebnis** | Nächste Schritte für die Entlassplanung; ggf. Teilhabeziel für die ICF-Zielmatrix |
+
+**Schnittstellen – was hier nicht erneut erhoben wird:**
+
+- **Kontaktpersonen, Pflegegrad, vorhandene Hilfsmittel:** werden vor der Aufnahme bzw. in der pflegerischen Aufnahme erfasst und hier genutzt
+- **Hilfsmittelbedarf:** stellt die [Ergotherapie](screening_ergotherapie.md) fest; der Sozialdienst übernimmt Antrag und Organisation
+- **Belastung und Informationsbedarf der Angehörigen:** Hinweise aus dem [Screening Parkinson Nurse](screening_pdnurse.md), Bereich 8
 
 ## Quelle
 

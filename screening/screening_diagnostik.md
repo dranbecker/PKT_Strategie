@@ -111,12 +111,27 @@ Sie werden hier deshalb als **individuelle sicherheits- und
 behandlungsrelevante diagnostische Fragestellungen** geführt und nicht
 als obligate Untersuchung bei allen Menschen mit Parkinson verstanden.
 
+## Einordnung in den Behandlungspfad
+
+| | |
+|---|---|
+| **Zeitpunkt** | Vorbereitung vor der Aufnahme, Arbeitsliste ab Tag 1 ([Phase 3–5 der Patient Journey](../prozesse/patient-journey.md)), laufend bis zur Entlassung |
+| **Datenhoheit** | Ärztlicher Dienst; Führung der Arbeitsliste durch die Physician Assistance, Entscheidung und Freigabe oberärztlich ([RACI-Matrix](../prozesse/raci-matrix.md)) |
+| **Kernset** | **MDS-UPDRS Teil III** ist Teil der ärztlichen Aufnahme ([Kernset](../prozesse/icf-ziele-und-messung.md)) |
+| **Dokumentation** | Orbis-Baustein 01 ([Ärztliche Aufnahme](../werkzeuge/orbis/01-aufnahme-aerztlich-pa.txt)) mit diagnostischer Arbeitsliste und Schellong-Test |
+| **Ergebnis** | Offene Punkte für jede wöchentliche Teambesprechung; abgeschlossene Befunde mit Konsequenz für den Arztbrief |
+
+**Schnittstellen – was hier nicht erneut erhoben wird:**
+
+- **Medikationsbezogene Sicherheitsaspekte:** stützen sich auf die [Medikationsanamnese](../medikationsmanagement/aufnahme-medikationsreview.md) und die [STRIP-PD-Analyse](../medikationsmanagement/strip-pd.md)
+- **Hinweise auf Orthostase oder Stürze** aus Pflege und Physiotherapie: [Screening Parkinson Nurse](screening_pdnurse.md), Bereich 3, und [Screening Physiotherapie](screening_physiotherapie.md)
+
 ## Quellenbasis
 
 -   Höglinger GU, Trenkwalder C, et al. **Parkinson-Krankheit.
     S2k-Leitlinie.** Deutsche Gesellschaft für Neurologie; 2023.
--   **parkinson_therapien_index.json**, Projekt PKT 3.0, insbesondere
-    der Eintrag zur Behandlung der (neurogenen) orthostatischen
-    Hypotonie.
+-   **parkinson_therapien_index.json**, Projekt PKT 3.0 (projektinterne
+    Therapie-Datenbank), insbesondere der Eintrag zur Behandlung der
+    (neurogenen) orthostatischen Hypotonie.
 -   Neurologische Aufnahmeplanung (**ANAP**) als projektspezifischer
     Ausgangspunkt der individuellen diagnostischen Arbeitsliste.

@@ -106,6 +106,23 @@ der Therapie richtet sich nach den individuell bedeutsamen
 Betätigungsproblemen, dem ergotherapeutischen Assessment und den
 gemeinsam vereinbarten Behandlungszielen.
 
+## Einordnung in den Behandlungspfad
+
+| | |
+|---|---|
+| **Zeitpunkt** | Tag 1–2 ([Phase 5 der Patient Journey](../prozesse/patient-journey.md)), Wiederholung vor der Entlassung |
+| **Datenhoheit** | Ergotherapie – Alltagsaktivitäten, Feinmotorik, Hilfsmittelbedarf ([Datenhoheit](../prozesse/raci-matrix.md#datenhoheit-single-source-of-truth)) |
+| **Kernset** | kein eigenes Kernset-Instrument; dokumentiert werden die konkrete Alltagstätigkeit und der Grad der Selbstständigkeit |
+| **Dokumentation** | Orbis-Baustein 03-ET ([Textbausteine](../werkzeuge/orbis/03-screenings-berufsgruppen.txt)) |
+| **Ergebnis** | Zielvorschlag für die [ICF-Zielmatrix](../prozesse/icf-ziele-und-messung.md) |
+
+**Schnittstellen – was hier nicht erneut erhoben wird:**
+
+- **Gang, Gleichgewicht, Sturzrisiko:** [Screening Physiotherapie](screening_physiotherapie.md)
+- **Kognition vertiefend:** [Screening Neuropsychologie](screening_neuropsychologie.md) – die Ergotherapie beurteilt die Auswirkung im Alltag
+- **Hilfsmittelanträge und Wohnraumanpassung:** Die Ergotherapie stellt den Bedarf fest, der [Sozialdienst](screening_sozialmedizin.md) übernimmt Antrag und Organisation
+- **Fatigue:** wird im [Screening Parkinson Nurse](screening_pdnurse.md) als Symptom erfasst; das Energiemanagement im Alltag verantwortet die Ergotherapie
+
 ## Quellenbasis
 
 -   Höglinger GU, Trenkwalder C, et al. **Parkinson-Krankheit.

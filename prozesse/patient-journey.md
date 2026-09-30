@@ -92,7 +92,7 @@ Untersuchung und Behandlung genutzt, nicht für das Sammeln von Papier.
   - Abfrage von Kontaktperson/Angehörigen, Hilfsmitteln, Pflegegrad
     (Triggerfragen für SD)
 - **Output:** vollständige ANAP, vorbereitete **diagnostische
-  Arbeitsliste** (siehe [Screening Diagnostik](../screening/screening_diagnsotik.md)),
+  Arbeitsliste** (siehe [Screening Diagnostik](../screening/screening_diagnostik.md)),
   Fragebögen und Tagebuch
 
 **Redundanzvermeidung:** Fragebögen werden nur einmal ausgefüllt
@@ -129,19 +129,19 @@ Screening durchgeführt; Auffälligkeiten sind gezielt vertieft oder
 weitergeleitet.
 
 - **Owner:** PA (Vollständigkeit und Zusammenführung)
-- **Durchführung** nach den bestehenden Screenings:
+- **Durchführung** nach den [Screenings der Berufsgruppen](../screening/README.md):
 
 | Berufsgruppe | Screening | Fokus |
 |---|---|---|
-| ÄD / PA | [Diagnostik](../screening/screening_diagnsotik.md) | ANAP-Arbeitsliste, Orthostase, Kardiales, PNP |
+| ÄD / PA | [Diagnostik](../screening/screening_diagnostik.md) | ANAP-Arbeitsliste, Orthostase, Kardiales, PNP |
 | PN / PF | [Parkinson-Nurse](../screening/screening_pdnurse.md) | Medikation, Fluktuationen, autonome Symptome, Device |
 | PT | [Physiotherapie](../screening/screening_physiotherapie.md) | Gang, Gleichgewicht, Sturz, Freezing, Transfers |
 | ET | [Ergotherapie](../screening/screening_ergotherapie.md) | ADL, Feinmotorik, Hilfsmittel, Fatigue |
 | NP | [Neuropsychologie](../screening/screening_neuropsychologie.md) | Kognition, Stimmung, Impulskontrolle, Psychose, Delir |
-| SD | [Sozialmedizin](../screening/screening_sozialmedizin.md) | Häusliche Versorgung, Pflegegrad, Anschlussversorgung |
-| LO | Logopädie (Screening in Vorbereitung) | Sprechen, Stimme, Schlucken |
+| SD | [Sozialdienst](../screening/screening_sozialmedizin.md) | Häusliche Versorgung, Pflegegrad, Anschlussversorgung |
+| LO | [Logopädie](../screening/screening_logopaedie.md) | Stimme, Sprechen, Schlucken, Speichel |
 | KP | [STRIP-PD](../medikationsmanagement/strip-pd.md), Phase 1 + 3 | Systematische Medikationsanalyse |
-| EB | Mangelernährungsscreening | Gewicht, Proteinverteilung, Obstipation |
+| PF / EB | [Ernährung](../screening/screening_ernaehrung.md) | Basis-Screening durch Pflege; Gewicht, Mahlzeiten und Levodopa, Obstipation |
 
 - **Output:** vollständiges interprofessionelles Aufnahmeprofil
   (ein gemeinsames Dokument/Formular, keine parallelen Berichte)

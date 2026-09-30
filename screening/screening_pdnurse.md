@@ -221,6 +221,24 @@ Das Screening legt noch keine konkrete Intervention fest. Es dient dazu,
 Probleme im pflegerischen Alltag sichtbar zu machen und die
 erforderliche Vertiefung, Beratung oder Weiterleitung einzuleiten.
 
+## Einordnung in den Behandlungspfad
+
+| | |
+|---|---|
+| **Zeitpunkt** | Tag 1–2 ([Phase 4 und 5 der Patient Journey](../prozesse/patient-journey.md)); Fluktuationsmonitoring laufend |
+| **Datenhoheit** | Parkinson Nurse – Medikationsanamnese mit Einnahmezeiten, Fluktuationsprotokoll, Device-Handhabung, Beratungsbedarf ([Datenhoheit](../prozesse/raci-matrix.md#datenhoheit-single-source-of-truth)); bis zur Besetzung einer PN-Stelle übergangsweise Physician Assistance bzw. Bezugspflege ([Rollenprofil](../rollen/parkinson-nurse.md)) |
+| **Dokumentation** | Bereiche 1, 2 und 7: Orbis-Baustein 02 ([Medikationsanamnese](../werkzeuge/orbis/02-medikationsanamnese.txt)); Bereiche 3–6 und 8: Orbis-Baustein 04 ([Screening Parkinson Nurse](../werkzeuge/orbis/04-screening-parkinson-nurse.txt)) |
+| **Ergebnis** | Hinweise für die Therapieplanung und die ärztliche Medikationsentscheidung; Beratungsbedarf für die Entlassplanung |
+
+**Schnittstellen – was hier nicht erneut erhoben wird:**
+
+- **Bereich 1** ist die einmalige Medikationsanamnese nach [Medikationsreview bei Aufnahme](../medikationsmanagement/aufnahme-medikationsreview.md); Ärztlicher Dienst und Klinische Pharmazie ([STRIP-PD](../medikationsmanagement/strip-pd.md)) übernehmen sie
+- **Bereich 3 – Schwindel beim Aufstehen:** Messung und Abklärung über die [Diagnostik](screening_diagnostik.md), Bereich 4
+- **Bereich 4 – Schlucken:** Vertiefung durch das [Screening Logopädie](screening_logopaedie.md); Gewicht und Appetit durch das [Screening Ernährung](screening_ernaehrung.md)
+- **Bereich 5 – Mobilität:** Vertiefung durch das [Screening Physiotherapie](screening_physiotherapie.md)
+- **Bereich 6 – Warnsignale:** Vertiefung durch das [Screening Neuropsychologie](screening_neuropsychologie.md)
+- **Bereich 8 – Unterstützungsbedarf der Angehörigen:** sozialrechtliche Klärung durch den [Sozialdienst](screening_sozialmedizin.md)
+
 ## Quellenbasis
 
 -   Höglinger GU, Trenkwalder C, et al. **Parkinson-Krankheit.
