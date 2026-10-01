@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-01
+
+### Hinzugefügt
+- `ENTSCHEIDUNGEN.md`: E-007 (Screening-Prinzip), E-008 (Orbis-Textbausteine),
+  E-009 (Trennung öffentliches Konzept / einrichtungsinterne Inhalte)
+
 ## 2026-09-30
 
 ### Hinzugefügt

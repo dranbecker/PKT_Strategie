@@ -1,6 +1,7 @@
 # Entscheidungen
 
 Festgehaltene Konzeptentscheidungen mit Alternativen und Begründung.
+Nummern ohne Eintrag betreffen einrichtungsinterne Entscheidungen.
 
 ---
 
@@ -66,3 +67,47 @@ Festgehaltene Konzeptentscheidungen mit Alternativen und Begründung.
   Rotation und tragen die fachärztliche Behandlungsleitung
   nach OPS 8-97d. Entscheidungen gehören zur Rolle mit Kontinuität und
   Facharztkompetenz; die PA bereitet vor, entscheidet aber nicht.
+
+## E-007 · Screenings nach dem Prinzip „Screenen – Vertiefen – Weiterleiten“
+
+- **Datum:** 2026-09-30 · **Status:** beschlossen (Konzept)
+- **Entscheidung:** Jede Berufsgruppe screent nur ihren Kernbereich
+  innerhalb von 48 Stunden; Hinweise außerhalb des eigenen Bereichs
+  werden weitergeleitet. Logopädie und Ernährung erhalten eigene
+  Screenings. Psychotherapie, Sport-, Kunst- und Musiktherapie sowie
+  Klinische Pharmazie erhalten **kein eigenes Screening**; ihre
+  Indikation ergibt sich aus Neuropsychologie, Physiotherapie,
+  Zielvereinbarung bzw. STRIP-PD.
+- **Alternativen:** eigenes Screening für jede Berufsgruppe; ein
+  gemeinsamer Aufnahmebogen für alle.
+- **Begründung:** Eigene Screenings für alle Berufsgruppen würden die
+  Mehrfacherhebung wieder einführen; ein einziger Bogen würde die
+  fachliche Tiefe verlieren. Die Weiterleitungsregeln
+  ([screening/README.md](screening/README.md)) machen Überschneidungen
+  eindeutig.
+
+## E-008 · Dokumentationswerkzeuge zunächst als Orbis-Textbausteine
+
+- **Datum:** 2026-09-30 · **Status:** beschlossen (Konzept)
+- **Entscheidung:** Aufnahmeprofil, Screenings, ICF-Zielmatrix,
+  Teambesprechung und Arztbrief starten als Orbis-Textbausteine
+  ([werkzeuge/orbis](werkzeuge/orbis/README.md)); ein KIS-Formular folgt,
+  wenn sich die Inhalte bewährt haben.
+- **Alternativen:** direkt ein KIS-Formular; Word- oder PDF-Vorlagen.
+- **Begründung:** Textbausteine sind ohne IT-Projekt kurzfristig
+  einsetzbar und bleiben im KIS. Word- oder PDF-Vorlagen würden eine
+  zusätzliche Übertragung erzeugen. Das KIS-Formular ist der zweite
+  Schritt, sobald die Struktur erprobt ist.
+
+## E-009 · Öffentliches Konzept, einrichtungsinterne Inhalte getrennt
+
+- **Datum:** 2026-09-30 · **Status:** beschlossen
+- **Entscheidung:** Dieses Repository enthält das übertragbare
+  Versorgungskonzept. Einrichtungsspezifische Angaben – Stellen,
+  Kennzahlen, Planungstermine und Präsentationen – werden nicht
+  veröffentlicht. Rollen werden neutral beschrieben (z. B. „bis zur
+  Besetzung einer PN-Stelle übergangsweise PA“).
+- **Alternativen:** vollständige Veröffentlichung; privates Repository.
+- **Begründung:** Das Konzept soll für den fachlichen Austausch offen
+  zugänglich bleiben, ohne interne Personal- und Planungsdaten
+  preiszugeben.
