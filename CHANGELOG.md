@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026-10-04
+
+### Hinzugefügt
+- `werkzeuge/parson/`: Vision **PARson** (Parkinson + JSON) – Parkinson-
+  spezifische FHIR-Sicht über alle Versorgungsstationen: Zielbild und
+  Beteiligte, Ressourcenmodell mit Codesystemen (SNOMED CT, LOINC,
+  ICD-10-GM, OPS, ATC, ICF), Datenschutz-Leitlinien, Roadmap in fünf
+  Stufen und ein synthetisches FHIR-Beispiel-Bundle
+- `werkzeuge/README.md`: Übersicht der Werkzeuge (Orbis heute, PARson als Vision)
+- `ENTSCHEIDUNGEN.md`: E-012 (PARson als FHIR-Vision)
+- `ABKUERZUNGEN.md`: Abschnitt „Digitale Gesundheitsdaten und Interoperabilität“
+
+### Geändert
+- `README.md`: Inhaltsverzeichnis um Werkzeuge und PARson ergänzt
+
 ## 2026-10-01
 
 ### Hinzugefügt

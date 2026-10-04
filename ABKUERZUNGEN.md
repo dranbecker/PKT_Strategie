@@ -141,3 +141,25 @@ Dokumenten dieses Repositorys verwendet werden.
 | **EMC** | Enhanced Multidisciplinary Care |
 | **DOI** | Digital Object Identifier – dauerhafte Kennung wissenschaftlicher Publikationen |
 | **CC BY-NC** | Creative Commons – Namensnennung, nicht kommerziell (Lizenz dieses Repositorys) |
+
+## Digitale Gesundheitsdaten und Interoperabilität
+
+| Kürzel / Begriff | Bedeutung |
+|---|---|
+| **PARson** | **PAR**kinson + J**SON** – Vision einer Parkinson-spezifischen FHIR-Sicht über alle Versorgungsstationen; siehe [PARson](werkzeuge/parson/README.md) |
+| **FHIR** | Fast Healthcare Interoperability Resources – Standard von HL7 für den Austausch von Gesundheitsdaten in kleinen Bausteinen (Ressourcen) |
+| **Ressource** | Baustein in FHIR, z. B. `Patient`, `Condition` (Diagnose), `Observation` (Befund/Messwert), `MedicationStatement` (Medikation) |
+| **Profil** | Festlegung, wie eine FHIR-Ressource für einen bestimmten Zweck zu befüllen ist |
+| **JSON** | JavaScript Object Notation – textbasiertes Datenformat, in dem FHIR-Ressourcen ausgetauscht werden |
+| **HL7** | Health Level Seven – internationale Organisation für Standards im Gesundheitswesen |
+| **SNOMED CT** | Systematized Nomenclature of Medicine – Clinical Terms; umfassende medizinische Terminologie für Diagnosen, Befunde und Prozeduren |
+| **LOINC** | Logical Observation Identifiers Names and Codes – Codesystem für Messwerte, Assessments und Dokumenttypen |
+| **ICD-10-GM** | Internationale Klassifikation der Krankheiten, German Modification – amtliche Diagnoseklassifikation |
+| **ATC** | Anatomisch-Therapeutisch-Chemische Klassifikation von Wirkstoffen |
+| **PZN** | Pharmazentralnummer – Kennzeichnung eines konkreten Arzneimittels |
+| **UCUM** | Unified Code for Units of Measure – einheitliche Maßeinheiten |
+| **ISiK** | Informationstechnische Systeme in Krankenhäusern – verpflichtende FHIR-Schnittstellen der Krankenhaus-IT (Spezifikation der gematik) |
+| **ePA** | Elektronische Patientenakte |
+| **SMART on FHIR** | Standard für Apps, Anmeldung und Berechtigungen auf FHIR-Servern |
+| **DSGVO** | Datenschutz-Grundverordnung der EU |
+| **DSFA** | Datenschutz-Folgenabschätzung (Art. 35 DSGVO) |

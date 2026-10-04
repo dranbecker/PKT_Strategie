@@ -1,0 +1,379 @@
+{
+  "resourceType": "Bundle",
+  "id": "parson-beispiel",
+  "meta": {
+    "security": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  },
+  "type": "collection",
+  "timestamp": "2027-04-20T10:00:00+02:00",
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/erika-beispiel",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "erika-beispiel",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Erfundene Person – synthetische Beispieldaten</div>"
+        },
+        "name": [{ "family": "Beispiel", "given": ["Erika"] }],
+        "gender": "female",
+        "birthDate": "1956-05-14"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/RelatedPerson/ehemann",
+      "resource": {
+        "resourceType": "RelatedPerson",
+        "id": "ehemann",
+        "patient": { "reference": "Patient/erika-beispiel" },
+        "relationship": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                "code": "HUSB",
+                "display": "husband"
+              }
+            ]
+          }
+        ],
+        "name": [{ "family": "Beispiel", "given": ["Klaus"] }]
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Organization/beispielklinik",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "beispielklinik",
+        "name": "Beispielklinik – Parkinson-Zentrum"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Organization/physiopraxis",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "physiopraxis",
+        "name": "Physiotherapiepraxis Beispielstadt"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Condition/parkinson",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "parkinson",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "49049000",
+              "display": "Parkinson's disease"
+            }
+          ],
+          "text": "Idiopathisches Parkinson-Syndrom, akinetisch-rigider Typ, mit Wirkungsfluktuationen (ICD-10-GM-Kodierung zu prüfen)"
+        },
+        "subject": { "reference": "Patient/erika-beispiel" },
+        "onsetDateTime": "2018"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Encounter/pkt-aufenthalt",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "pkt-aufenthalt",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "IMP",
+          "display": "inpatient encounter"
+        },
+        "subject": { "reference": "Patient/erika-beispiel" },
+        "period": { "start": "2027-02-03", "end": "2027-02-19" },
+        "reasonReference": [{ "reference": "Condition/parkinson" }],
+        "serviceProvider": { "reference": "Organization/beispielklinik" }
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Procedure/pkt",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "pkt",
+        "status": "completed",
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/bfarm/ops",
+              "code": "8-97d.1"
+            }
+          ],
+          "text": "Multimodale Komplexbehandlung bei Morbus Parkinson, 14 bis 20 Behandlungstage"
+        },
+        "subject": { "reference": "Patient/erika-beispiel" },
+        "encounter": { "reference": "Encounter/pkt-aufenthalt" },
+        "performedPeriod": { "start": "2027-02-03", "end": "2027-02-19" }
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/MedicationStatement/levodopa",
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "levodopa",
+        "status": "active",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/bfarm/atc",
+              "code": "N04BA02",
+              "display": "Levodopa und Decarboxylasehemmer"
+            }
+          ],
+          "text": "Levodopa/Benserazid 100 mg/25 mg Tablette"
+        },
+        "subject": { "reference": "Patient/erika-beispiel" },
+        "effectivePeriod": { "start": "2027-02-19" },
+        "informationSource": { "reference": "Patient/erika-beispiel" },
+        "dosage": [
+          {
+            "text": "1 Tablette um 07:00, 10:30, 14:00 und 17:30 Uhr, jeweils 30 Minuten vor dem Essen",
+            "timing": {
+              "repeat": {
+                "timeOfDay": ["07:00:00", "10:30:00", "14:00:00", "17:30:00"]
+              }
+            },
+            "doseAndRate": [
+              { "doseQuantity": { "value": 1, "unit": "Tablette" } }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/updrs3-aufnahme",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "updrs3-aufnahme",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam"
+              }
+            ]
+          }
+        ],
+        "code": { "text": "MDS-UPDRS Teil III, Summenwert (LOINC-Code zu prüfen)" },
+        "subject": { "reference": "Patient/erika-beispiel" },
+        "encounter": { "reference": "Encounter/pkt-aufenthalt" },
+        "effectiveDateTime": "2027-02-03T09:30:00+01:00",
+        "valueQuantity": { "value": 34, "unit": "Punkte" },
+        "note": [{ "text": "Erhoben im ON, 90 Minuten nach Morgendosis" }]
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Goal/icf-baecker",
+      "resource": {
+        "resourceType": "Goal",
+        "id": "icf-baecker",
+        "lifecycleStatus": "completed",
+        "achievementStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/goal-achievement",
+              "code": "achieved"
+            }
+          ]
+        },
+        "description": {
+          "text": "Wieder selbstständig zum Bäcker gehen (ca. 300 m, mit Rollator) – ICF d4602, Kodierung zu prüfen"
+        },
+        "subject": { "reference": "Patient/erika-beispiel" },
+        "target": [
+          {
+            "measure": { "text": "Goal Attainment Scaling (−2 bis +2)" },
+            "detailInteger": 0
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/gas-entlassung",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "gas-entlassung",
+        "status": "final",
+        "code": { "text": "GAS-Bewertung bei Entlassung" },
+        "subject": { "reference": "Patient/erika-beispiel" },
+        "focus": [{ "reference": "Goal/icf-baecker" }],
+        "encounter": { "reference": "Encounter/pkt-aufenthalt" },
+        "effectiveDateTime": "2027-02-18",
+        "valueInteger": 1,
+        "note": [{ "text": "+1: besser als erwartet – Weg ohne Pause bewältigt" }]
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/pdq39-jahr",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "pdq39-jahr",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": { "text": "PDQ-39 Summary Index (LOINC-Code zu prüfen)" },
+        "subject": { "reference": "Patient/erika-beispiel" },
+        "effectiveDateTime": "2027-04-12",
+        "performer": [{ "reference": "Patient/erika-beispiel" }],
+        "valueQuantity": { "value": 27.6, "unit": "Punkte (0–100)" }
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Observation/tagebuch-off",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "tagebuch-off",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": { "text": "Symptomtagebuch: Anteil OFF-Zeit am Wachtag" },
+        "subject": { "reference": "Patient/erika-beispiel" },
+        "effectiveDateTime": "2027-04-18",
+        "performer": [{ "reference": "Patient/erika-beispiel" }],
+        "valueQuantity": {
+          "value": 20,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        },
+        "note": [{ "text": "Morgens vor der ersten Tablette steif, nachmittags gut" }]
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Provenance/tagebuch-off",
+      "resource": {
+        "resourceType": "Provenance",
+        "id": "tagebuch-off",
+        "target": [{ "reference": "Observation/tagebuch-off" }],
+        "recorded": "2027-04-18T20:15:00+02:00",
+        "agent": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+                  "code": "author"
+                }
+              ]
+            },
+            "who": { "reference": "Patient/erika-beispiel" }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Appointment/follow-up-6-wochen",
+      "resource": {
+        "resourceType": "Appointment",
+        "id": "follow-up-6-wochen",
+        "status": "booked",
+        "description": "Telefon-Follow-up 6 Wochen nach Entlassung: Fluktuationen, Stürze, Heimübungsprogramm",
+        "start": "2027-04-02T10:00:00+02:00",
+        "end": "2027-04-02T10:20:00+02:00",
+        "participant": [
+          { "actor": { "reference": "Patient/erika-beispiel" }, "status": "accepted" },
+          { "actor": { "reference": "Organization/beispielklinik", "display": "Parkinson Nurse" }, "status": "accepted" }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Consent/freigabe-physiopraxis",
+      "resource": {
+        "resourceType": "Consent",
+        "id": "freigabe-physiopraxis",
+        "status": "active",
+        "scope": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/consentscope",
+              "code": "patient-privacy"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "59284-0",
+                "display": "Patient Consent"
+              }
+            ]
+          }
+        ],
+        "patient": { "reference": "Patient/erika-beispiel" },
+        "dateTime": "2027-02-17",
+        "policyRule": { "text": "PARson-Freigaberegel (Entwurf)" },
+        "provision": {
+          "type": "permit",
+          "period": { "start": "2027-02-17", "end": "2028-02-17" },
+          "actor": [
+            {
+              "role": { "text": "Empfänger" },
+              "reference": { "reference": "Organization/physiopraxis" }
+            }
+          ],
+          "action": [{ "text": "lesen" }],
+          "purpose": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "TREAT",
+              "display": "treatment"
+            }
+          ],
+          "data": [
+            { "meaning": "related", "reference": { "reference": "Goal/icf-baecker" } },
+            { "meaning": "related", "reference": { "reference": "Observation/tagebuch-off" } }
+          ]
+        }
+      }
+    }
+  ]
+}

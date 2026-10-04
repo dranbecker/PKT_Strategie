@@ -111,3 +111,24 @@ Nummern ohne Eintrag betreffen einrichtungsinterne Entscheidungen.
 - **Begründung:** Das Konzept soll für den fachlichen Austausch offen
   zugänglich bleiben, ohne interne Personal- und Planungsdaten
   preiszugeben.
+
+## E-012 · PARson als FHIR-Vision
+
+- **Datum:** 2026-10-04 · **Status:** Vision (nicht beschlossen zur Umsetzung)
+- **Entscheidung:** Als langfristiges Zielbild wird **PARson**
+  beschrieben – eine Parkinson-spezifische FHIR-Sicht auf Diagnostik,
+  Therapie, Medikation, Termine und Krankenhausaufenthalte
+  ([werkzeuge/parson](werkzeuge/parson/README.md)). PARson ist eine
+  **Sicht über die vorhandenen Quellen** (KIS über ISiK, ePA, Partner
+  im Netzwerk), kein eigenes Datensilo. Patientinnen, Patienten und
+  Angehörige lesen ihre Daten und tragen selbst bei (Symptomtagebuch,
+  Fragebögen, Termine); ärztliche und therapeutische Einträge bleiben
+  für sie schreibgeschützt.
+- **Alternativen:** eigener zentraler PARson-Server, in den alle
+  Beteiligten direkt eintragen; keine eigene Vision, nur Nutzung der ePA.
+- **Begründung:** Ein zentraler Server würde Daten doppelt halten und
+  widerspräche der Datenhoheit (E-001); er erhöht zudem den
+  Datenschutzaufwand. Die ePA allein bildet Parkinson-Besonderheiten
+  wie exakte Einnahmezeiten, ON/OFF-Tagebuch, Device-Parameter und
+  ICF-Ziele mit GAS nicht ab. Die Orbis-Textbausteine (E-008) haben
+  Vorrang; ihre Felder sind die fachliche Vorlage für spätere Profile.
