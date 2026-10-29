@@ -51,7 +51,7 @@ festgelegt:
 
 - **Festlegung:** bis Tag 3
 - **Zwischenstand:** in jeder wöchentlichen Teambesprechung
-- **Abschlussbewertung:** Tag 12–13
+- **Abschlussbewertung:** vor der Entlassung
 - **Auswertung:** GAS-T-Wert über alle Ziele (Aggregation durch PA)
 
 > Die Skalenstufen werden vorab konkret und beobachtbar formuliert. So

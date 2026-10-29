@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-29
+
+### Geändert
+- `prozesse/icf-ziele-und-messung.md`: GAS-Abschlussbewertung „vor der
+  Entlassung“ statt „Tag 12–13“ (passend zur Verweildauer und zur
+  Patient Journey)
+
 ## 2026-10-04
 
 ### Hinzugefügt
