@@ -1,0 +1,1131 @@
+{
+ "sectors": [
+  {
+   "id": "b1",
+   "titel": "Mentale Funktionen",
+   "kurz": "Mental",
+   "comp": "b",
+   "codes": [
+    {
+     "code": "b134",
+     "titel": "Funktionen des Schlafes",
+     "items": [
+      {
+       "inst": "PDQ-39",
+       "nr": "30",
+       "stichwort": "Unerwartet tagsüber eingeschlafen"
+      },
+      {
+       "inst": "PDQ-39",
+       "nr": "33",
+       "stichwort": "Belastende Träume oder Halluzinationen"
+      }
+     ],
+     "nurUntersuchung": false
+    },
+    {
+     "code": "b140",
+     "titel": "Funktionen der Aufmerksamkeit",
+     "items": [
+      {
+       "inst": "PDQ-39",
+       "nr": "31",
+       "stichwort": "Konzentrationsprobleme"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D1.1",
+       "stichwort": "Konzentration 10 Minuten"
+      }
+     ],
+     "nurUntersuchung": false
+    },
+    {
+     "code": "b144",
+     "titel": "Funktionen des Gedächtnisses",
+     "items": [
+      {
+       "inst": "PDQ-39",
+       "nr": "32",
+       "stichwort": "Schlechtes Gedächtnis"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D1.2",
+       "stichwort": "An Wichtiges denken (Gedächtnis)"
+      }
+     ],
+     "nurUntersuchung": false
+    },
+    {
+     "code": "b152",
+     "titel": "Emotionale Funktionen",
+     "items": [
+      {
+       "inst": "PDQ-39",
+       "nr": "9",
+       "stichwort": "Sorge vor Sturz in der Öffentlichkeit"
+      },
+      {
+       "inst": "PDQ-39",
+       "nr": "17",
+       "stichwort": "Niedergeschlagen/deprimiert"
+      },
+      {
+       "inst": "PDQ-39",
+       "nr": "18",
+       "stichwort": "Isoliert und einsam"
+      },
+      {
+       "inst": "PDQ-39",
+       "nr": "19",
+       "stichwort": "Weinerlich"
+      },
+      {
+       "inst": "PDQ-39",
+       "nr": "20",
+       "stichwort": "Ärgerlich oder verbittert"
+      },
+      {
+       "inst": "PDQ-39",
+       "nr": "21",
+       "stichwort": "Ängstlich"
+      },
+      {
+       "inst": "PDQ-39",
+       "nr": "22",
+       "stichwort": "Sorgen um die Zukunft"
+      },
+      {
+       "inst": "PDQ-39",
+       "nr": "23",
+       "stichwort": "Erkrankung verbergen müssen"
+      },
+      {
+       "inst": "PDQ-39",
+       "nr": "25",
+       "stichwort": "Verlegenheit wegen Erkrankung"
+      },
+      {
+       "inst": "PDQ-39",
+       "nr": "26",
+       "stichwort": "Sorge um Reaktionen anderer"
+      },
+      {
+       "inst": "PDQ-39",
+       "nr": "36",
+       "stichwort": "Sich von anderen ignoriert fühlen"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D6.5",
+       "stichwort": "Emotional belastet"
+      }
+     ],
+     "nurUntersuchung": false
+    },
+    {
+     "code": "b156",
+     "titel": "Funktionen der Wahrnehmung",
+     "items": [
+      {
+       "inst": "PDQ-39",
+       "nr": "33",
+       "stichwort": "Belastende Träume oder Halluzinationen"
+      }
+     ],
+     "nurUntersuchung": false
+    }
+   ]
+  },
+  {
+   "id": "b2",
+   "titel": "Sinnesfunktionen und Schmerz",
+   "kurz": "Sinne · Schmerz",
+   "comp": "b",
+   "codes": [
+    {
+     "code": "b270",
+     "titel": "Sinnesfunktionen bezüglich Temperatur und anderer Reize",
+     "items": [
+      {
+       "inst": "PDQ-39",
+       "nr": "39",
+       "stichwort": "Unangenehm heiß oder kalt"
+      }
+     ],
+     "nurUntersuchung": false
+    },
+    {
+     "code": "b280",
+     "titel": "Schmerz",
+     "items": [
+      {
+       "inst": "PDQ-39",
+       "nr": "37",
+       "stichwort": "Schmerzhafte Muskelkrämpfe/-spasmen"
+      },
+      {
+       "inst": "PDQ-39",
+       "nr": "38",
+       "stichwort": "Gelenk- oder Körperschmerzen"
+      }
+     ],
+     "nurUntersuchung": false
+    }
+   ]
+  },
+  {
+   "id": "b3",
+   "titel": "Stimm- und Sprechfunktionen",
+   "kurz": "Stimme",
+   "comp": "b",
+   "codes": [
+    {
+     "code": "b310",
+     "titel": "Funktionen der Stimme",
+     "items": [
+      {
+       "inst": "PDQ-39",
+       "nr": "34",
+       "stichwort": "Sprechprobleme"
+      }
+     ],
+     "nurUntersuchung": false
+    },
+    {
+     "code": "b320",
+     "titel": "Artikulationsfunktionen",
+     "items": [
+      {
+       "inst": "PDQ-39",
+       "nr": "34",
+       "stichwort": "Sprechprobleme"
+      }
+     ],
+     "nurUntersuchung": false
+    }
+   ]
+  },
+  {
+   "id": "b5",
+   "titel": "Funktionen des Verdauungs-, Stoffwechsel- und endokrinen Systems",
+   "kurz": "Verdauung · Stoffw.",
+   "comp": "b",
+   "codes": [
+    {
+     "code": "b510",
+     "titel": "Funktionen der Nahrungsaufnahme",
+     "items": [],
+     "nurUntersuchung": true
+    },
+    {
+     "code": "b550",
+     "titel": "Funktionen der Wärmeregulation",
+     "items": [
+      {
+       "inst": "PDQ-39",
+       "nr": "39",
+       "stichwort": "Unangenehm heiß oder kalt"
+      }
+     ],
+     "nurUntersuchung": false
+    }
+   ]
+  },
+  {
+   "id": "b7",
+   "titel": "Neuromuskuloskeletale und bewegungsbezogene Funktionen",
+   "kurz": "Bewegung",
+   "comp": "b",
+   "codes": [
+    {
+     "code": "b735",
+     "titel": "Funktionen des Muskeltonus",
+     "items": [],
+     "nurUntersuchung": true
+    },
+    {
+     "code": "b760",
+     "titel": "Funktionen der Kontrolle von Willkürbewegungen",
+     "items": [],
+     "nurUntersuchung": true
+    },
+    {
+     "code": "b765",
+     "titel": "Funktionen der unwillkürlichen Bewegungen",
+     "items": [],
+     "nurUntersuchung": true
+    },
+    {
+     "code": "b770",
+     "titel": "Funktionen der Bewegungsmuster beim Gehen",
+     "items": [],
+     "nurUntersuchung": true
+    },
+    {
+     "code": "b780",
+     "titel": "Mit den Funktionen der Muskeln und der Bewegung in Zusammenhang stehende Empfindungen",
+     "items": [
+      {
+       "inst": "PDQ-39",
+       "nr": "37",
+       "stichwort": "Schmerzhafte Muskelkrämpfe/-spasmen"
+      }
+     ],
+     "nurUntersuchung": false
+    }
+   ]
+  },
+  {
+   "id": "d1",
+   "titel": "Lernen und Wissensanwendung",
+   "kurz": "Lernen",
+   "comp": "d",
+   "codes": [
+    {
+     "code": "d155",
+     "titel": "Sich Fertigkeiten aneignen",
+     "items": [
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D1.4",
+       "stichwort": "Neue Aufgabe lernen"
+      }
+     ],
+     "nurUntersuchung": false
+    },
+    {
+     "code": "d160",
+     "titel": "Aufmerksamkeit fokussieren",
+     "items": [
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D1.1",
+       "stichwort": "Konzentration 10 Minuten"
+      }
+     ],
+     "nurUntersuchung": false
+    },
+    {
+     "code": "d170",
+     "titel": "Schreiben",
+     "items": [
+      {
+       "inst": "PDQ-39",
+       "nr": "14",
+       "stichwort": "Leserlich schreiben"
+      }
+     ],
+     "nurUntersuchung": false
+    },
+    {
+     "code": "d175",
+     "titel": "Probleme lösen",
+     "items": [
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D1.3",
+       "stichwort": "Alltagsprobleme lösen"
+      }
+     ],
+     "nurUntersuchung": false
+    }
+   ]
+  },
+  {
+   "id": "d2",
+   "titel": "Allgemeine Aufgaben und Anforderungen",
+   "kurz": "Aufgaben",
+   "comp": "d",
+   "codes": [
+    {
+     "code": "d210",
+     "titel": "Eine Einzelaufgabe übernehmen",
+     "items": [
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D5.2",
+       "stichwort": "Wichtigste Hausarbeiten gut erledigen"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D5.3",
+       "stichwort": "Alle Hausarbeiten erledigen"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D5.4",
+       "stichwort": "Hausarbeit schnell genug erledigen"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D5.6",
+       "stichwort": "Wichtigste Arbeitsaufgaben gut erledigen"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D5.7",
+       "stichwort": "Alle Arbeit erledigen"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D5.8",
+       "stichwort": "Arbeit schnell genug erledigen"
+      }
+     ],
+     "nurUntersuchung": false
+    },
+    {
+     "code": "d220",
+     "titel": "Mehrfachaufgaben übernehmen",
+     "items": [
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D5.2",
+       "stichwort": "Wichtigste Hausarbeiten gut erledigen"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D5.3",
+       "stichwort": "Alle Hausarbeiten erledigen"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D5.4",
+       "stichwort": "Hausarbeit schnell genug erledigen"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D5.6",
+       "stichwort": "Wichtigste Arbeitsaufgaben gut erledigen"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D5.7",
+       "stichwort": "Alle Arbeit erledigen"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D5.8",
+       "stichwort": "Arbeit schnell genug erledigen"
+      }
+     ],
+     "nurUntersuchung": false
+    }
+   ]
+  },
+  {
+   "id": "d3",
+   "titel": "Kommunikation",
+   "kurz": "Kommunikation",
+   "comp": "d",
+   "codes": [
+    {
+     "code": "d310",
+     "titel": "Kommunizieren als Empfänger gesprochener Mitteilungen",
+     "items": [
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D1.5",
+       "stichwort": "Andere verstehen"
+      }
+     ],
+     "nurUntersuchung": false
+    },
+    {
+     "code": "d330",
+     "titel": "Sprechen",
+     "items": [
+      {
+       "inst": "PDQ-39",
+       "nr": "34",
+       "stichwort": "Sprechprobleme"
+      },
+      {
+       "inst": "PDQ-39",
+       "nr": "35",
+       "stichwort": "Nicht richtig kommunizieren können"
+      }
+     ],
+     "nurUntersuchung": false
+    },
+    {
+     "code": "d350",
+     "titel": "Konversation",
+     "items": [
+      {
+       "inst": "PDQ-39",
+       "nr": "35",
+       "stichwort": "Nicht richtig kommunizieren können"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D1.6",
+       "stichwort": "Gespräch beginnen und führen"
+      }
+     ],
+     "nurUntersuchung": false
+    }
+   ]
+  },
+  {
+   "id": "d4",
+   "titel": "Mobilität",
+   "kurz": "Mobilität",
+   "comp": "d",
+   "codes": [
+    {
+     "code": "d410",
+     "titel": "Eine elementare Körperposition wechseln",
+     "items": [
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D2.2",
+       "stichwort": "Aus dem Sitzen aufstehen"
+      }
+     ],
+     "nurUntersuchung": false
+    },
+    {
+     "code": "d415",
+     "titel": "In einer Körperposition verbleiben",
+     "items": [
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D2.1",
+       "stichwort": "Lange stehen (30 Min.)"
+      }
+     ],
+     "nurUntersuchung": false
+    },
+    {
+     "code": "d430",
+     "titel": "Gegenstände anheben und tragen",
+     "items": [
+      {
+       "inst": "PDQ-39",
+       "nr": "3",
+       "stichwort": "Einkaufstaschen tragen"
+      }
+     ],
+     "nurUntersuchung": false
+    },
+    {
+     "code": "d440",
+     "titel": "Feinmotorischer Handgebrauch",
+     "items": [
+      {
+       "inst": "PDQ-39",
+       "nr": "13",
+       "stichwort": "Knöpfe oder Schnürsenkel schließen"
+      },
+      {
+       "inst": "PDQ-39",
+       "nr": "14",
+       "stichwort": "Leserlich schreiben"
+      },
+      {
+       "inst": "PDQ-39",
+       "nr": "15",
+       "stichwort": "Essen schneiden"
+      },
+      {
+       "inst": "PDQ-39",
+       "nr": "16",
+       "stichwort": "Getränk halten ohne zu verschütten"
+      }
+     ],
+     "nurUntersuchung": false
+    },
+    {
+     "code": "d450",
+     "titel": "Gehen",
+     "items": [
+      {
+       "inst": "PDQ-39",
+       "nr": "4",
+       "stichwort": "Längere Strecke (ca. 800 m) gehen"
+      },
+      {
+       "inst": "PDQ-39",
+       "nr": "5",
+       "stichwort": "Kurze Strecke (ca. 100 m) gehen"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D2.5",
+       "stichwort": "Lange Strecke (1 km) gehen"
+      }
+     ],
+     "nurUntersuchung": false
+    },
+    {
+     "code": "d460",
+     "titel": "Sich in verschiedenen Umgebungen fortbewegen",
+     "items": [
+      {
+       "inst": "PDQ-39",
+       "nr": "6",
+       "stichwort": "In der Wohnung fortbewegen"
+      },
+      {
+       "inst": "PDQ-39",
+       "nr": "7",
+       "stichwort": "Sich in der Öffentlichkeit fortbewegen"
+      },
+      {
+       "inst": "PDQ-39",
+       "nr": "8",
+       "stichwort": "Begleitung beim Ausgehen nötig"
+      },
+      {
+       "inst": "PDQ-39",
+       "nr": "9",
+       "stichwort": "Sorge vor Sturz in der Öffentlichkeit"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D2.3",
+       "stichwort": "In der Wohnung fortbewegen"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D2.4",
+       "stichwort": "Das Haus verlassen"
+      }
+     ],
+     "nurUntersuchung": false
+    }
+   ]
+  },
+  {
+   "id": "d5",
+   "titel": "Selbstversorgung",
+   "kurz": "Selbstversorgung",
+   "comp": "d",
+   "codes": [
+    {
+     "code": "d510",
+     "titel": "Sich waschen",
+     "items": [
+      {
+       "inst": "PDQ-39",
+       "nr": "11",
+       "stichwort": "Sich waschen"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D3.1",
+       "stichwort": "Ganzen Körper waschen"
+      }
+     ],
+     "nurUntersuchung": false
+    },
+    {
+     "code": "d540",
+     "titel": "Sich kleiden",
+     "items": [
+      {
+       "inst": "PDQ-39",
+       "nr": "12",
+       "stichwort": "Sich anziehen"
+      },
+      {
+       "inst": "PDQ-39",
+       "nr": "13",
+       "stichwort": "Knöpfe oder Schnürsenkel schließen"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D3.2",
+       "stichwort": "Sich anziehen"
+      }
+     ],
+     "nurUntersuchung": false
+    },
+    {
+     "code": "d550",
+     "titel": "Essen",
+     "items": [
+      {
+       "inst": "PDQ-39",
+       "nr": "15",
+       "stichwort": "Essen schneiden"
+      },
+      {
+       "inst": "PDQ-39",
+       "nr": "24",
+       "stichwort": "Essen/Trinken in Öffentlichkeit meiden"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D3.3",
+       "stichwort": "Essen"
+      }
+     ],
+     "nurUntersuchung": false
+    },
+    {
+     "code": "d560",
+     "titel": "Trinken",
+     "items": [
+      {
+       "inst": "PDQ-39",
+       "nr": "16",
+       "stichwort": "Getränk halten ohne zu verschütten"
+      },
+      {
+       "inst": "PDQ-39",
+       "nr": "24",
+       "stichwort": "Essen/Trinken in Öffentlichkeit meiden"
+      }
+     ],
+     "nurUntersuchung": false
+    }
+   ]
+  },
+  {
+   "id": "d6",
+   "titel": "Häusliches Leben",
+   "kurz": "Haushalt",
+   "comp": "d",
+   "codes": [
+    {
+     "code": "d620",
+     "titel": "Waren und Dienstleistungen des täglichen Bedarfs beschaffen",
+     "items": [
+      {
+       "inst": "PDQ-39",
+       "nr": "3",
+       "stichwort": "Einkaufstaschen tragen"
+      }
+     ],
+     "nurUntersuchung": false
+    },
+    {
+     "code": "d630",
+     "titel": "Mahlzeiten vorbereiten",
+     "items": [
+      {
+       "inst": "PDQ-39",
+       "nr": "2",
+       "stichwort": "Haushalt versorgen"
+      }
+     ],
+     "nurUntersuchung": false
+    },
+    {
+     "code": "d640",
+     "titel": "Hausarbeiten erledigen",
+     "items": [
+      {
+       "inst": "PDQ-39",
+       "nr": "2",
+       "stichwort": "Haushalt versorgen"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D5.2",
+       "stichwort": "Wichtigste Hausarbeiten gut erledigen"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D5.3",
+       "stichwort": "Alle Hausarbeiten erledigen"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D5.4",
+       "stichwort": "Hausarbeit schnell genug erledigen"
+      }
+     ],
+     "nurUntersuchung": false
+    },
+    {
+     "code": "d650",
+     "titel": "Haushaltsgegenstände pflegen",
+     "items": [
+      {
+       "inst": "PDQ-39",
+       "nr": "2",
+       "stichwort": "Haushalt versorgen"
+      }
+     ],
+     "nurUntersuchung": false
+    }
+   ]
+  },
+  {
+   "id": "d7",
+   "titel": "Interpersonelle Interaktionen und Beziehungen",
+   "kurz": "Beziehungen",
+   "comp": "d",
+   "codes": [
+    {
+     "code": "d720",
+     "titel": "Komplexe interpersonelle Interaktionen",
+     "items": [
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D4.4",
+       "stichwort": "Neue Freunde finden"
+      }
+     ],
+     "nurUntersuchung": false
+    },
+    {
+     "code": "d730",
+     "titel": "Mit Fremden umgehen",
+     "items": [
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D4.1",
+       "stichwort": "Mit Fremden umgehen"
+      }
+     ],
+     "nurUntersuchung": false
+    },
+    {
+     "code": "d750",
+     "titel": "Informelle soziale Beziehungen",
+     "items": [
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D4.2",
+       "stichwort": "Freundschaft aufrechterhalten"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D4.3",
+       "stichwort": "Mit nahestehenden Menschen auskommen"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D4.4",
+       "stichwort": "Neue Freunde finden"
+      }
+     ],
+     "nurUntersuchung": false
+    },
+    {
+     "code": "d760",
+     "titel": "Familienbeziehungen",
+     "items": [
+      {
+       "inst": "PDQ-39",
+       "nr": "27",
+       "stichwort": "Probleme in engen Beziehungen"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D4.3",
+       "stichwort": "Mit nahestehenden Menschen auskommen"
+      }
+     ],
+     "nurUntersuchung": false
+    },
+    {
+     "code": "d770",
+     "titel": "Intime Beziehungen",
+     "items": [
+      {
+       "inst": "PDQ-39",
+       "nr": "27",
+       "stichwort": "Probleme in engen Beziehungen"
+      },
+      {
+       "inst": "PDQ-39",
+       "nr": "28",
+       "stichwort": "Fehlende Unterstützung durch Partner/in"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D4.3",
+       "stichwort": "Mit nahestehenden Menschen auskommen"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D4.5",
+       "stichwort": "Sexuelle Aktivitäten"
+      }
+     ],
+     "nurUntersuchung": false
+    }
+   ]
+  },
+  {
+   "id": "d8",
+   "titel": "Bedeutende Lebensbereiche",
+   "kurz": "Arbeit · Bildung",
+   "comp": "d",
+   "codes": [
+    {
+     "code": "d820",
+     "titel": "Schulbildung",
+     "items": [
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D5.5",
+       "stichwort": "Tägliche Arbeit/Ausbildung"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D5.6",
+       "stichwort": "Wichtigste Arbeitsaufgaben gut erledigen"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D5.7",
+       "stichwort": "Alle Arbeit erledigen"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D5.8",
+       "stichwort": "Arbeit schnell genug erledigen"
+      }
+     ],
+     "nurUntersuchung": false
+    },
+    {
+     "code": "d825",
+     "titel": "Theoretische Berufsausbildung",
+     "items": [
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D5.5",
+       "stichwort": "Tägliche Arbeit/Ausbildung"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D5.6",
+       "stichwort": "Wichtigste Arbeitsaufgaben gut erledigen"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D5.7",
+       "stichwort": "Alle Arbeit erledigen"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D5.8",
+       "stichwort": "Arbeit schnell genug erledigen"
+      }
+     ],
+     "nurUntersuchung": false
+    },
+    {
+     "code": "d830",
+     "titel": "Höhere Bildung und Ausbildung",
+     "items": [
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D5.5",
+       "stichwort": "Tägliche Arbeit/Ausbildung"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D5.6",
+       "stichwort": "Wichtigste Arbeitsaufgaben gut erledigen"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D5.7",
+       "stichwort": "Alle Arbeit erledigen"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D5.8",
+       "stichwort": "Arbeit schnell genug erledigen"
+      }
+     ],
+     "nurUntersuchung": false
+    },
+    {
+     "code": "d850",
+     "titel": "Bezahlte Tätigkeit",
+     "items": [
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D5.5",
+       "stichwort": "Tägliche Arbeit/Ausbildung"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D5.6",
+       "stichwort": "Wichtigste Arbeitsaufgaben gut erledigen"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D5.7",
+       "stichwort": "Alle Arbeit erledigen"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D5.8",
+       "stichwort": "Arbeit schnell genug erledigen"
+      }
+     ],
+     "nurUntersuchung": false
+    },
+    {
+     "code": "d870",
+     "titel": "Wirtschaftliche Eigenständigkeit",
+     "items": [
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D6.6",
+       "stichwort": "Finanzielle Belastung"
+      }
+     ],
+     "nurUntersuchung": false
+    }
+   ]
+  },
+  {
+   "id": "d9",
+   "titel": "Gemeinschafts-, soziales und staatsbürgerliches Leben",
+   "kurz": "Gemeinschaft",
+   "comp": "d",
+   "codes": [
+    {
+     "code": "d910",
+     "titel": "Gemeinschaftsleben",
+     "items": [
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D6.1",
+       "stichwort": "An Gemeinschaftsaktivitäten teilnehmen"
+      }
+     ],
+     "nurUntersuchung": false
+    },
+    {
+     "code": "d920",
+     "titel": "Erholung und Freizeit",
+     "items": [
+      {
+       "inst": "PDQ-39",
+       "nr": "1",
+       "stichwort": "Freizeitaktivitäten ausüben"
+      },
+      {
+       "inst": "PDQ-39",
+       "nr": "24",
+       "stichwort": "Essen/Trinken in Öffentlichkeit meiden"
+      },
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D6.8",
+       "stichwort": "Allein entspannen/Freude haben"
+      }
+     ],
+     "nurUntersuchung": false
+    },
+    {
+     "code": "d940",
+     "titel": "Menschenrechte",
+     "items": [
+      {
+       "inst": "WHODAS 2.0",
+       "nr": "D6.3",
+       "stichwort": "In Würde leben"
+      }
+     ],
+     "nurUntersuchung": false
+    }
+   ]
+  },
+  {
+   "id": "e3",
+   "titel": "Unterstützung und Beziehungen",
+   "kurz": "Unterstützung",
+   "comp": "e",
+   "codes": [
+    {
+     "code": "e310",
+     "titel": "Engster Familienkreis",
+     "items": [
+      {
+       "inst": "PDQ-39",
+       "nr": "28",
+       "stichwort": "Fehlende Unterstützung durch Partner/in"
+      },
+      {
+       "inst": "PDQ-39",
+       "nr": "29",
+       "stichwort": "Fehlende Unterstützung Familie/Freunde"
+      }
+     ],
+     "nurUntersuchung": false
+    },
+    {
+     "code": "e320",
+     "titel": "Freunde",
+     "items": [
+      {
+       "inst": "PDQ-39",
+       "nr": "29",
+       "stichwort": "Fehlende Unterstützung Familie/Freunde"
+      }
+     ],
+     "nurUntersuchung": false
+    },
+    {
+     "code": "e399",
+     "titel": "Unterstützung und Beziehungen, nicht näher bezeichnet",
+     "items": [
+      {
+       "inst": "PDQ-39",
+       "nr": "8",
+       "stichwort": "Begleitung beim Ausgehen nötig"
+      }
+     ],
+     "nurUntersuchung": false
+    }
+   ]
+  },
+  {
+   "id": "e4",
+   "titel": "Einstellungen",
+   "kurz": "Einstellungen",
+   "comp": "e",
+   "codes": [
+    {
+     "code": "e460",
+     "titel": "Gesellschaftliche Einstellungen",
+     "items": [
+      {
+       "inst": "PDQ-39",
+       "nr": "23",
+       "stichwort": "Erkrankung verbergen müssen"
+      },
+      {
+       "inst": "PDQ-39",
+       "nr": "25",
+       "stichwort": "Verlegenheit wegen Erkrankung"
+      }
+     ],
+     "nurUntersuchung": false
+    },
+    {
+     "code": "e499",
+     "titel": "Einstellungen, nicht näher bezeichnet",
+     "items": [
+      {
+       "inst": "PDQ-39",
+       "nr": "26",
+       "stichwort": "Sorge um Reaktionen anderer"
+      },
+      {
+       "inst": "PDQ-39",
+       "nr": "36",
+       "stichwort": "Sich von anderen ignoriert fühlen"
+      }
+     ],
+     "nurUntersuchung": false
+    }
+   ]
+  }
+ ]
+}

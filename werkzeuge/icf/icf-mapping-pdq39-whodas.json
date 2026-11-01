@@ -1,0 +1,2802 @@
+{
+  "meta": {
+    "stand": "2026-11-01",
+    "status": "Konzept – Linking geprüft, Korrekturen eingearbeitet (2026-11-01)",
+    "methode": "PDQ-39: Komponentenzuordnung nach Nilsson et al. 2010 (Q2, Konsens von drei Fachpersonen); Kategorien-Codes eigene Zuordnung nach den ICF-Linking-Regeln (Q1: Hauptkonzept je Item identifizieren, präziseste passende Kategorie, ‚nd‘ bei nicht definierbaren Items, personbezogene Faktoren nicht codiert). Ein publiziertes Linking der PDQ-39-Items auf Kategorien-Codes wurde NICHT gefunden. WHODAS 2.0: Zuordnung 1:1 aus der WHO-Tabelle (Üstün et al. 2010, Q3); im Feld ‚icf‘ unverkürzt; Bereiche/Kapitel (d110–d129, d510–d650, d6, d9) gesondert in ‚verdichtung_gesondert‘. Verdichtung auf 3-stellige Ebene (4-stellige Codes ihrem Elterncode zugeordnet).",
+    "rehadat_status": "REHADAT-ICF (www.rehadat-icf.de) war per WebFetch und Browser nicht abrufbar (HTTP 503, Seite ‚Security Check‘ / Bot-Schutz); eine Umgehung wurde nicht versucht. Deshalb ist KEIN Code als ‚verifiziert_rehadat: true‘ markiert. Deutsche Titel stammen aus der amtlichen deutschen ICF-Fassung des BfArM (Q8), auf der REHADAT-ICF inhaltlich basiert (Übereinstimmung nicht geprüft). REHADAT-URL-Muster …/de/klassifikation/<koerperfunktionen|aktivitaeten-partizipation>/<Kapitel>/<Code>/ ist nur für 3-stellige b- und d-Codes aus dem Suchindex belegt (englische Seiten d450, b152); die eingetragenen URLs sind daraus konstruiert und ungeprüft. Für e-Codes und 4-stellige Codes ist das Muster unbekannt (null).",
+    "urheberrecht": "Itemtexte PDQ-39 (Oxford University Innovation) und WHODAS 2.0 (WHO) nur als sinngemäße Stichworte.",
+    "quellen": [
+      {
+        "id": "Q1",
+        "zitat": "Cieza A, Fayed N, Bickenbach J, Prodinger B. Refinements of the ICF Linking Rules to strengthen their potential for establishing comparability of health information. Disabil Rehabil 2019;41(5):574–583. doi:10.3109/09638288.2016.1145258",
+        "url": "https://doi.org/10.3109/09638288.2016.1145258",
+        "hinweis": "Linking-Regeln; Zitat bestätigt über Q5 (Literaturverzeichnis), Volltext nicht selbst eingesehen"
+      },
+      {
+        "id": "Q1a",
+        "zitat": "Cieza A et al. Linking health-status measurements to the ICF. J Rehabil Med 2002;34:205–210 sowie Cieza A et al. ICF linking rules: an update based on lessons learned. J Rehabil Med 2005;37:212–218",
+        "url": null,
+        "hinweis": "Frühere Fassungen der Linking-Regeln; in Q2 und Q5 zitiert, Volltext nicht selbst eingesehen"
+      },
+      {
+        "id": "Q2",
+        "zitat": "Nilsson MH, Westergren A, Carlsson G, Hagell P. Uncovering indicators of the International Classification of Functioning, Disability, and Health from the 39-item Parkinson's Disease Questionnaire. Parkinsons Dis 2010;2010:984673. doi:10.4061/2010/984673",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2957468/",
+        "hinweis": "Einzige gefundene Linking-Studie PDQ-39 → ICF. Ordnet die 39 Items nur ICF-KOMPONENTEN zu (BF, AP, E, ND), keine Kategorien-Codes (Tabelle 2). 30 Items einer Komponente (BF 13, AP 16, E 1), 8 Items zwei Komponenten, Item 10 nicht definierbar. Konsensverfahren mit drei Forschenden (Pflege, Physio-, Ergotherapie); Verweis auf Cieza 2002/2005."
+      },
+      {
+        "id": "Q3",
+        "zitat": "Üstün TB, Chatterji S, Kostanjsek N, Rehm J, Kennedy C, Epping-Jordan J, Saxena S, von Korff M, Pull C. Developing the World Health Organization Disability Assessment Schedule 2.0. Bull World Health Organ 2010;88(11):815–823. doi:10.2471/BLT.09.067231",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2971503/",
+        "hinweis": "Tabelle 1: offizielle WHO-Zuordnung aller 36 WHODAS-Items zu ICF-Codes (Grundlage der WHODAS-Spalte)."
+      },
+      {
+        "id": "Q4",
+        "zitat": "Üstün TB, Kostanjsek N, Chatterji S, Rehm J (Hrsg.). Measuring Health and Disability: Manual for WHO Disability Assessment Schedule (WHODAS 2.0). Genf: WHO 2010. ISBN 978 92 4 154759 8",
+        "url": "https://www.who.int/publications/i/item/measuring-health-and-disability-manual-for-who-disability-assessment-schedule-(-whodas-2.0)",
+        "hinweis": "Manual: Domänen 'map directly onto ICF's Activity and participation component'; Domäne 6 schließt ausdrücklich auch Kontextfaktoren (personbezogen, Umwelt) ein. Enthält selbst keine Item-Code-Tabelle (Text durchsucht)."
+      },
+      {
+        "id": "Q5",
+        "zitat": "Rogatto FBT, Guelfi ÉTN, Alflen VEV, Silva LBB, Pereira GS, Silva SM. Linking the Pre-Assessment Information Form (PIF) to the ICF: Enhancing standardized functional assessment in Parkinson's disease. Physiother Res Int 2026;31(3):e70247. doi:10.1002/pri.70247",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13264484/",
+        "hinweis": "Wendet Cieza 2019 bei Parkinson an; nennt die PDQ-39-Linkingarbeit (Hagell et al.) als einzige frühere Instrumenten-Linking-Studie bei Parkinson. Die dort angegebene Zitation (HQLO 2008;6:74) ist uneinheitlich (Titel = Nilsson 2010) – nicht verifiziert."
+      },
+      {
+        "id": "Q6",
+        "zitat": "Frattura L, Morassutto C. Disability determination using WHODAS 2.0 and ICF: first results. Poster C525, WHO-FIC Network Annual Meeting, Mexico City 2017",
+        "url": "https://www.reteclassificazioni.it/download_doc.php?uuid=bf7bf4d8-5606-4052-b41b-bfe601603123",
+        "hinweis": "Gibt WHO-Zuordnung (nach Q3) und eine alternative Zuordnung des italienischen WHO-FIC-CC auf 3-stelliger Ebene wieder (z. B. 1.2 → d230, 3.4 → d571, 6.4 → d570)."
+      },
+      {
+        "id": "Q7",
+        "zitat": "Vojciechowski AS, Zotz TGG, Loureiro APC, Israel VL. The International Classification of Functioning, Disability and Health as applied to Parkinson's disease: a literature review. Adv Parkinsons Dis 2016;5:29–40. doi:10.4236/apd.2016.52005",
+        "url": "http://dx.doi.org/10.4236/apd.2016.52005",
+        "hinweis": "Lokale Datei .claude/context/icf-parkinson.pdf. Fasst Wynia 2006, Leonardi 2009, Raggi 2010/2011 zusammen: relevanteste ICF-Kategorien bei Parkinson (Grundlage der Lückenanalyse). Abbildung 2 (Instrumente ↔ ICF) ist als Grafik nicht textlich auslesbar."
+      },
+      {
+        "id": "Q8",
+        "zitat": "BfArM (ehem. DIMDI). ICF – Internationale Klassifikation der Funktionsfähigkeit, Behinderung und Gesundheit, deutsche Fassung, Stand Oktober 2005, HTML-Online-Version",
+        "url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/index.htm",
+        "hinweis": "ERSATZQUELLE für deutsche Code-Titel, weil REHADAT-ICF nicht abrufbar war (HTTP 503 / 'Security Check'). Alle Titel wurden maschinell aus den BfArM-Seiten ausgelesen (1.122 Codes)."
+      }
+    ],
+    "pruefung": {
+      "verfahren": "Unabhängige Zweitprüfung durch zweiten Agenten: WHODAS Item für Item gegen Üstün 2010 Tab. 1; PDQ-39-Komponenten gegen Nilsson 2010 Tab. 2; Titel gegen BfArM ICF 2005.",
+      "ergebnis": "4 Fehler, 10 Diskussionspunkte, 15 Hinweise; Fehler und Diskussionspunkte übernommen (Details in begruendung je Item).",
+      "offen": [
+        "Titelabgleich mit REHADAT-ICF manuell (Bot-Schutz, HTTP 503)",
+        "PDQ-39-Codes: eigene Zuordnung, kein publiziertes Code-Linking gefunden – fachliches Gegenlesen (PT/ET/LO/NP)",
+        "Item 27: d750 ergänzen? (dann d750 gemeinsam)",
+        "Zitation „Hagell et al. 2008“ in Rogatto 2026 ist fehlerhaft (DOI gehört zu Esch et al. 2008) – nicht verwendet"
+      ],
+      "ueberlappung_3stellig": {
+        "beide": 13,
+        "nur PDQ-39": 21,
+        "nur WHODAS 2.0": 18
+      }
+    }
+  },
+  "icf_codes": [
+    {
+      "code": "b130",
+      "titel_de": "Funktionen der psychischen Energie und des Antriebs",
+      "komponente": "b",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-b110-b139.htm#b130",
+      "rehadat_url": null,
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "b134",
+      "titel_de": "Funktionen des Schlafes",
+      "komponente": "b",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-b110-b139.htm#b134",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/koerperfunktionen/b1/b134/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "b1344",
+      "titel_de": "Am Schlafzyklus beteiligte Funktionen",
+      "komponente": "b",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-b110-b139.htm#b1344",
+      "rehadat_url": null,
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "b140",
+      "titel_de": "Funktionen der Aufmerksamkeit",
+      "komponente": "b",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-b140-b189.htm#b140",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/koerperfunktionen/b1/b140/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "b144",
+      "titel_de": "Funktionen des Gedächtnisses",
+      "komponente": "b",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-b140-b189.htm#b144",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/koerperfunktionen/b1/b144/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "b152",
+      "titel_de": "Emotionale Funktionen",
+      "komponente": "b",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-b140-b189.htm#b152",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/koerperfunktionen/b1/b152/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "b156",
+      "titel_de": "Funktionen der Wahrnehmung",
+      "komponente": "b",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-b140-b189.htm#b156",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/koerperfunktionen/b1/b156/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "b210",
+      "titel_de": "Funktionen des Sehens (Sehsinn)",
+      "komponente": "b",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-b210-b229.htm#b210",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/koerperfunktionen/b2/b210/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "b270",
+      "titel_de": "Sinnesfunktionen bezüglich Temperatur und anderer Reize",
+      "komponente": "b",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-b250-b279.htm#b270",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/koerperfunktionen/b2/b270/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "b280",
+      "titel_de": "Schmerz",
+      "komponente": "b",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-b280-b289.htm#b280",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/koerperfunktionen/b2/b280/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "b310",
+      "titel_de": "Funktionen der Stimme",
+      "komponente": "b",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/chapter-b3.htm#b310",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/koerperfunktionen/b3/b310/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "b320",
+      "titel_de": "Artikulationsfunktionen",
+      "komponente": "b",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/chapter-b3.htm#b320",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/koerperfunktionen/b3/b320/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "b455",
+      "titel_de": "Funktionen der kardiorespiratorischen Belastbarkeit",
+      "komponente": "b",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-b450-b469.htm#b455",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/koerperfunktionen/b4/b455/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "b510",
+      "titel_de": "Funktionen der Nahrungsaufnahme",
+      "komponente": "b",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-b510-b539.htm#b510",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/koerperfunktionen/b5/b510/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "b550",
+      "titel_de": "Funktionen der Wärmeregulation",
+      "komponente": "b",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-b540-b559.htm#b550",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/koerperfunktionen/b5/b550/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "b640",
+      "titel_de": "Sexuelle Funktionen",
+      "komponente": "b",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-b640-b679.htm#b640",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/koerperfunktionen/b6/b640/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "b735",
+      "titel_de": "Funktionen des Muskeltonus",
+      "komponente": "b",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-b730-b749.htm#b735",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/koerperfunktionen/b7/b735/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "b760",
+      "titel_de": "Funktionen der Kontrolle von Willkürbewegungen",
+      "komponente": "b",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-b750-b789.htm#b760",
+      "rehadat_url": null,
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "b765",
+      "titel_de": "Funktionen der unwillkürlichen Bewegungen",
+      "komponente": "b",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-b750-b789.htm#b765",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/koerperfunktionen/b7/b765/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "b770",
+      "titel_de": "Funktionen der Bewegungsmuster beim Gehen",
+      "komponente": "b",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-b750-b789.htm#b770",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/koerperfunktionen/b7/b770/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "b780",
+      "titel_de": "Mit den Funktionen der Muskeln und der Bewegung in Zusammenhang stehende Empfindungen",
+      "komponente": "b",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-b750-b789.htm#b780",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/koerperfunktionen/b7/b780/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "b7801",
+      "titel_de": "Empfindung von Muskelspasmus",
+      "komponente": "b",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-b750-b789.htm#b7801",
+      "rehadat_url": null,
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d110",
+      "titel_de": "Zuschauen",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d110-d129.htm#d110",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/aktivitaeten-partizipation/d1/d110/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d155",
+      "titel_de": "Sich Fertigkeiten aneignen",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d130-d159.htm#d155",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/aktivitaeten-partizipation/d1/d155/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d1551",
+      "titel_de": "Sich komplexe Fertigkeiten aneignen",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d130-d159.htm#d1551",
+      "rehadat_url": null,
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d160",
+      "titel_de": "Aufmerksamkeit fokussieren",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d160-d179.htm#d160",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/aktivitaeten-partizipation/d1/d160/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d170",
+      "titel_de": "Schreiben",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d160-d179.htm#d170",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/aktivitaeten-partizipation/d1/d170/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d175",
+      "titel_de": "Probleme lösen",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d160-d179.htm#d175",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/aktivitaeten-partizipation/d1/d175/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d210",
+      "titel_de": "Eine Einzelaufgabe übernehmen",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/chapter-d2.htm#d210",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/aktivitaeten-partizipation/d2/d210/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d220",
+      "titel_de": "Mehrfachaufgaben übernehmen",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/chapter-d2.htm#d220",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/aktivitaeten-partizipation/d2/d220/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d310",
+      "titel_de": "Kommunizieren als Empfänger gesprochener Mitteilungen",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d310-d329.htm#d310",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/aktivitaeten-partizipation/d3/d310/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d330",
+      "titel_de": "Sprechen",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d330-d349.htm#d330",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/aktivitaeten-partizipation/d3/d330/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d350",
+      "titel_de": "Konversation",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d350-d369.htm#d350",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/aktivitaeten-partizipation/d3/d350/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d3500",
+      "titel_de": "Eine Unterhaltung beginnen",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d350-d369.htm#d3500",
+      "rehadat_url": null,
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d3501",
+      "titel_de": "Eine Unterhaltung aufrecht erhalten",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d350-d369.htm#d3501",
+      "rehadat_url": null,
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d410",
+      "titel_de": "Eine elementare Körperposition wechseln",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d410-d429.htm#d410",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/aktivitaeten-partizipation/d4/d410/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d4104",
+      "titel_de": "Stehen",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d410-d429.htm#d4104",
+      "rehadat_url": null,
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d415",
+      "titel_de": "In einer Körperposition verbleiben",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d410-d429.htm#d415",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/aktivitaeten-partizipation/d4/d415/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d4154",
+      "titel_de": "In stehender Position verbleiben",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d410-d429.htm#d4154",
+      "rehadat_url": null,
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d430",
+      "titel_de": "Gegenstände anheben und tragen",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d430-d449.htm#d430",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/aktivitaeten-partizipation/d4/d430/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d440",
+      "titel_de": "Feinmotorischer Handgebrauch",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d430-d449.htm#d440",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/aktivitaeten-partizipation/d4/d440/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d450",
+      "titel_de": "Gehen",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d450-d469.htm#d450",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/aktivitaeten-partizipation/d4/d450/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d4500",
+      "titel_de": "Kurze Entfernungen gehen",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d450-d469.htm#d4500",
+      "rehadat_url": null,
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d4501",
+      "titel_de": "Lange Entfernungen gehen",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d450-d469.htm#d4501",
+      "rehadat_url": null,
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d460",
+      "titel_de": "Sich in verschiedenen Umgebungen fortbewegen",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d450-d469.htm#d460",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/aktivitaeten-partizipation/d4/d460/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d4600",
+      "titel_de": "Sich in seiner Wohnung umherbewegen",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d450-d469.htm#d4600",
+      "rehadat_url": null,
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d4602",
+      "titel_de": "Sich außerhalb der eigenen Wohnung und anderen Gebäuden umherbewegen",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d450-d469.htm#d4602",
+      "rehadat_url": null,
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d510",
+      "titel_de": "Sich waschen",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/chapter-d5.htm#d510",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/aktivitaeten-partizipation/d5/d510/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d5101",
+      "titel_de": "Den ganzen Körper waschen",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/chapter-d5.htm#d5101",
+      "rehadat_url": null,
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d540",
+      "titel_de": "Sich kleiden",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/chapter-d5.htm#d540",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/aktivitaeten-partizipation/d5/d540/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d550",
+      "titel_de": "Essen",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/chapter-d5.htm#d550",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/aktivitaeten-partizipation/d5/d550/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d560",
+      "titel_de": "Trinken",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/chapter-d5.htm#d560",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/aktivitaeten-partizipation/d5/d560/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d6",
+      "titel_de": "Häusliches Leben",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/component-d.htm",
+      "rehadat_url": null,
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d620",
+      "titel_de": "Waren und Dienstleistungen des täglichen Bedarfs beschaffen",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d610-d629.htm#d620",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/aktivitaeten-partizipation/d6/d620/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d630",
+      "titel_de": "Mahlzeiten vorbereiten",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d630-d649.htm#d630",
+      "rehadat_url": null,
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d640",
+      "titel_de": "Hausarbeiten erledigen",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d630-d649.htm#d640",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/aktivitaeten-partizipation/d6/d640/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d650",
+      "titel_de": "Haushaltsgegenstände pflegen",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d650-d669.htm#d650",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/aktivitaeten-partizipation/d6/d650/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d720",
+      "titel_de": "Komplexe interpersonelle Interaktionen",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d710-d729.htm#d720",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/aktivitaeten-partizipation/d7/d720/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d7200",
+      "titel_de": "Beziehungen eingehen",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d710-d729.htm#d7200",
+      "rehadat_url": null,
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d730",
+      "titel_de": "Mit Fremden umgehen",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d730-d779.htm#d730",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/aktivitaeten-partizipation/d7/d730/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d750",
+      "titel_de": "Informelle soziale Beziehungen",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d730-d779.htm#d750",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/aktivitaeten-partizipation/d7/d750/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d7500",
+      "titel_de": "Informelle Beziehungen zu Freunden",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d730-d779.htm#d7500",
+      "rehadat_url": null,
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d760",
+      "titel_de": "Familienbeziehungen",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d730-d779.htm#d760",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/aktivitaeten-partizipation/d7/d760/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d770",
+      "titel_de": "Intime Beziehungen",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d730-d779.htm#d770",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/aktivitaeten-partizipation/d7/d770/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d7702",
+      "titel_de": "Sexualbeziehungen",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d730-d779.htm#d7702",
+      "rehadat_url": null,
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d820",
+      "titel_de": "Schulbildung",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d810-d839.htm#d820",
+      "rehadat_url": null,
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d825",
+      "titel_de": "Theoretische Berufsausbildung",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d810-d839.htm#d825",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/aktivitaeten-partizipation/d8/d825/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d830",
+      "titel_de": "Höhere Bildung und Ausbildung",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d810-d839.htm#d830",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/aktivitaeten-partizipation/d8/d830/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d850",
+      "titel_de": "Bezahlte Tätigkeit",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d840-d859.htm#d850",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/aktivitaeten-partizipation/d8/d850/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d870",
+      "titel_de": "Wirtschaftliche Eigenständigkeit",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d860-d879.htm#d870",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/aktivitaeten-partizipation/d8/d870/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d8700",
+      "titel_de": "Persönliche wirtschaftliche Ressourcen",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/block-d860-d879.htm#d8700",
+      "rehadat_url": null,
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d9",
+      "titel_de": "Gemeinschafts-, soziales und staatsbürgerliches Leben",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/component-d.htm",
+      "rehadat_url": null,
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d910",
+      "titel_de": "Gemeinschaftsleben",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/chapter-d9.htm#d910",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/aktivitaeten-partizipation/d9/d910/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d920",
+      "titel_de": "Erholung und Freizeit",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/chapter-d9.htm#d920",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/aktivitaeten-partizipation/d9/d920/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d9205",
+      "titel_de": "Geselligkeit",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/chapter-d9.htm#d9205",
+      "rehadat_url": null,
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "d940",
+      "titel_de": "Menschenrechte",
+      "komponente": "d",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/chapter-d9.htm#d940",
+      "rehadat_url": "https://www.rehadat-icf.de/de/klassifikation/aktivitaeten-partizipation/d9/d940/",
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "e110",
+      "titel_de": "Produkte und Substanzen für den persönlichen Verbrauch",
+      "komponente": "e",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/chapter-e1.htm#e110",
+      "rehadat_url": null,
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "e225",
+      "titel_de": "Klima",
+      "komponente": "e",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/chapter-e2.htm#e225",
+      "rehadat_url": null,
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "e310",
+      "titel_de": "Engster Familienkreis",
+      "komponente": "e",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/chapter-e3.htm#e310",
+      "rehadat_url": null,
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "e320",
+      "titel_de": "Freunde",
+      "komponente": "e",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/chapter-e3.htm#e320",
+      "rehadat_url": null,
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "e399",
+      "titel_de": "Unterstützung und Beziehungen, nicht näher bezeichnet",
+      "komponente": "e",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/chapter-e3.htm#e399",
+      "rehadat_url": null,
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "e460",
+      "titel_de": "Gesellschaftliche Einstellungen",
+      "komponente": "e",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/chapter-e4.htm#e460",
+      "rehadat_url": null,
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "e499",
+      "titel_de": "Einstellungen, nicht näher bezeichnet",
+      "komponente": "e",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/chapter-e4.htm#e499",
+      "rehadat_url": null,
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "e540",
+      "titel_de": "Dienste, Systeme und Handlungsgrundsätze des Transportwesens",
+      "komponente": "e",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/chapter-e5.htm#e540",
+      "rehadat_url": null,
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "e570",
+      "titel_de": "Dienste, Systeme und Handlungsgrundsätze der sozialen Sicherheit",
+      "komponente": "e",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/chapter-e5.htm#e570",
+      "rehadat_url": null,
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    },
+    {
+      "code": "e580",
+      "titel_de": "Dienste, Systeme und Handlungsgrundsätze des Gesundheitswesens",
+      "komponente": "e",
+      "bfarm_url": "https://klassifikationen.bfarm.de/icf/icfhtml2005/chapter-e5.htm#e580",
+      "rehadat_url": null,
+      "verifiziert_rehadat": false,
+      "verifiziert_bfarm": true
+    }
+  ],
+  "instrumente": {
+    "PDQ-39": {
+      "dimensionen": [
+        {
+          "name": "Mobilität",
+          "items": [
+            {
+              "nr": 1,
+              "stichwort": "Freizeitaktivitäten ausüben",
+              "icf": [
+                "d920"
+              ],
+              "nilsson_komponente": "AP",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": false,
+              "begruendung": "Freizeit = d920 Erholung und Freizeit (Hauptkonzept des Items)."
+            },
+            {
+              "nr": 2,
+              "stichwort": "Haushalt versorgen",
+              "icf": [
+                "d640",
+                "d630",
+                "d650"
+              ],
+              "nilsson_komponente": "AP",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": false,
+              "begruendung": "Hausarbeit (d640); Pflege von Haus/Gegenständen (d650) als Nebenkonzept. Prüfung: Kochen im Item genannt → d630 ergänzt."
+            },
+            {
+              "nr": 3,
+              "stichwort": "Einkaufstaschen tragen",
+              "icf": [
+                "d430",
+                "d620"
+              ],
+              "nilsson_komponente": "AP",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": false,
+              "begruendung": "Tragen von Gegenständen (d430) als Hauptkonzept; Einkaufskontext d620 als Nebenkonzept."
+            },
+            {
+              "nr": 4,
+              "stichwort": "Längere Strecke (ca. 800 m) gehen",
+              "icf": [
+                "d4500"
+              ],
+              "nilsson_komponente": "AP",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": false,
+              "begruendung": "Gehen (d450). Die Distanz (ca. 800 m) liegt nach ICF-Definition unter 1 km und fällt damit formal unter d4500 ‚Kurze Entfernungen gehen‘, obwohl das Item als ‚längere Strecke‘ gemeint ist; daher 3-stellig d450 als Hauptcode. Prüfung: nur d4500 (ca. 800 m < 1 km); kein Parallel-Link auf zwei Ebenen.",
+              "hinweis": "Inhaltlicher Unterschied zu WHODAS D2.5 (d4501, ≥ 1 km) beachten."
+            },
+            {
+              "nr": 5,
+              "stichwort": "Kurze Strecke (ca. 100 m) gehen",
+              "icf": [
+                "d4500"
+              ],
+              "nilsson_komponente": "AP",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": false,
+              "begruendung": "Kurze Entfernung (< 1 km laut ICF-Definition) → d4500."
+            },
+            {
+              "nr": 6,
+              "stichwort": "In der Wohnung fortbewegen",
+              "icf": [
+                "d4600"
+              ],
+              "nilsson_komponente": "AP",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": false,
+              "begruendung": "Eindeutig d4600 Sich in seiner Wohnung umherbewegen."
+            },
+            {
+              "nr": 7,
+              "stichwort": "Sich in der Öffentlichkeit fortbewegen",
+              "icf": [
+                "d4602"
+              ],
+              "nilsson_komponente": "AP",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": false,
+              "begruendung": "Fortbewegung außer Haus → d4602."
+            },
+            {
+              "nr": 8,
+              "stichwort": "Begleitung beim Ausgehen nötig",
+              "icf": [
+                "d4602",
+                "e399"
+              ],
+              "nilsson_komponente": "AP + E",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": true,
+              "begruendung": "Nilsson: AP + E. Aktivität = Fortbewegung außer Haus (d4602); Umweltfaktor = begleitende Person (e340 bzw. e310). Welche e3-Kategorie, ist aus dem Item nicht bestimmbar. Prüfung: Begleitperson unbestimmt → e399 statt e340/e310."
+            },
+            {
+              "nr": 9,
+              "stichwort": "Sorge vor Sturz in der Öffentlichkeit",
+              "icf": [
+                "b152",
+                "d4602"
+              ],
+              "nilsson_komponente": "BF + AP",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": false,
+              "begruendung": "Nilsson: BF + AP. Sorge/Angst = b152 (Inkl. ‚Furcht, Angst, Sorgen‘); Kontext Fortbewegung außer Haus d4602."
+            },
+            {
+              "nr": 10,
+              "stichwort": "An das Haus gebunden",
+              "icf": [],
+              "nilsson_komponente": "ND",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": true,
+              "begruendung": "Nilsson: ‚nicht definierbar‘. Eigene vorläufige Zuordnung: Einschränkung, das Haus zu verlassen (d4602), Folge für Gemeinschaftsleben (d910). Nach Cieza 2019 ggf. als ‚nd‘ (not definable) zu belassen. Prüfung: nach Nilsson 2010 nicht definierbar (nd); hilfsweise d4602.",
+              "nd": true,
+              "hilfsweise": [
+                "d4602"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Alltagsaktivitäten",
+          "items": [
+            {
+              "nr": 11,
+              "stichwort": "Sich waschen",
+              "icf": [
+                "d510"
+              ],
+              "nilsson_komponente": "AP",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": false,
+              "begruendung": "Eindeutig d510 Sich waschen."
+            },
+            {
+              "nr": 12,
+              "stichwort": "Sich anziehen",
+              "icf": [
+                "d540"
+              ],
+              "nilsson_komponente": "AP",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": false,
+              "begruendung": "Eindeutig d540 Sich kleiden."
+            },
+            {
+              "nr": 13,
+              "stichwort": "Knöpfe oder Schnürsenkel schließen",
+              "icf": [
+                "d540",
+                "d440"
+              ],
+              "nilsson_komponente": "AP",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": false,
+              "begruendung": "Teilaufgabe des Ankleidens (d540) mit feinmotorischem Handgebrauch (d440)."
+            },
+            {
+              "nr": 14,
+              "stichwort": "Leserlich schreiben",
+              "icf": [
+                "d440",
+                "d170"
+              ],
+              "nilsson_komponente": "AP",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": false,
+              "begruendung": "Schreiben als Aktivität (d170); motorische Komponente d440. Mikrographie wäre Körperfunktion (b760), im Item nicht benannt. Prüfung: Leserlichkeit = Feinmotorik (d440) vor d170 (Inhalt des Schreibens)."
+            },
+            {
+              "nr": 15,
+              "stichwort": "Essen schneiden",
+              "icf": [
+                "d550",
+                "d440"
+              ],
+              "nilsson_komponente": "AP",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": false,
+              "begruendung": "ICF d550 schließt ausdrücklich ‚Nahrungsmittel in Stücke zu schneiden‘ ein; d440 als Nebenkonzept."
+            },
+            {
+              "nr": 16,
+              "stichwort": "Getränk halten ohne zu verschütten",
+              "icf": [
+                "d560",
+                "d440"
+              ],
+              "nilsson_komponente": "AP",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": false,
+              "begruendung": "Trinken (d560) mit Handhabung des Gefäßes (d440). Ursache (z. B. Tremor b765) im Item nicht genannt → nicht gelinkt."
+            }
+          ]
+        },
+        {
+          "name": "Emotionales Wohlbefinden",
+          "items": [
+            {
+              "nr": 17,
+              "stichwort": "Niedergeschlagen/deprimiert",
+              "icf": [
+                "b152"
+              ],
+              "nilsson_komponente": "BF",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": false,
+              "begruendung": "Affekt/Trauer → b152."
+            },
+            {
+              "nr": 18,
+              "stichwort": "Isoliert und einsam",
+              "icf": [
+                "b152"
+              ],
+              "nilsson_komponente": "BF",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": true,
+              "begruendung": "Nilsson: BF → b152 (Gefühl der Einsamkeit). Alternativ Bezug zu d7 (Beziehungen) denkbar; hier nicht gelinkt, da Gefühl im Vordergrund."
+            },
+            {
+              "nr": 19,
+              "stichwort": "Weinerlich",
+              "icf": [
+                "b152"
+              ],
+              "nilsson_komponente": "BF",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": false,
+              "begruendung": "Affektlabilität → b152."
+            },
+            {
+              "nr": 20,
+              "stichwort": "Ärgerlich oder verbittert",
+              "icf": [
+                "b152"
+              ],
+              "nilsson_komponente": "BF",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": false,
+              "begruendung": "Ärger → b152."
+            },
+            {
+              "nr": 21,
+              "stichwort": "Ängstlich",
+              "icf": [
+                "b152"
+              ],
+              "nilsson_komponente": "BF",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": false,
+              "begruendung": "Angst → b152."
+            },
+            {
+              "nr": 22,
+              "stichwort": "Sorgen um die Zukunft",
+              "icf": [
+                "b152"
+              ],
+              "nilsson_komponente": "BF",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": false,
+              "begruendung": "Sorgen → b152 (Inkl.). Zukunftserwartung als personbezogener Faktor nicht codierbar."
+            }
+          ]
+        },
+        {
+          "name": "Stigma",
+          "items": [
+            {
+              "nr": 23,
+              "stichwort": "Erkrankung verbergen müssen",
+              "icf": [
+                "b152",
+                "e460"
+              ],
+              "nilsson_komponente": "BF + E",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": true,
+              "begruendung": "Nilsson: BF + E. Emotion (b152) und gesellschaftliche Einstellungen (e460). Bewältigungsstil = personbezogener Faktor (nicht codiert)."
+            },
+            {
+              "nr": 24,
+              "stichwort": "Essen/Trinken in Öffentlichkeit meiden",
+              "icf": [
+                "d550",
+                "d560",
+                "d9205"
+              ],
+              "nilsson_komponente": "AP",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": true,
+              "begruendung": "Nilsson: AP. Vermiedene Aktivitäten d550/d560 im öffentlichen Rahmen; d910 als Teilhabe-Aspekt fraglich. Prüfung: d910 durch d9205 Geselligkeit ersetzt."
+            },
+            {
+              "nr": 25,
+              "stichwort": "Verlegenheit wegen Erkrankung",
+              "icf": [
+                "b152",
+                "e460"
+              ],
+              "nilsson_komponente": "BF + E",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": false,
+              "begruendung": "Nilsson: BF + E. Scham → b152; gesellschaftlicher Kontext e460."
+            },
+            {
+              "nr": 26,
+              "stichwort": "Sorge um Reaktionen anderer",
+              "icf": [
+                "b152",
+                "e499"
+              ],
+              "nilsson_komponente": "BF + E",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": true,
+              "begruendung": "Nilsson: BF + E. Sorge → b152; Einstellungen anderer → e4 (e460 gewählt; e425/e445 je nach Personengruppe möglich). Prüfung: unbestimmte Personen → e499 statt e460 (gesellschaftliche Einstellungen)."
+            }
+          ]
+        },
+        {
+          "name": "Soziale Unterstützung",
+          "items": [
+            {
+              "nr": 27,
+              "stichwort": "Probleme in engen Beziehungen",
+              "icf": [
+                "d760",
+                "d770"
+              ],
+              "nilsson_komponente": "AP",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": false,
+              "begruendung": "Nilsson: AP. Familien- (d760) und intime Beziehungen (d770)."
+            },
+            {
+              "nr": 28,
+              "stichwort": "Fehlende Unterstützung durch Partner/in",
+              "icf": [
+                "e310",
+                "d770"
+              ],
+              "nilsson_komponente": "AP + E",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": false,
+              "begruendung": "Nilsson: AP + E. Partner/in gehört zu e310 Engster Familienkreis; Einstellung e410; Beziehung d770. Prüfung: e410 als Overlinking entfernt."
+            },
+            {
+              "nr": 29,
+              "stichwort": "Fehlende Unterstützung Familie/Freunde",
+              "icf": [
+                "e310",
+                "e320"
+              ],
+              "nilsson_komponente": "E",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": false,
+              "begruendung": "Nilsson: E. Unterstützung durch Familie (e310) und Freunde (e320)."
+            }
+          ]
+        },
+        {
+          "name": "Kognition",
+          "items": [
+            {
+              "nr": 30,
+              "stichwort": "Unerwartet tagsüber eingeschlafen",
+              "icf": [
+                "b134"
+              ],
+              "nilsson_komponente": "BF",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": true,
+              "begruendung": "Nilsson: BF. b134 schließt ‚Hypersomnie, Narkolepsie‘ ein; b110 schließt Schlaf aus → b134. Nachtschlaf selbst wird nicht erfragt."
+            },
+            {
+              "nr": 31,
+              "stichwort": "Konzentrationsprobleme",
+              "icf": [
+                "b140"
+              ],
+              "nilsson_komponente": "BF",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": false,
+              "begruendung": "Konzentration = b140 Funktionen der Aufmerksamkeit."
+            },
+            {
+              "nr": 32,
+              "stichwort": "Schlechtes Gedächtnis",
+              "icf": [
+                "b144"
+              ],
+              "nilsson_komponente": "BF",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": false,
+              "begruendung": "Eindeutig b144."
+            },
+            {
+              "nr": 33,
+              "stichwort": "Belastende Träume oder Halluzinationen",
+              "icf": [
+                "b156",
+                "b1344"
+              ],
+              "nilsson_komponente": "BF",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": true,
+              "begruendung": "Halluzinationen sind in b156 ausdrücklich eingeschlossen; Träume → Schlafzyklus b1344. Zwei verschiedene Konzepte in einem Item."
+            }
+          ]
+        },
+        {
+          "name": "Kommunikation",
+          "items": [
+            {
+              "nr": 34,
+              "stichwort": "Sprechprobleme",
+              "icf": [
+                "b320",
+                "b310",
+                "d330"
+              ],
+              "nilsson_komponente": "BF + AP",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": false,
+              "begruendung": "Nilsson: BF + AP. Artikulation (b320), Stimme (b310), Aktivität Sprechen (d330)."
+            },
+            {
+              "nr": 35,
+              "stichwort": "Nicht richtig kommunizieren können",
+              "icf": [
+                "d350",
+                "d330"
+              ],
+              "nilsson_komponente": "AP",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": false,
+              "begruendung": "Nilsson: AP. Konversation (d350) mit Sprechen (d330)."
+            },
+            {
+              "nr": 36,
+              "stichwort": "Sich von anderen ignoriert fühlen",
+              "icf": [
+                "b152",
+                "e499"
+              ],
+              "nilsson_komponente": "BF + E",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": true,
+              "begruendung": "Nilsson: BF + E. Gefühl → b152; Verhalten/Einstellung anderer → e4 (e460 als Platzhalter, Personengruppe unbestimmt). Prüfung: unbestimmte Personen → e499 statt e460."
+            }
+          ]
+        },
+        {
+          "name": "Körperliche Beschwerden",
+          "items": [
+            {
+              "nr": 37,
+              "stichwort": "Schmerzhafte Muskelkrämpfe/-spasmen",
+              "icf": [
+                "b280",
+                "b7801"
+              ],
+              "nilsson_komponente": "BF",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": false,
+              "begruendung": "Nilsson: BF. Schmerz (b280); ‚Empfindung von Muskelspasmus‘ (b7801). Ursache (z. B. Off-Dystonie, b765) im Item nicht benannt."
+            },
+            {
+              "nr": 38,
+              "stichwort": "Gelenk- oder Körperschmerzen",
+              "icf": [
+                "b280"
+              ],
+              "nilsson_komponente": "BF",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": false,
+              "begruendung": "Eindeutig b280 Schmerz."
+            },
+            {
+              "nr": 39,
+              "stichwort": "Unangenehm heiß oder kalt",
+              "icf": [
+                "b550",
+                "b270"
+              ],
+              "nilsson_komponente": "BF",
+              "quelle": "Q2 (Komponente) + eigene Zuordnung nach Linking-Regeln Q1 (Kategorie)",
+              "unsicher": true,
+              "begruendung": "Nilsson: BF. Wärmeregulation (b550) vs. Temperaturempfindung (b270) – Item unterscheidet nicht."
+            }
+          ]
+        }
+      ]
+    },
+    "WHODAS 2.0": {
+      "version": "36 Items; D5.5–D5.8 nur bei Erwerbstätigkeit/Ausbildung",
+      "domaenen": [
+        {
+          "name": "D1 Kognition",
+          "items": [
+            {
+              "nr": "D1.1",
+              "stichwort": "Konzentration 10 Minuten",
+              "icf": [
+                "d160",
+                "b140",
+                "d110–d129"
+              ],
+              "icf_who_original": [
+                "d160",
+                "b140",
+                "d110–d129"
+              ],
+              "quelle": "Q3 (WHO-Zuordnung, Tabelle 1)",
+              "unsicher": false,
+              "begruendung": "WHO-Zuordnung (Üstün et al. 2010, Tab. 1), unverkürzt übernommen."
+            },
+            {
+              "nr": "D1.2",
+              "stichwort": "An Wichtiges denken (Gedächtnis)",
+              "icf": [
+                "b144"
+              ],
+              "icf_who_original": [
+                "b144"
+              ],
+              "quelle": "Q3 (WHO-Zuordnung, Tabelle 1)",
+              "unsicher": false,
+              "begruendung": "WHO-Zuordnung (Üstün et al. 2010, Tab. 1), unverkürzt übernommen."
+            },
+            {
+              "nr": "D1.3",
+              "stichwort": "Alltagsprobleme lösen",
+              "icf": [
+                "d175",
+                "d130–d159"
+              ],
+              "icf_who_original": [
+                "d175",
+                "d130–d159"
+              ],
+              "quelle": "Q3 (WHO-Zuordnung, Tabelle 1)",
+              "unsicher": false,
+              "begruendung": "WHO-Zuordnung (Üstün et al. 2010, Tab. 1), unverkürzt übernommen."
+            },
+            {
+              "nr": "D1.4",
+              "stichwort": "Neue Aufgabe lernen",
+              "icf": [
+                "d1551"
+              ],
+              "icf_who_original": [
+                "d1551"
+              ],
+              "quelle": "Q3 (WHO-Zuordnung, Tabelle 1)",
+              "unsicher": false,
+              "begruendung": "WHO-Zuordnung (Üstün et al. 2010, Tab. 1), unverkürzt übernommen."
+            },
+            {
+              "nr": "D1.5",
+              "stichwort": "Andere verstehen",
+              "icf": [
+                "d310"
+              ],
+              "icf_who_original": [
+                "d310"
+              ],
+              "quelle": "Q3 (WHO-Zuordnung, Tabelle 1)",
+              "unsicher": false,
+              "begruendung": "WHO-Zuordnung (Üstün et al. 2010, Tab. 1), unverkürzt übernommen."
+            },
+            {
+              "nr": "D1.6",
+              "stichwort": "Gespräch beginnen und führen",
+              "icf": [
+                "d3500",
+                "d3501"
+              ],
+              "icf_who_original": [
+                "d3500",
+                "d3501"
+              ],
+              "quelle": "Q3 (WHO-Zuordnung, Tabelle 1)",
+              "unsicher": false,
+              "begruendung": "WHO-Zuordnung (Üstün et al. 2010, Tab. 1), unverkürzt übernommen."
+            }
+          ]
+        },
+        {
+          "name": "D2 Mobilität",
+          "items": [
+            {
+              "nr": "D2.1",
+              "stichwort": "Lange stehen (30 Min.)",
+              "icf": [
+                "d4154"
+              ],
+              "icf_who_original": [
+                "d4154"
+              ],
+              "quelle": "Q3 (WHO-Zuordnung, Tabelle 1)",
+              "unsicher": false,
+              "begruendung": "WHO-Zuordnung (Üstün et al. 2010, Tab. 1), unverkürzt übernommen."
+            },
+            {
+              "nr": "D2.2",
+              "stichwort": "Aus dem Sitzen aufstehen",
+              "icf": [
+                "d4104"
+              ],
+              "icf_who_original": [
+                "d4104"
+              ],
+              "quelle": "Q3 (WHO-Zuordnung, Tabelle 1)",
+              "unsicher": false,
+              "begruendung": "WHO-Zuordnung (Üstün et al. 2010, Tab. 1), unverkürzt übernommen."
+            },
+            {
+              "nr": "D2.3",
+              "stichwort": "In der Wohnung fortbewegen",
+              "icf": [
+                "d4600"
+              ],
+              "icf_who_original": [
+                "d4600"
+              ],
+              "quelle": "Q3 (WHO-Zuordnung, Tabelle 1)",
+              "unsicher": false,
+              "begruendung": "WHO-Zuordnung (Üstün et al. 2010, Tab. 1), unverkürzt übernommen."
+            },
+            {
+              "nr": "D2.4",
+              "stichwort": "Das Haus verlassen",
+              "icf": [
+                "d4602"
+              ],
+              "icf_who_original": [
+                "d4602"
+              ],
+              "quelle": "Q3 (WHO-Zuordnung, Tabelle 1)",
+              "unsicher": false,
+              "begruendung": "WHO-Zuordnung (Üstün et al. 2010, Tab. 1), unverkürzt übernommen."
+            },
+            {
+              "nr": "D2.5",
+              "stichwort": "Lange Strecke (1 km) gehen",
+              "icf": [
+                "d4501"
+              ],
+              "icf_who_original": [
+                "d4501"
+              ],
+              "quelle": "Q3 (WHO-Zuordnung, Tabelle 1)",
+              "unsicher": false,
+              "begruendung": "WHO-Zuordnung (Üstün et al. 2010, Tab. 1), unverkürzt übernommen."
+            }
+          ]
+        },
+        {
+          "name": "D3 Selbstversorgung",
+          "items": [
+            {
+              "nr": "D3.1",
+              "stichwort": "Ganzen Körper waschen",
+              "icf": [
+                "d5101"
+              ],
+              "icf_who_original": [
+                "d5101"
+              ],
+              "quelle": "Q3 (WHO-Zuordnung, Tabelle 1)",
+              "unsicher": false,
+              "begruendung": "WHO-Zuordnung (Üstün et al. 2010, Tab. 1), unverkürzt übernommen."
+            },
+            {
+              "nr": "D3.2",
+              "stichwort": "Sich anziehen",
+              "icf": [
+                "d540"
+              ],
+              "icf_who_original": [
+                "d540"
+              ],
+              "quelle": "Q3 (WHO-Zuordnung, Tabelle 1)",
+              "unsicher": false,
+              "begruendung": "WHO-Zuordnung (Üstün et al. 2010, Tab. 1), unverkürzt übernommen."
+            },
+            {
+              "nr": "D3.3",
+              "stichwort": "Essen",
+              "icf": [
+                "d550"
+              ],
+              "icf_who_original": [
+                "d550"
+              ],
+              "quelle": "Q3 (WHO-Zuordnung, Tabelle 1)",
+              "unsicher": false,
+              "begruendung": "WHO-Zuordnung (Üstün et al. 2010, Tab. 1), unverkürzt übernommen."
+            },
+            {
+              "nr": "D3.4",
+              "stichwort": "Einige Tage allein zurechtkommen",
+              "icf": [
+                "d510–d650"
+              ],
+              "icf_who_original": [
+                "d510–d650"
+              ],
+              "quelle": "Q3 (WHO-Zuordnung, Tabelle 1)",
+              "unsicher": true,
+              "begruendung": "WHO-Zuordnung (Üstün et al. 2010, Tab. 1), unverkürzt übernommen."
+            }
+          ]
+        },
+        {
+          "name": "D4 Umgang mit anderen",
+          "items": [
+            {
+              "nr": "D4.1",
+              "stichwort": "Mit Fremden umgehen",
+              "icf": [
+                "d730"
+              ],
+              "icf_who_original": [
+                "d730"
+              ],
+              "quelle": "Q3 (WHO-Zuordnung, Tabelle 1)",
+              "unsicher": false,
+              "begruendung": "WHO-Zuordnung (Üstün et al. 2010, Tab. 1), unverkürzt übernommen."
+            },
+            {
+              "nr": "D4.2",
+              "stichwort": "Freundschaft aufrechterhalten",
+              "icf": [
+                "d7500"
+              ],
+              "icf_who_original": [
+                "d7500"
+              ],
+              "quelle": "Q3 (WHO-Zuordnung, Tabelle 1)",
+              "unsicher": false,
+              "begruendung": "WHO-Zuordnung (Üstün et al. 2010, Tab. 1), unverkürzt übernommen."
+            },
+            {
+              "nr": "D4.3",
+              "stichwort": "Mit nahestehenden Menschen auskommen",
+              "icf": [
+                "d760",
+                "d770",
+                "d750"
+              ],
+              "icf_who_original": [
+                "d760",
+                "d770",
+                "d750"
+              ],
+              "quelle": "Q3 (WHO-Zuordnung, Tabelle 1)",
+              "unsicher": false,
+              "begruendung": "WHO-Zuordnung (Üstün et al. 2010, Tab. 1), unverkürzt übernommen."
+            },
+            {
+              "nr": "D4.4",
+              "stichwort": "Neue Freunde finden",
+              "icf": [
+                "d7500",
+                "d7200"
+              ],
+              "icf_who_original": [
+                "d7500",
+                "d7200"
+              ],
+              "quelle": "Q3 (WHO-Zuordnung, Tabelle 1)",
+              "unsicher": false,
+              "begruendung": "WHO-Zuordnung (Üstün et al. 2010, Tab. 1), unverkürzt übernommen."
+            },
+            {
+              "nr": "D4.5",
+              "stichwort": "Sexuelle Aktivitäten",
+              "icf": [
+                "d7702"
+              ],
+              "icf_who_original": [
+                "d7702"
+              ],
+              "quelle": "Q3 (WHO-Zuordnung, Tabelle 1)",
+              "unsicher": false,
+              "begruendung": "WHO-Zuordnung (Üstün et al. 2010, Tab. 1), unverkürzt übernommen."
+            }
+          ]
+        },
+        {
+          "name": "D5 Alltagsaktivitäten (Haushalt/Arbeit)",
+          "items": [
+            {
+              "nr": "D5.1",
+              "stichwort": "Haushaltspflichten erfüllen",
+              "icf": [
+                "d6"
+              ],
+              "icf_who_original": [
+                "d6"
+              ],
+              "quelle": "Q3 (WHO-Zuordnung, Tabelle 1)",
+              "unsicher": false,
+              "begruendung": "WHO-Zuordnung (Üstün et al. 2010, Tab. 1), unverkürzt übernommen."
+            },
+            {
+              "nr": "D5.2",
+              "stichwort": "Wichtigste Hausarbeiten gut erledigen",
+              "icf": [
+                "d640",
+                "d210",
+                "d220"
+              ],
+              "icf_who_original": [
+                "d640",
+                "d210",
+                "d220"
+              ],
+              "quelle": "Q3 (WHO-Zuordnung, Tabelle 1)",
+              "unsicher": false,
+              "begruendung": "WHO-Zuordnung (Üstün et al. 2010, Tab. 1), unverkürzt übernommen."
+            },
+            {
+              "nr": "D5.3",
+              "stichwort": "Alle Hausarbeiten erledigen",
+              "icf": [
+                "d640",
+                "d210",
+                "d220"
+              ],
+              "icf_who_original": [
+                "d640",
+                "d210",
+                "d220"
+              ],
+              "quelle": "Q3 (WHO-Zuordnung, Tabelle 1)",
+              "unsicher": false,
+              "begruendung": "WHO-Zuordnung (Üstün et al. 2010, Tab. 1), unverkürzt übernommen."
+            },
+            {
+              "nr": "D5.4",
+              "stichwort": "Hausarbeit schnell genug erledigen",
+              "icf": [
+                "d640",
+                "d210",
+                "d220"
+              ],
+              "icf_who_original": [
+                "d640",
+                "d210",
+                "d220"
+              ],
+              "quelle": "Q3 (WHO-Zuordnung, Tabelle 1)",
+              "unsicher": false,
+              "begruendung": "WHO-Zuordnung (Üstün et al. 2010, Tab. 1), unverkürzt übernommen."
+            },
+            {
+              "nr": "D5.5",
+              "stichwort": "Tägliche Arbeit/Ausbildung",
+              "icf": [
+                "d850",
+                "d830",
+                "d825",
+                "d820"
+              ],
+              "icf_who_original": [
+                "d850",
+                "d830",
+                "d825",
+                "d820"
+              ],
+              "quelle": "Q3 (WHO-Zuordnung, Tabelle 1)",
+              "unsicher": false,
+              "begruendung": "WHO-Zuordnung (Üstün et al. 2010, Tab. 1), unverkürzt übernommen."
+            },
+            {
+              "nr": "D5.6",
+              "stichwort": "Wichtigste Arbeitsaufgaben gut erledigen",
+              "icf": [
+                "d850",
+                "d830",
+                "d825",
+                "d820",
+                "d210",
+                "d220"
+              ],
+              "icf_who_original": [
+                "d850",
+                "d830",
+                "d825",
+                "d820",
+                "d210",
+                "d220"
+              ],
+              "quelle": "Q3 (WHO-Zuordnung, Tabelle 1)",
+              "unsicher": false,
+              "begruendung": "WHO-Zuordnung (Üstün et al. 2010, Tab. 1), unverkürzt übernommen."
+            },
+            {
+              "nr": "D5.7",
+              "stichwort": "Alle Arbeit erledigen",
+              "icf": [
+                "d850",
+                "d830",
+                "d825",
+                "d820",
+                "d210",
+                "d220"
+              ],
+              "icf_who_original": [
+                "d850",
+                "d830",
+                "d825",
+                "d820",
+                "d210",
+                "d220"
+              ],
+              "quelle": "Q3 (WHO-Zuordnung, Tabelle 1)",
+              "unsicher": false,
+              "begruendung": "WHO-Zuordnung (Üstün et al. 2010, Tab. 1), unverkürzt übernommen."
+            },
+            {
+              "nr": "D5.8",
+              "stichwort": "Arbeit schnell genug erledigen",
+              "icf": [
+                "d850",
+                "d830",
+                "d825",
+                "d820",
+                "d210",
+                "d220"
+              ],
+              "icf_who_original": [
+                "d850",
+                "d830",
+                "d825",
+                "d820",
+                "d210",
+                "d220"
+              ],
+              "quelle": "Q3 (WHO-Zuordnung, Tabelle 1)",
+              "unsicher": false,
+              "begruendung": "WHO-Zuordnung (Üstün et al. 2010, Tab. 1), unverkürzt übernommen."
+            }
+          ]
+        },
+        {
+          "name": "D6 Teilhabe",
+          "items": [
+            {
+              "nr": "D6.1",
+              "stichwort": "An Gemeinschaftsaktivitäten teilnehmen",
+              "icf": [
+                "d910"
+              ],
+              "icf_who_original": [
+                "d910"
+              ],
+              "quelle": "Q3 (WHO-Zuordnung, Tabelle 1)",
+              "unsicher": false,
+              "begruendung": "WHO-Zuordnung (Üstün et al. 2010, Tab. 1), unverkürzt übernommen."
+            },
+            {
+              "nr": "D6.2",
+              "stichwort": "Barrieren in der Umwelt",
+              "icf": [
+                "d9"
+              ],
+              "icf_who_original": [
+                "d9"
+              ],
+              "quelle": "Q3 (WHO-Zuordnung, Tabelle 1)",
+              "unsicher": true,
+              "begruendung": "WHO-Zuordnung (Üstün et al. 2010, Tab. 1), unverkürzt übernommen."
+            },
+            {
+              "nr": "D6.3",
+              "stichwort": "In Würde leben",
+              "icf": [
+                "d940"
+              ],
+              "icf_who_original": [
+                "d940"
+              ],
+              "quelle": "Q3 (WHO-Zuordnung, Tabelle 1)",
+              "unsicher": false,
+              "begruendung": "WHO-Zuordnung (Üstün et al. 2010, Tab. 1), unverkürzt übernommen."
+            },
+            {
+              "nr": "D6.4",
+              "stichwort": "Zeitaufwand für Gesundheit",
+              "icf": [],
+              "icf_who_original": [],
+              "quelle": "Q3 (WHO-Zuordnung, Tabelle 1)",
+              "unsicher": true,
+              "begruendung": "WHO-Zuordnung (Üstün et al. 2010, Tab. 1), unverkürzt übernommen. Kein Code (Impact-Frage)."
+            },
+            {
+              "nr": "D6.5",
+              "stichwort": "Emotional belastet",
+              "icf": [
+                "b152"
+              ],
+              "icf_who_original": [
+                "b152"
+              ],
+              "quelle": "Q3 (WHO-Zuordnung, Tabelle 1)",
+              "unsicher": false,
+              "begruendung": "WHO-Zuordnung (Üstün et al. 2010, Tab. 1), unverkürzt übernommen. Weitere b-Items: D1.1 (b140), D1.2 (b144)."
+            },
+            {
+              "nr": "D6.6",
+              "stichwort": "Finanzielle Belastung",
+              "icf": [
+                "d8700"
+              ],
+              "icf_who_original": [
+                "d8700"
+              ],
+              "quelle": "Q3 (WHO-Zuordnung, Tabelle 1)",
+              "unsicher": false,
+              "begruendung": "WHO-Zuordnung (Üstün et al. 2010, Tab. 1), unverkürzt übernommen."
+            },
+            {
+              "nr": "D6.7",
+              "stichwort": "Belastung der Familie",
+              "icf": [],
+              "icf_who_original": [],
+              "quelle": "Q3 (WHO-Zuordnung, Tabelle 1)",
+              "unsicher": true,
+              "begruendung": "WHO-Zuordnung (Üstün et al. 2010, Tab. 1), unverkürzt übernommen. Kein Code (Impact-Frage)."
+            },
+            {
+              "nr": "D6.8",
+              "stichwort": "Allein entspannen/Freude haben",
+              "icf": [
+                "d920"
+              ],
+              "icf_who_original": [
+                "d920"
+              ],
+              "quelle": "Q3 (WHO-Zuordnung, Tabelle 1)",
+              "unsicher": false,
+              "begruendung": "WHO-Zuordnung (Üstün et al. 2010, Tab. 1), unverkürzt übernommen."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "verdichtung": [
+    {
+      "code": "b134",
+      "titel_de": "Funktionen des Schlafes",
+      "komponente": "b",
+      "unterkategorien_genutzt": [
+        "b1344"
+      ],
+      "pdq39_items": [
+        30,
+        33
+      ],
+      "whodas_items": [],
+      "abdeckung": "nur PDQ-39"
+    },
+    {
+      "code": "b140",
+      "titel_de": "Funktionen der Aufmerksamkeit",
+      "komponente": "b",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [
+        31
+      ],
+      "whodas_items": [
+        "D1.1"
+      ],
+      "abdeckung": "beide"
+    },
+    {
+      "code": "b144",
+      "titel_de": "Funktionen des Gedächtnisses",
+      "komponente": "b",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [
+        32
+      ],
+      "whodas_items": [
+        "D1.2"
+      ],
+      "abdeckung": "beide"
+    },
+    {
+      "code": "b152",
+      "titel_de": "Emotionale Funktionen",
+      "komponente": "b",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [
+        9,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        25,
+        26,
+        36
+      ],
+      "whodas_items": [
+        "D6.5"
+      ],
+      "abdeckung": "beide"
+    },
+    {
+      "code": "b156",
+      "titel_de": "Funktionen der Wahrnehmung",
+      "komponente": "b",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [
+        33
+      ],
+      "whodas_items": [],
+      "abdeckung": "nur PDQ-39"
+    },
+    {
+      "code": "b270",
+      "titel_de": "Sinnesfunktionen bezüglich Temperatur und anderer Reize",
+      "komponente": "b",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [
+        39
+      ],
+      "whodas_items": [],
+      "abdeckung": "nur PDQ-39"
+    },
+    {
+      "code": "b280",
+      "titel_de": "Schmerz",
+      "komponente": "b",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [
+        37,
+        38
+      ],
+      "whodas_items": [],
+      "abdeckung": "nur PDQ-39"
+    },
+    {
+      "code": "b310",
+      "titel_de": "Funktionen der Stimme",
+      "komponente": "b",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [
+        34
+      ],
+      "whodas_items": [],
+      "abdeckung": "nur PDQ-39"
+    },
+    {
+      "code": "b320",
+      "titel_de": "Artikulationsfunktionen",
+      "komponente": "b",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [
+        34
+      ],
+      "whodas_items": [],
+      "abdeckung": "nur PDQ-39"
+    },
+    {
+      "code": "b550",
+      "titel_de": "Funktionen der Wärmeregulation",
+      "komponente": "b",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [
+        39
+      ],
+      "whodas_items": [],
+      "abdeckung": "nur PDQ-39"
+    },
+    {
+      "code": "b780",
+      "titel_de": "Mit den Funktionen der Muskeln und der Bewegung in Zusammenhang stehende Empfindungen",
+      "komponente": "b",
+      "unterkategorien_genutzt": [
+        "b7801"
+      ],
+      "pdq39_items": [
+        37
+      ],
+      "whodas_items": [],
+      "abdeckung": "nur PDQ-39"
+    },
+    {
+      "code": "d155",
+      "titel_de": "Sich Fertigkeiten aneignen",
+      "komponente": "d",
+      "unterkategorien_genutzt": [
+        "d1551"
+      ],
+      "pdq39_items": [],
+      "whodas_items": [
+        "D1.4"
+      ],
+      "abdeckung": "nur WHODAS 2.0"
+    },
+    {
+      "code": "d160",
+      "titel_de": "Aufmerksamkeit fokussieren",
+      "komponente": "d",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [],
+      "whodas_items": [
+        "D1.1"
+      ],
+      "abdeckung": "nur WHODAS 2.0"
+    },
+    {
+      "code": "d170",
+      "titel_de": "Schreiben",
+      "komponente": "d",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [
+        14
+      ],
+      "whodas_items": [],
+      "abdeckung": "nur PDQ-39"
+    },
+    {
+      "code": "d175",
+      "titel_de": "Probleme lösen",
+      "komponente": "d",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [],
+      "whodas_items": [
+        "D1.3"
+      ],
+      "abdeckung": "nur WHODAS 2.0"
+    },
+    {
+      "code": "d210",
+      "titel_de": "Eine Einzelaufgabe übernehmen",
+      "komponente": "d",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [],
+      "whodas_items": [
+        "D5.2",
+        "D5.3",
+        "D5.4",
+        "D5.6",
+        "D5.7",
+        "D5.8"
+      ],
+      "abdeckung": "nur WHODAS 2.0"
+    },
+    {
+      "code": "d220",
+      "titel_de": "Mehrfachaufgaben übernehmen",
+      "komponente": "d",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [],
+      "whodas_items": [
+        "D5.2",
+        "D5.3",
+        "D5.4",
+        "D5.6",
+        "D5.7",
+        "D5.8"
+      ],
+      "abdeckung": "nur WHODAS 2.0"
+    },
+    {
+      "code": "d310",
+      "titel_de": "Kommunizieren als Empfänger gesprochener Mitteilungen",
+      "komponente": "d",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [],
+      "whodas_items": [
+        "D1.5"
+      ],
+      "abdeckung": "nur WHODAS 2.0"
+    },
+    {
+      "code": "d330",
+      "titel_de": "Sprechen",
+      "komponente": "d",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [
+        34,
+        35
+      ],
+      "whodas_items": [],
+      "abdeckung": "nur PDQ-39"
+    },
+    {
+      "code": "d350",
+      "titel_de": "Konversation",
+      "komponente": "d",
+      "unterkategorien_genutzt": [
+        "d3500",
+        "d3501"
+      ],
+      "pdq39_items": [
+        35
+      ],
+      "whodas_items": [
+        "D1.6"
+      ],
+      "abdeckung": "beide"
+    },
+    {
+      "code": "d410",
+      "titel_de": "Eine elementare Körperposition wechseln",
+      "komponente": "d",
+      "unterkategorien_genutzt": [
+        "d4104"
+      ],
+      "pdq39_items": [],
+      "whodas_items": [
+        "D2.2"
+      ],
+      "abdeckung": "nur WHODAS 2.0"
+    },
+    {
+      "code": "d415",
+      "titel_de": "In einer Körperposition verbleiben",
+      "komponente": "d",
+      "unterkategorien_genutzt": [
+        "d4154"
+      ],
+      "pdq39_items": [],
+      "whodas_items": [
+        "D2.1"
+      ],
+      "abdeckung": "nur WHODAS 2.0"
+    },
+    {
+      "code": "d430",
+      "titel_de": "Gegenstände anheben und tragen",
+      "komponente": "d",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [
+        3
+      ],
+      "whodas_items": [],
+      "abdeckung": "nur PDQ-39"
+    },
+    {
+      "code": "d440",
+      "titel_de": "Feinmotorischer Handgebrauch",
+      "komponente": "d",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [
+        13,
+        14,
+        15,
+        16
+      ],
+      "whodas_items": [],
+      "abdeckung": "nur PDQ-39"
+    },
+    {
+      "code": "d450",
+      "titel_de": "Gehen",
+      "komponente": "d",
+      "unterkategorien_genutzt": [
+        "d4500",
+        "d4501"
+      ],
+      "pdq39_items": [
+        4,
+        5
+      ],
+      "whodas_items": [
+        "D2.5"
+      ],
+      "abdeckung": "beide"
+    },
+    {
+      "code": "d460",
+      "titel_de": "Sich in verschiedenen Umgebungen fortbewegen",
+      "komponente": "d",
+      "unterkategorien_genutzt": [
+        "d4600",
+        "d4602"
+      ],
+      "pdq39_items": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "whodas_items": [
+        "D2.3",
+        "D2.4"
+      ],
+      "abdeckung": "beide"
+    },
+    {
+      "code": "d510",
+      "titel_de": "Sich waschen",
+      "komponente": "d",
+      "unterkategorien_genutzt": [
+        "d5101"
+      ],
+      "pdq39_items": [
+        11
+      ],
+      "whodas_items": [
+        "D3.1"
+      ],
+      "abdeckung": "beide"
+    },
+    {
+      "code": "d540",
+      "titel_de": "Sich kleiden",
+      "komponente": "d",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [
+        12,
+        13
+      ],
+      "whodas_items": [
+        "D3.2"
+      ],
+      "abdeckung": "beide"
+    },
+    {
+      "code": "d550",
+      "titel_de": "Essen",
+      "komponente": "d",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [
+        15,
+        24
+      ],
+      "whodas_items": [
+        "D3.3"
+      ],
+      "abdeckung": "beide"
+    },
+    {
+      "code": "d560",
+      "titel_de": "Trinken",
+      "komponente": "d",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [
+        16,
+        24
+      ],
+      "whodas_items": [],
+      "abdeckung": "nur PDQ-39"
+    },
+    {
+      "code": "d620",
+      "titel_de": "Waren und Dienstleistungen des täglichen Bedarfs beschaffen",
+      "komponente": "d",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [
+        3
+      ],
+      "whodas_items": [],
+      "abdeckung": "nur PDQ-39"
+    },
+    {
+      "code": "d630",
+      "titel_de": "Mahlzeiten vorbereiten",
+      "komponente": "d",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [
+        2
+      ],
+      "whodas_items": [],
+      "abdeckung": "nur PDQ-39"
+    },
+    {
+      "code": "d640",
+      "titel_de": "Hausarbeiten erledigen",
+      "komponente": "d",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [
+        2
+      ],
+      "whodas_items": [
+        "D5.2",
+        "D5.3",
+        "D5.4"
+      ],
+      "abdeckung": "beide"
+    },
+    {
+      "code": "d650",
+      "titel_de": "Haushaltsgegenstände pflegen",
+      "komponente": "d",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [
+        2
+      ],
+      "whodas_items": [],
+      "abdeckung": "nur PDQ-39"
+    },
+    {
+      "code": "d720",
+      "titel_de": "Komplexe interpersonelle Interaktionen",
+      "komponente": "d",
+      "unterkategorien_genutzt": [
+        "d7200"
+      ],
+      "pdq39_items": [],
+      "whodas_items": [
+        "D4.4"
+      ],
+      "abdeckung": "nur WHODAS 2.0"
+    },
+    {
+      "code": "d730",
+      "titel_de": "Mit Fremden umgehen",
+      "komponente": "d",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [],
+      "whodas_items": [
+        "D4.1"
+      ],
+      "abdeckung": "nur WHODAS 2.0"
+    },
+    {
+      "code": "d750",
+      "titel_de": "Informelle soziale Beziehungen",
+      "komponente": "d",
+      "unterkategorien_genutzt": [
+        "d7500"
+      ],
+      "pdq39_items": [],
+      "whodas_items": [
+        "D4.2",
+        "D4.3",
+        "D4.4"
+      ],
+      "abdeckung": "nur WHODAS 2.0"
+    },
+    {
+      "code": "d760",
+      "titel_de": "Familienbeziehungen",
+      "komponente": "d",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [
+        27
+      ],
+      "whodas_items": [
+        "D4.3"
+      ],
+      "abdeckung": "beide"
+    },
+    {
+      "code": "d770",
+      "titel_de": "Intime Beziehungen",
+      "komponente": "d",
+      "unterkategorien_genutzt": [
+        "d7702"
+      ],
+      "pdq39_items": [
+        27,
+        28
+      ],
+      "whodas_items": [
+        "D4.3",
+        "D4.5"
+      ],
+      "abdeckung": "beide"
+    },
+    {
+      "code": "d820",
+      "titel_de": "Schulbildung",
+      "komponente": "d",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [],
+      "whodas_items": [
+        "D5.5",
+        "D5.6",
+        "D5.7",
+        "D5.8"
+      ],
+      "abdeckung": "nur WHODAS 2.0"
+    },
+    {
+      "code": "d825",
+      "titel_de": "Theoretische Berufsausbildung",
+      "komponente": "d",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [],
+      "whodas_items": [
+        "D5.5",
+        "D5.6",
+        "D5.7",
+        "D5.8"
+      ],
+      "abdeckung": "nur WHODAS 2.0"
+    },
+    {
+      "code": "d830",
+      "titel_de": "Höhere Bildung und Ausbildung",
+      "komponente": "d",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [],
+      "whodas_items": [
+        "D5.5",
+        "D5.6",
+        "D5.7",
+        "D5.8"
+      ],
+      "abdeckung": "nur WHODAS 2.0"
+    },
+    {
+      "code": "d850",
+      "titel_de": "Bezahlte Tätigkeit",
+      "komponente": "d",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [],
+      "whodas_items": [
+        "D5.5",
+        "D5.6",
+        "D5.7",
+        "D5.8"
+      ],
+      "abdeckung": "nur WHODAS 2.0"
+    },
+    {
+      "code": "d870",
+      "titel_de": "Wirtschaftliche Eigenständigkeit",
+      "komponente": "d",
+      "unterkategorien_genutzt": [
+        "d8700"
+      ],
+      "pdq39_items": [],
+      "whodas_items": [
+        "D6.6"
+      ],
+      "abdeckung": "nur WHODAS 2.0"
+    },
+    {
+      "code": "d910",
+      "titel_de": "Gemeinschaftsleben",
+      "komponente": "d",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [],
+      "whodas_items": [
+        "D6.1"
+      ],
+      "abdeckung": "nur WHODAS 2.0"
+    },
+    {
+      "code": "d920",
+      "titel_de": "Erholung und Freizeit",
+      "komponente": "d",
+      "unterkategorien_genutzt": [
+        "d9205"
+      ],
+      "pdq39_items": [
+        1,
+        24
+      ],
+      "whodas_items": [
+        "D6.8"
+      ],
+      "abdeckung": "beide"
+    },
+    {
+      "code": "d940",
+      "titel_de": "Menschenrechte",
+      "komponente": "d",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [],
+      "whodas_items": [
+        "D6.3"
+      ],
+      "abdeckung": "nur WHODAS 2.0"
+    },
+    {
+      "code": "e310",
+      "titel_de": "Engster Familienkreis",
+      "komponente": "e",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [
+        28,
+        29
+      ],
+      "whodas_items": [],
+      "abdeckung": "nur PDQ-39"
+    },
+    {
+      "code": "e320",
+      "titel_de": "Freunde",
+      "komponente": "e",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [
+        29
+      ],
+      "whodas_items": [],
+      "abdeckung": "nur PDQ-39"
+    },
+    {
+      "code": "e399",
+      "titel_de": "Unterstützung und Beziehungen, nicht näher bezeichnet",
+      "komponente": "e",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [
+        8
+      ],
+      "whodas_items": [],
+      "abdeckung": "nur PDQ-39"
+    },
+    {
+      "code": "e460",
+      "titel_de": "Gesellschaftliche Einstellungen",
+      "komponente": "e",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [
+        23,
+        25
+      ],
+      "whodas_items": [],
+      "abdeckung": "nur PDQ-39"
+    },
+    {
+      "code": "e499",
+      "titel_de": "Einstellungen, nicht näher bezeichnet",
+      "komponente": "e",
+      "unterkategorien_genutzt": [],
+      "pdq39_items": [
+        26,
+        36
+      ],
+      "whodas_items": [],
+      "abdeckung": "nur PDQ-39"
+    }
+  ],
+  "luecken": [
+    {
+      "code": "b765",
+      "titel_de": "Funktionen der unwillkürlichen Bewegungen",
+      "komponente": "b",
+      "abdeckung_pdq39_whodas": "keine",
+      "hinweis": "Q7: Wynia 2006 und Raggi 2011 – unwillkürliche Bewegungen unter den relevantesten Körperfunktionen. Tremor/Dyskinesie wird in keinem Item als Konzept erfragt (PDQ-39 16, 37 nur Folgen).",
+      "unsicher": false,
+      "kernset_pkt": "MDS-UPDRS III (Tremor-Items)"
+    },
+    {
+      "code": "b510",
+      "titel_de": "Funktionen der Nahrungsaufnahme",
+      "komponente": "b",
+      "abdeckung_pdq39_whodas": "keine",
+      "hinweis": "Q7: Wynia 2006 – Schlucken als relevant. ICF-Titel deutsch: ‚Funktionen der Nahrungsaufnahme‘ (Inkl. Schlucken, Dysphagie, Sabbern). Kein Item.",
+      "unsicher": false,
+      "kernset_pkt": "Schluckscreening (LO)"
+    },
+    {
+      "code": "b134",
+      "titel_de": "Funktionen des Schlafes",
+      "komponente": "b",
+      "abdeckung_pdq39_whodas": "teilweise",
+      "hinweis": "Q7: Wynia 2006, Raggi 2010 (schwerwiegend). Nur Tagesschläfrigkeit (PDQ-39 Item 30) und Träume (Item 33, b1344); Nachtschlaf/Insomnie nicht erfasst → teilweise Lücke.",
+      "unsicher": false,
+      "kernset_pkt": null
+    },
+    {
+      "code": "b455",
+      "titel_de": "Funktionen der kardiorespiratorischen Belastbarkeit",
+      "komponente": "b",
+      "abdeckung_pdq39_whodas": "keine",
+      "hinweis": "Q7: Wynia 2006 – Belastbarkeit. Kein Item.",
+      "unsicher": false,
+      "kernset_pkt": null
+    },
+    {
+      "code": "b735",
+      "titel_de": "Funktionen des Muskeltonus",
+      "komponente": "b",
+      "abdeckung_pdq39_whodas": "keine",
+      "hinweis": "Q7: Raggi 2010/2011 – Muskeltonus (Rigor). Kein Item (Item 37 = Spasmus-Empfindung b7801).",
+      "unsicher": false,
+      "kernset_pkt": "MDS-UPDRS III (Rigor)"
+    },
+    {
+      "code": "b640",
+      "titel_de": "Sexuelle Funktionen",
+      "komponente": "b",
+      "abdeckung_pdq39_whodas": "keine",
+      "hinweis": "Q7: Raggi 2010 – sexuelle Funktionen schwerwiegend. WHODAS D4.5 erfasst nur Sexualbeziehungen (d7702), nicht die Funktion.",
+      "unsicher": false,
+      "kernset_pkt": null
+    },
+    {
+      "code": "b210",
+      "titel_de": "Funktionen des Sehens (Sehsinn)",
+      "komponente": "b",
+      "abdeckung_pdq39_whodas": "keine",
+      "hinweis": "Q7: Leonardi 2009, Raggi 2011 – Sehen. Kein Item.",
+      "unsicher": false,
+      "kernset_pkt": null
+    },
+    {
+      "code": "b770",
+      "titel_de": "Funktionen der Bewegungsmuster beim Gehen",
+      "komponente": "b",
+      "abdeckung_pdq39_whodas": "keine",
+      "hinweis": "Bewegungsmuster beim Gehen (Freezing, Gangbild) – eigene Ableitung: beide Instrumente erfassen Gehen nur als Aktivität (d450/d460); FOG-Q und MDS-UPDRS III des PKT-Kernsets decken die Funktion ab. Nicht direkt aus Q7, daher unsicher.",
+      "unsicher": true,
+      "kernset_pkt": "MDS-UPDRS III (Gang, Freezing), FOG-Q, TUG"
+    },
+    {
+      "code": "d410",
+      "titel_de": "Eine elementare Körperposition wechseln",
+      "komponente": "d",
+      "abdeckung_pdq39_whodas": "teilweise",
+      "hinweis": "Q7: Raggi 2010 – Körperposition wechseln. Nur WHODAS D2.2 (d4104), nicht PDQ-39.",
+      "unsicher": false,
+      "kernset_pkt": "TUG (Aufstehen), MDS-UPDRS III (Aufstehen vom Stuhl)"
+    },
+    {
+      "code": "d415",
+      "titel_de": "In einer Körperposition verbleiben",
+      "komponente": "d",
+      "abdeckung_pdq39_whodas": "teilweise",
+      "hinweis": "Q7: Raggi 2010 – Körperposition halten. Nur WHODAS D2.1 (d4154), nicht PDQ-39.",
+      "unsicher": false,
+      "kernset_pkt": "Mini-BESTest"
+    },
+    {
+      "code": "d430",
+      "titel_de": "Gegenstände anheben und tragen",
+      "komponente": "d",
+      "abdeckung_pdq39_whodas": "teilweise",
+      "hinweis": "Q7: Leonardi 2009, Raggi 2011 – Heben/Tragen. Nur PDQ-39 Item 3, nicht WHODAS.",
+      "unsicher": false,
+      "kernset_pkt": null
+    },
+    {
+      "code": "d110",
+      "titel_de": "Zuschauen",
+      "komponente": "d",
+      "abdeckung_pdq39_whodas": "indirekt",
+      "hinweis": "Q7: Leonardi 2009 – Zuschauen. Weder PDQ-39 noch WHODAS (WHODAS D1.1 verweist nur auf Block d110–d129, nicht übernommen). Prüfung: WHO ordnet WHODAS D1.1 den Block d110–d129 zu → indirekt erfasst.",
+      "unsicher": false,
+      "kernset_pkt": null
+    },
+    {
+      "code": "e110",
+      "titel_de": "Produkte und Substanzen für den persönlichen Verbrauch",
+      "komponente": "e",
+      "abdeckung_pdq39_whodas": "keine",
+      "hinweis": "Q7: Raggi 2010/2011 – Medikamente (Produkte und Substanzen) als Barriere UND Förderfaktor. Kein Item – für PKT (Medikationsmanagement) zentral. WHODAS D6.2 fragt Umweltbarrieren nur pauschal (d9) ab.",
+      "unsicher": false,
+      "kernset_pkt": "kein Instrument – Medikationsmanagement (STRIP-PD, PN)"
+    },
+    {
+      "code": "e580",
+      "titel_de": "Dienste, Systeme und Handlungsgrundsätze des Gesundheitswesens",
+      "komponente": "e",
+      "abdeckung_pdq39_whodas": "keine",
+      "hinweis": "Q7: Wynia 2006, Raggi 2010/2011 – Gesundheitsdienste. Kein Item. WHODAS D6.2 fragt Umweltbarrieren nur pauschal (d9) ab.",
+      "unsicher": false,
+      "kernset_pkt": null
+    },
+    {
+      "code": "e570",
+      "titel_de": "Dienste, Systeme und Handlungsgrundsätze der sozialen Sicherheit",
+      "komponente": "e",
+      "abdeckung_pdq39_whodas": "keine",
+      "hinweis": "Q7: Wynia 2006, Raggi 2010 – soziale Sicherheit. Kein Item (WHODAS D6.6 nur finanzielle Belastung d8700). WHODAS D6.2 fragt Umweltbarrieren nur pauschal (d9) ab.",
+      "unsicher": false,
+      "kernset_pkt": "Screening Sozialdienst"
+    },
+    {
+      "code": "e540",
+      "titel_de": "Dienste, Systeme und Handlungsgrundsätze des Transportwesens",
+      "komponente": "e",
+      "abdeckung_pdq39_whodas": "keine",
+      "hinweis": "Q7: Raggi 2010 – Transportwesen als Barriere. Kein Item. WHODAS D6.2 fragt Umweltbarrieren nur pauschal (d9) ab.",
+      "unsicher": false,
+      "kernset_pkt": null
+    },
+    {
+      "code": "e225",
+      "titel_de": "Klima",
+      "komponente": "e",
+      "abdeckung_pdq39_whodas": "keine",
+      "hinweis": "Q7: Leonardi 2009 – Klima als Barriere. Kein Item. WHODAS D6.2 fragt Umweltbarrieren nur pauschal (d9) ab.",
+      "unsicher": false,
+      "kernset_pkt": null
+    },
+    {
+      "code": "b760",
+      "titel_de": "Funktionen der Kontrolle von Willkürbewegungen",
+      "komponente": "b",
+      "abdeckung_pdq39_whodas": "keine",
+      "hinweis": "Kein Item erfasst Willkürmotorik/Bradykinese als Konzept; in den Quellen nicht namentlich als relevant belegt [XX].",
+      "unsicher": true,
+      "kernset_pkt": "MDS-UPDRS III (Bradykinese)"
+    },
+    {
+      "code": "b130",
+      "titel_de": "Funktionen der psychischen Energie und des Antriebs",
+      "komponente": "b",
+      "abdeckung_pdq39_whodas": "keine",
+      "hinweis": "Kein Item erfasst Antrieb/Fatigue; in den Quellen nicht namentlich als relevant belegt [XX].",
+      "unsicher": true,
+      "kernset_pkt": null
+    }
+  ],
+  "verdichtung_gesondert": [
+    {
+      "code_oder_bereich": "d110–d129",
+      "instrument": "WHODAS 2.0",
+      "item": "D1.1"
+    },
+    {
+      "code_oder_bereich": "d130–d159",
+      "instrument": "WHODAS 2.0",
+      "item": "D1.3"
+    },
+    {
+      "code_oder_bereich": "d510–d650",
+      "instrument": "WHODAS 2.0",
+      "item": "D3.4"
+    },
+    {
+      "code_oder_bereich": "d6",
+      "instrument": "WHODAS 2.0",
+      "item": "D5.1"
+    },
+    {
+      "code_oder_bereich": "d9",
+      "instrument": "WHODAS 2.0",
+      "item": "D6.2"
+    }
+  ]
+}

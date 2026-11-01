@@ -14,3 +14,10 @@ erhoben und von allen genutzt** (siehe
 Die Stufen bauen aufeinander auf: Die Felder der Textbausteine werden
 im KIS-Formular zu strukturierten Daten und lassen sich in PARson als
 FHIR-Ressourcen abbilden.
+
+## Referenzdaten
+
+| Datei | Status | Inhalt |
+|---|---|---|
+| [icf/icf-mapping-pdq39-whodas.json](icf/icf-mapping-pdq39-whodas.json) | Konzept | Zuordnung der Items von PDQ-39 und WHODAS 2.0 zu ICF-Kategorien, Überlappung und Lücken – Grundlage für die ICF-Zielmatrix und spätere FHIR-Codierung |
+| [icf/icf-kreis.html](icf/icf-kreis.html) | Konzept (Prototyp) | ICF-Kreis: Langzeitverlauf der Funktionsfähigkeit auf einen Blick, berechnet aus PDQ-39 und WHODAS 2.0; Beispiel mit fiktiven Daten |

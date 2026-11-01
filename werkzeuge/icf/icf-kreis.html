@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ICF-Kreis – Prototyp (PKT 3.0)</title>
+<link rel="icon" href="data:,">
+<style>
+:root{--lim:#d70015;--bg:#fff;--ink:#1d1d1f;--ink2:#424245;--mut:#6e6e73;--card:#f5f5f7;--line:#d2d2d7;--acc:#0071e3;color-scheme:light dark}
+@media (prefers-color-scheme:dark){:root:not(.light){--lim:#ff453a;--bg:#000;--ink:#f5f5f7;--ink2:#d2d2d7;--mut:#a1a1a6;--card:#1c1c1e;--line:#38383a;--acc:#2997ff}}
+:root.dark{--lim:#ff453a;--bg:#000;--ink:#f5f5f7;--ink2:#d2d2d7;--mut:#a1a1a6;--card:#1c1c1e;--line:#38383a;--acc:#2997ff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif}
+main{max-width:1320px;margin:0 auto;padding:28px 32px 48px}
+h1{font-size:34px;letter-spacing:-.02em;margin:4px 0 6px}
+.kicker{color:var(--acc);font-weight:600;margin:0}
+.muted{color:var(--mut)}
+.warn{display:inline-block;background:rgba(255,159,10,.14);color:#c25700;font-weight:600;border-radius:8px;padding:2px 10px;font-size:13px}
+@media (prefers-color-scheme:dark){:root:not(.light) .warn{color:#ff9f0a}}:root.dark .warn{color:#ff9f0a}
+.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:16px 0 8px}
+button,label.btn{font:inherit;font-size:14px;font-weight:600;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 14px;cursor:pointer}
+button[aria-pressed=true]{background:var(--acc);border-color:var(--acc);color:#fff}
+.wrap{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:28px;align-items:start}
+.panel{background:var(--card);border-radius:20px;padding:18px 20px;position:sticky;top:16px}
+.panel h2{font-size:18px;margin:0 0 4px}.panel h3{font-size:13px;color:var(--mut);margin:14px 0 6px;font-weight:600;letter-spacing:.02em}
+.legend{display:flex;flex-direction:column;gap:6px;font-size:13.5px}
+.legend span{display:flex;align-items:center;gap:8px}
+.sw{width:22px;height:14px;border-radius:4px;display:inline-block;flex:none}
+.ik-legend{--q0:#ececf0;--q1:#f2a65e;--q2:#e07a22;--q3:#b8560a;--q4:#7a3305}
+@media (prefers-color-scheme:dark){:root:not(.light) .ik-legend{--q0:#2c2c2e;--q1:#7d4012;--q2:#b85c12;--q3:#ec8420;--q4:#ffbd6b}}
+:root.dark .ik-legend{--q0:#2c2c2e;--q1:#7d4012;--q2:#b85c12;--q3:#ec8420;--q4:#ffbd6b}
+#detail .row{display:flex;justify-content:space-between;gap:10px;font-size:13.5px;padding:3px 0;border-bottom:1px solid var(--line)}
+#detail .row b{font-variant-numeric:tabular-nums}
+#tip{position:fixed;pointer-events:none;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:8px 12px;font-size:13px;box-shadow:0 6px 24px rgba(0,0,0,.25);display:none;max-width:280px;z-index:5}
+table{border-collapse:collapse;width:100%;font-size:13px;margin-top:14px}
+th,td{padding:5px 8px;border-bottom:1px solid var(--line);text-align:left}
+td.v{text-align:center;font-variant-numeric:tabular-nums}
+th{color:var(--mut);font-weight:600;font-size:12px}
+details{margin-top:28px}summary{cursor:pointer;font-weight:600}
+code{font-size:13px}
+/* ICF-Kreis – Stufen 1–4 validiert (dataviz, ordinal, hell #fff / dunkel #1c1c1e) */
+.ik{--q0:#ececf0;--q1:#f2a65e;--q2:#e07a22;--q3:#b8560a;--q4:#7a3305;--qna:transparent;--qline:#d2d2d7;
+  --ik-b:#0071e3;--ik-d:#1f8a3b;--ik-e:#8944ab;--ik-ink:#1d1d1f;--ik-mut:#6e6e73;--ik-surf:#ffffff;--ik-gas:#1d1d1f;--ik-lim:#d70015;
+  width:100%;height:auto;display:block;font-family:inherit;overflow:visible}
+@media (prefers-color-scheme:dark){.ik{--q0:#2c2c2e;--q1:#7d4012;--q2:#b85c12;--q3:#ec8420;--q4:#ffbd6b;--qline:#48484a;
+  --ik-b:#2997ff;--ik-d:#30d158;--ik-e:#bf5af2;--ik-ink:#f5f5f7;--ik-mut:#a1a1a6;--ik-surf:#1c1c1e;--ik-gas:#f5f5f7;--ik-lim:#ff453a}}
+:root.light .ik,.light .ik{--q0:#ececf0;--q1:#f2a65e;--q2:#e07a22;--q3:#b8560a;--q4:#7a3305;--qline:#d2d2d7;
+  --ik-b:#0071e3;--ik-d:#1f8a3b;--ik-e:#8944ab;--ik-ink:#1d1d1f;--ik-mut:#6e6e73;--ik-surf:#ffffff;--ik-gas:#1d1d1f;--ik-lim:#d70015}
+.ik-cell{stroke:none;transition:opacity .15s}
+.ik-q0{fill:var(--q0)}.ik-q1{fill:var(--q1)}.ik-q2{fill:var(--q2)}.ik-q3{fill:var(--q3)}.ik-q4{fill:var(--q4)}
+.ik-na{fill:none;stroke:var(--qline);stroke-width:1;stroke-dasharray:2 3}
+.ik-x{fill:none;stroke:var(--qline);stroke-width:1}
+.ik-gas{fill:var(--ik-surf);stroke:var(--ik-gas);stroke-width:2;pointer-events:none}
+.ik-code{font-size:11px;fill:var(--ik-mut);font-variant-numeric:tabular-nums}
+.ik-band.ik-b{fill:var(--ik-b)}.ik-band.ik-d{fill:var(--ik-d)}.ik-band.ik-e{fill:var(--ik-e)}
+.ik-ch{font-size:15px;font-weight:600;fill:var(--ik-ink)}.ik-chid{fill:var(--ik-mut);font-weight:600}
+.ik-ring{font-size:11.5px;font-weight:600;fill:var(--ik-mut)}
+.ik-center{fill:none;stroke:var(--qline);stroke-width:1}
+.ik-c1{font-size:19px;font-weight:700;fill:var(--ik-ink)}.ik-c2{font-size:12.5px;fill:var(--ik-mut)}
+.ik.hl .ik-cell{opacity:.35}.ik.hl .ik-cell.on{opacity:1}
+.ik-lim{fill:none;stroke:var(--ik-lim);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
+.ik-lim-halo{fill:none;stroke:var(--ik-surf);stroke-width:6;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
+.ik-stay{stroke:var(--ik-ink);stroke-width:8;stroke-linecap:round}
+.ik-stayring{fill:none;stroke:var(--ik-ink);stroke-width:1.2;stroke-dasharray:2 4;opacity:.55;pointer-events:none}
+.ik-kon{fill:var(--ik-mut)}.ik-kon.pn{fill:var(--ik-surf);stroke:var(--ik-mut);stroke-width:1.6}
+
+:root.light .ik{--q0:#ececf0;--q1:#f2a65e;--q2:#e07a22;--q3:#b8560a;--q4:#7a3305;--qline:#d2d2d7;--ik-b:#0071e3;--ik-d:#1f8a3b;--ik-e:#8944ab;--ik-ink:#1d1d1f;--ik-mut:#6e6e73;--ik-surf:#ffffff;--ik-gas:#1d1d1f;--ik-lim:#d70015}
+:root.dark .ik{--q0:#2c2c2e;--q1:#7d4012;--q2:#b85c12;--q3:#ec8420;--q4:#ffbd6b;--qline:#48484a;--ik-b:#2997ff;--ik-d:#30d158;--ik-e:#bf5af2;--ik-ink:#f5f5f7;--ik-mut:#a1a1a6;--ik-surf:#000;--ik-gas:#f5f5f7;--ik-lim:#ff453a}
+.ik-cell{cursor:pointer}
+@media (max-width:980px){.wrap{grid-template-columns:1fr}.panel{position:static}}
+</style>
+</head>
+<body>
+<main>
+  <p class="kicker">PKT 3.0 · Werkzeug · Status: Konzept (Prototyp)</p>
+  <h1>ICF-Kreis</h1>
+  <p class="muted" style="max-width:860px;margin:0">Langzeitverlauf der Funktionsfähigkeit auf einen Blick: Segmente = ICF-Kapitel, Speichen = ICF-Codes, Ringe = Erhebungen (innen die erste, außen die letzte). Die Farbe zeigt die Ausprägung des Problems, berechnet aus PDQ-39 und WHODAS 2.0.</p>
+  <p id="quelle" style="margin:10px 0 0"><span class="warn">Fiktiver Beispielverlauf – keine echten Patientendaten</span></p>
+  <div class="bar">
+    <label class="btn">Eigene Daten laden (JSON)<input type="file" id="file" accept=".json,application/json" hidden></label>
+    <button id="tbl" aria-pressed="false">Tabellenansicht</button>
+    <button id="theme">Hell/Dunkel (T)</button>
+    <span class="muted" style="font-size:13px">Daten werden nur lokal im Browser gelesen, nichts wird übertragen.</span>
+  </div>
+  <div class="wrap">
+    <div id="chart"></div>
+    <aside class="panel">
+      <h2 id="d-title">Feld antippen</h2>
+      <p class="muted" id="d-sub" style="margin:0;font-size:13.5px">Zeigt Wert, Zeitpunkt und die zugrunde liegenden Fragebogen-Items.</p>
+      <div id="detail"></div>
+      <h3>AUSPRÄGUNG (Mittel der verknüpften Items, 0–4)</h3>
+      <div class="legend ik-legend">
+        <span><i class="sw" style="background:var(--q0)"></i>0 · kein Problem</span>
+        <span><i class="sw" style="background:var(--q1)"></i>1 · leicht</span>
+        <span><i class="sw" style="background:var(--q2)"></i>2 · mäßig</span>
+        <span><i class="sw" style="background:var(--q3)"></i>3 · erheblich</span>
+        <span><i class="sw" style="background:var(--q4)"></i>4 · voll ausgeprägt</span>
+        <span><i class="sw" style="border:1px dashed var(--line)"></i>keine Angabe (z. B. nicht berufstätig)</span>
+        <span><i class="sw" style="border:1px solid var(--line)"></i>nicht aus Fragebogen – nur durch Untersuchung</span>
+        <span><svg width="22" height="14" viewBox="-11 -7 22 14"><path d="M0 -6l6 6l-6 6l-6 -6Z" fill="var(--bg)" stroke="var(--ink)" stroke-width="2"/></svg>GAS-Ziel dieses Aufenthalts</span>
+        <span><svg width="22" height="14"><path d="M1 7H21" stroke="var(--bg)" stroke-width="6"/><path d="M1 7H21" stroke="var(--lim)" stroke-width="2.4"/></svg>Grenze erheblich: mind. ein Item ≥ 3<br>(Orientierungswert, nicht validiert)</span>
+      </div>
+      <h3>VERSORGUNG (obere Lücke, Zeit von innen nach außen)</h3>
+      <div class="legend">
+        <span><svg width="22" height="14"><path d="M4 7H18" stroke="var(--ink)" stroke-width="7" stroke-linecap="round"/></svg>stationärer Aufenthalt (gestrichelter Ring)</span>
+        <span><svg width="22" height="14"><circle cx="11" cy="7" r="4" fill="var(--mut)"/></svg>ärztlicher Kontakt (Ambulanz)</span>
+        <span><svg width="22" height="14"><circle cx="11" cy="7" r="4" fill="var(--bg)" stroke="var(--mut)" stroke-width="1.6"/></svg>Kontakt Parkinson Nurse</span>
+      </div>
+      <h3>KOMPONENTEN</h3>
+      <div class="legend">
+        <span><i class="sw" style="background:var(--acc)"></i>b · Körperfunktionen</span>
+        <span><i class="sw" style="background:#30a14e"></i>d · Aktivitäten und Teilhabe</span>
+        <span><i class="sw" style="background:#a35bc7"></i>e · Umweltfaktoren (Barriere)</span>
+      </div>
+    </aside>
+  </div>
+  <div id="table" hidden></div>
+  <details>
+    <summary>Berechnung und Datenformat</summary>
+    <ul>
+      <li><b>Wert je Code und Erhebung</b> = Mittelwert aller Items, die auf diesen ICF-Code verlinkt sind. PDQ-39 wird direkt genutzt (0 nie … 4 immer/kann gar nicht), WHODAS 2.0 als Antwort − 1 (1 keine … 5 extrem → 0–4). Die Farbstufe ist der gerundete Mittelwert. Die Skala ist an die Stufen des ICF-Beurteilungsmerkmals angelehnt, ersetzt es aber nicht.</li>
+      <li><b>Linking:</b> <code>werkzeuge/icf/icf-mapping-pdq39-whodas.json</code> (WHODAS nach WHO-Zuordnung, PDQ-39 eigene Zuordnung, geprüft). Pauschale WHODAS-Items (D3.4, D5.1, D6.2) und PDQ-39 Item 10 gehen nicht in einzelne Codes ein.</li>
+      <li><b>Grenzlinie:</b> umrandet alle Felder, in denen mindestens ein verknüpftes Item ≥ 3 ist (erheblich). So geht kein schweres Einzelproblem im Mittelwert unter. Wo die Linie nach innen springt, wurde die Grenze früher überschritten. <b>Orientierungswert, nicht validiert:</b> PDQ-39 misst die Häufigkeit, WHODAS 2.0 den Schweregrad.</li>
+      <li><b>Offen:</b> Ob Ambulanzkontakte mit MDS-UPDRS III die Motorik-Speichen (b735, b760, b765, b770) füllen, wird nach dem Pilot entschieden.</li>
+      <li><b>Versorgung:</b> Aufenthalte und Kontakte stehen in der oberen Lücke. Ihre Lage wird zwischen den Erhebungen zeitlich interpoliert – die Ringe sind gleich breit, die Zeitachse ist deshalb nicht maßstäblich.</li>
+      <li><b>Umweltfaktoren (e):</b> Der Wert zeigt das Ausmaß der Barriere (z. B. fehlende Unterstützung).</li>
+      <li><b>Datenformat:</b> <code>{"patient":{…},"zeitpunkte":[{"label":"02/23","anlass":"…","pdq39":{"1":0…},"whodas":{"D1.1":1…},"gas":["d450"]}],"ereignisse":[{"typ":"stationaer","von":"2023-02-22","bis":"2023-03-10"},{"typ":"arzt|pn","datum":"…","label":"…"}]}</code> – siehe <code>beispiel-verlauf-fiktiv.json</code>.</li>
+    </ul>
+  </details>
+</main>
+<div id="tip"></div>
+<script>
+
+function icfWerte(model, daten) {
+  // Wert je Code und Zeitpunkt = Mittelwert der verknüpften Items auf 0–4
+  // (PDQ-39 0–4 direkt, WHODAS 2.0 1–5 minus 1). Stufe = gerundeter Mittelwert.
+  const out = {};
+  for (const s of model.sectors) for (const c of s.codes) {
+    out[c.code] = daten.zeitpunkte.map(t => {
+      const vals = [];
+      for (const it of c.items) {
+        const v = it.inst === 'PDQ-39' ? t.pdq39?.[it.nr] : (t.whodas?.[it.nr] == null ? null : t.whodas[it.nr] - 1);
+        if (v != null && !Number.isNaN(+v)) vals.push({ ...it, wert: +v });
+      }
+      const m = vals.length ? vals.reduce((a, b) => a + b.wert, 0) / vals.length : null;
+      const max = vals.length ? Math.max(...vals.map(x => x.wert)) : null;
+      return { mittel: m, stufe: m == null ? null : Math.round(m), max, items: vals };
+    });
+  }
+  return out;
+}
+function icfKreisSVG(model, daten, o = {}) {
+  const R0 = o.r0 ?? 92, R = o.r ?? 330, n = daten.zeitpunkte.length;
+  const gapCh = 0.7, gapComp = 1.8, gapTop = 6.5;
+  const werte = o.werte || icfWerte(model, daten);
+  // Winkel-Slots
+  let slots = gapTop / 2, prevComp = null; const pos = [];
+  model.sectors.forEach((s, si) => {
+    if (si) slots += s.comp !== prevComp ? gapComp : gapCh;
+    const start = slots;
+    s.codes.forEach(c => { pos.push({ s, c, a: slots }); slots += 1; });
+    s._a0 = start; s._a1 = slots; prevComp = s.comp;
+  });
+  slots += gapTop / 2;
+  const k = 2 * Math.PI / slots, ang = x => x * k - Math.PI / 2;
+  const P = (r, a) => [(r * Math.cos(a)).toFixed(1), (r * Math.sin(a)).toFixed(1)];
+  const arc = (r1, r2, a1, a2) => {
+    const [x1, y1] = P(r2, a1), [x2, y2] = P(r2, a2), [x3, y3] = P(r1, a2), [x4, y4] = P(r1, a1);
+    const L = a2 - a1 > Math.PI ? 1 : 0;
+    return 'M' + x1 + ' ' + y1 + 'A' + r2 + ' ' + r2 + ' 0 ' + L + ' 1 ' + x2 + ' ' + y2 + 'L' + x3 + ' ' + y3 + 'A' + r1 + ' ' + r1 + ' 0 ' + L + ' 0 ' + x4 + ' ' + y4 + 'Z';
+  };
+  const rw = (R - R0) / n, esc = t => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+  const deg = a => a * 180 / Math.PI;
+  let g = '', gd = '';
+  // Zellen
+  for (const p of pos) {
+    const a1 = ang(p.a) + 0.004, a2 = ang(p.a + 1) - 0.004;
+    daten.zeitpunkte.forEach((t, i) => {
+      const w = werte[p.c.code][i];
+      const cls = p.c.nurUntersuchung ? 'ik-x' : (w.stufe == null ? 'ik-na' : 'ik-q' + w.stufe);
+      g += '<path class="ik-cell ' + cls + '" d="' + arc(R0 + i * rw + 1, R0 + (i + 1) * rw - 1, a1, a2) + '" data-code="' + p.c.code + '" data-t="' + i + '"/>';
+    });
+    // GAS-Rauten
+    daten.zeitpunkte.forEach((t, i) => {
+      if ((t.gas || []).includes(p.c.code)) {
+        const rr = R0 + (i + 0.5) * rw, [x, y] = P(rr, ang(p.a + 0.5)); const d = Math.max(5.5, Math.min(9, rw * 0.22, rr * k * 0.3));
+        gd += '<path class="ik-gas" d="M' + x + ' ' + (y - d) + 'l' + d + ' ' + d + 'l-' + d + ' ' + d + 'l-' + d + ' -' + d + 'Z"/>';
+      }
+    });
+    // Code-Beschriftung radial
+    const am = ang(p.a + 0.5), flip = Math.cos(am) < 0;
+    const [tx, ty] = P(R + 8, am);
+    g += '<text class="ik-code" x="' + tx + '" y="' + ty + '" transform="rotate(' + (deg(am) + (flip ? 180 : 0)).toFixed(1) + ' ' + tx + ' ' + ty + ')" text-anchor="' + (flip ? 'end' : 'start') + '" dominant-baseline="central">' + p.c.code + '</text>';
+  }
+  // Kapitel-Bänder und -Beschriftung
+  for (const s of model.sectors) {
+    const a1 = ang(s._a0) + 0.003, a2 = ang(s._a1) - 0.003, rB = R + 50;
+    g += '<path class="ik-band ik-' + s.comp + '" d="' + arc(rB, rB + 9, a1, a2) + '"><title>' + s.id + ' ' + esc(s.titel) + '</title></path>';
+    const am = (a1 + a2) / 2, bottom = Math.sin(am) > 0.05, rt = rB + 24;
+    const id = 'ikp-' + (o.idp || '') + s.id;
+    const sw = bottom ? [P(rt + 8, a2), P(rt + 8, a1), 0] : [P(rt, a1), P(rt, a2), 1];
+    g += '<path id="' + id + '" fill="none" d="M' + sw[0][0] + ' ' + sw[0][1] + 'A' + (bottom ? rt + 8 : rt) + ' ' + (bottom ? rt + 8 : rt) + ' 0 0 ' + sw[2] + ' ' + sw[1][0] + ' ' + sw[1][1] + '"/>';
+    const passt = (s.id.length + s.kurz.length + 1) * 8.6 < rt * (a2 - a1);
+    g += '<text class="ik-ch"><textPath href="#' + id + '" startOffset="50%" text-anchor="middle"><tspan class="ik-chid">' + s.id + '</tspan>' + (passt ? ' ' + esc(s.kurz) : '') + '</textPath><title>' + s.id + ' ' + esc(s.titel) + '</title></text>';
+  }
+  // Grenze mäßig | erheblich: Umriss aller Felder, in denen mindestens ein verknüpftes Item >= o.grenze (Standard 3) ist.
+  // Orientierungswert, nicht validiert (PDQ-39 misst Häufigkeit, WHODAS 2.0 Schweregrad).
+  const G = o.grenze ?? 3;
+  const hi = (pi, i) => { const p = pos[pi]; if (!p || p.c.nurUntersuchung) return false; const w = werte[p.c.code][i]; return o.grenzeFn ? !!o.grenzeFn(w, p.c.code, i) : (w.max != null && w.max >= G); };
+  const aL = (r, a1, a2) => { const [x1, y1] = P(r, a1), [x2, y2] = P(r, a2); return 'M' + x1 + ' ' + y1 + 'A' + r + ' ' + r + ' 0 0 1 ' + x2 + ' ' + y2; };
+  const rL = (a, r1, r2) => { const [x1, y1] = P(r1, a), [x2, y2] = P(r2, a); return 'M' + x1 + ' ' + y1 + 'L' + x2 + ' ' + y2; };
+  let lim = '';
+  pos.forEach((p, pi) => {
+    const a1 = ang(p.a), a2 = ang(p.a + 1);
+    for (let i = 0; i < n; i++) {
+      if (!hi(pi, i)) continue;
+      const ri = R0 + i * rw, ro = R0 + (i + 1) * rw;
+      if (i === 0 || !hi(pi, i - 1)) lim += aL(ri, a1, a2);
+      if (i === n - 1 || !hi(pi, i + 1)) lim += aL(ro, a1, a2);
+      if (!pos[pi - 1] || pos[pi - 1].s !== p.s || !hi(pi - 1, i)) lim += rL(a1, ri, ro);
+      if (!pos[pi + 1] || pos[pi + 1].s !== p.s || !hi(pi + 1, i)) lim += rL(a2, ri, ro);
+    }
+  });
+  if (lim && o.grenzlinie !== false) g += '<path class="ik-lim-halo" d="' + lim + '"/><path class="ik-lim" d="' + lim + '"/>';
+  g += gd;
+  // Ereignisse in der oberen Lücke: links stationäre Aufenthalte, rechts Kontakte.
+  // Zeit -> Radius stückweise linear zwischen den Ringmitten (Ringe = Erhebungen, nicht maßstäblich).
+  const tOf = d => { const [y, m, dd] = String(d).split('-').map(Number); return y * 12 + (m - 1) + ((dd || 15) - 1) / 31; };
+  const tc = daten.zeitpunkte.map(t => tOf(t.datum)), rc = i => R0 + (i + 0.5) * rw;
+  const rOf = d => {
+    const x = tOf(d); let r;
+    if (n === 1) r = rc(0);
+    else if (x <= tc[0]) r = rc(0) - (tc[0] - x) / (tc[1] - tc[0]) * rw;
+    else if (x >= tc[n - 1]) r = rc(n - 1) + (x - tc[n - 1]) / (tc[n - 1] - tc[n - 2]) * rw;
+    else { let i = 0; while (x > tc[i + 1]) i++; r = rc(i) + (x - tc[i]) / (tc[i + 1] - tc[i]) * rw; }
+    return Math.max(R0 + 3, Math.min(R - 3, r));
+  };
+  const fmt = d => { const [y, m, dd] = String(d).split('-'); return (dd ? dd + '.' : '') + m + '.' + y; };
+  const laneS = -Math.PI / 2 - 2.35 * k, laneK = -Math.PI / 2 + 2.35 * k;
+  for (const e of daten.ereignisse || []) {
+    if (e.typ === 'stationaer') {
+      let r1 = rOf(e.von), r2 = rOf(e.bis); if (r2 - r1 < 6) { const m = (r1 + r2) / 2; r1 = m - 3; r2 = m + 3; }
+      const [x1, y1] = P(r1, laneS), [x2, y2] = P(r2, laneS);
+      g += '<circle class="ik-stayring" r="' + ((r1 + r2) / 2).toFixed(1) + '"/>';
+      g += '<path class="ik-stay" d="M' + x1 + ' ' + y1 + 'L' + x2 + ' ' + y2 + '"><title>' + esc(e.label || 'stationär') + ': ' + fmt(e.von) + '–' + fmt(e.bis) + '</title></path>';
+    } else {
+      const [x, y] = P(rOf(e.datum), laneK);
+      g += '<circle class="ik-kon ' + (e.typ === 'pn' ? 'pn' : '') + '" cx="' + x + '" cy="' + y + '" r="3.6"><title>' + esc(e.label || 'Kontakt') + ': ' + fmt(e.datum) + '</title></circle>';
+    }
+  }
+  // Ring-Beschriftung (Zeitpunkte) in der oberen Lücke
+  daten.zeitpunkte.forEach((t, i) => {
+    const r = R0 + (i + 0.5) * rw;
+    g += '<text class="ik-ring" x="0" y="' + (-r).toFixed(1) + '" text-anchor="middle" dominant-baseline="central">' + esc(t.label) + '</text>';
+  });
+  // Zentrum
+  g += '<circle class="ik-center" r="' + (R0 - 6) + '"/>';
+  g += '<text class="ik-c1" y="-8" text-anchor="middle">' + esc(o.zentrum1 ?? 'Patient') + '</text>';
+  g += '<text class="ik-c2" y="16" text-anchor="middle">' + esc(o.zentrum2 ?? (daten.zeitpunkte[0].label + ' → ' + daten.zeitpunkte[n - 1].label)) + '</text>';
+  const V = R + 112;
+  return '<svg class="ik" viewBox="' + (-V) + ' ' + (-V) + ' ' + 2 * V + ' ' + 2 * V + '" role="img" aria-label="' + esc(o.aria || 'ICF-Kreis') + '">' + g + '</svg>';
+}
+
+const MODEL = {"sectors":[{"id":"b1","titel":"Mentale Funktionen","kurz":"Mental","comp":"b","codes":[{"code":"b134","titel":"Funktionen des Schlafes","items":[{"inst":"PDQ-39","nr":"30","stichwort":"Unerwartet tagsüber eingeschlafen"},{"inst":"PDQ-39","nr":"33","stichwort":"Belastende Träume oder Halluzinationen"}],"nurUntersuchung":false},{"code":"b140","titel":"Funktionen der Aufmerksamkeit","items":[{"inst":"PDQ-39","nr":"31","stichwort":"Konzentrationsprobleme"},{"inst":"WHODAS 2.0","nr":"D1.1","stichwort":"Konzentration 10 Minuten"}],"nurUntersuchung":false},{"code":"b144","titel":"Funktionen des Gedächtnisses","items":[{"inst":"PDQ-39","nr":"32","stichwort":"Schlechtes Gedächtnis"},{"inst":"WHODAS 2.0","nr":"D1.2","stichwort":"An Wichtiges denken (Gedächtnis)"}],"nurUntersuchung":false},{"code":"b152","titel":"Emotionale Funktionen","items":[{"inst":"PDQ-39","nr":"9","stichwort":"Sorge vor Sturz in der Öffentlichkeit"},{"inst":"PDQ-39","nr":"17","stichwort":"Niedergeschlagen/deprimiert"},{"inst":"PDQ-39","nr":"18","stichwort":"Isoliert und einsam"},{"inst":"PDQ-39","nr":"19","stichwort":"Weinerlich"},{"inst":"PDQ-39","nr":"20","stichwort":"Ärgerlich oder verbittert"},{"inst":"PDQ-39","nr":"21","stichwort":"Ängstlich"},{"inst":"PDQ-39","nr":"22","stichwort":"Sorgen um die Zukunft"},{"inst":"PDQ-39","nr":"23","stichwort":"Erkrankung verbergen müssen"},{"inst":"PDQ-39","nr":"25","stichwort":"Verlegenheit wegen Erkrankung"},{"inst":"PDQ-39","nr":"26","stichwort":"Sorge um Reaktionen anderer"},{"inst":"PDQ-39","nr":"36","stichwort":"Sich von anderen ignoriert fühlen"},{"inst":"WHODAS 2.0","nr":"D6.5","stichwort":"Emotional belastet"}],"nurUntersuchung":false},{"code":"b156","titel":"Funktionen der Wahrnehmung","items":[{"inst":"PDQ-39","nr":"33","stichwort":"Belastende Träume oder Halluzinationen"}],"nurUntersuchung":false}],"_a0":3.25,"_a1":8.25},{"id":"b2","titel":"Sinnesfunktionen und Schmerz","kurz":"Sinne · Schmerz","comp":"b","codes":[{"code":"b270","titel":"Sinnesfunktionen bezüglich Temperatur und anderer Reize","items":[{"inst":"PDQ-39","nr":"39","stichwort":"Unangenehm heiß oder kalt"}],"nurUntersuchung":false},{"code":"b280","titel":"Schmerz","items":[{"inst":"PDQ-39","nr":"37","stichwort":"Schmerzhafte Muskelkrämpfe/-spasmen"},{"inst":"PDQ-39","nr":"38","stichwort":"Gelenk- oder Körperschmerzen"}],"nurUntersuchung":false}],"_a0":8.95,"_a1":10.95},{"id":"b3","titel":"Stimm- und Sprechfunktionen","kurz":"Stimme","comp":"b","codes":[{"code":"b310","titel":"Funktionen der Stimme","items":[{"inst":"PDQ-39","nr":"34","stichwort":"Sprechprobleme"}],"nurUntersuchung":false},{"code":"b320","titel":"Artikulationsfunktionen","items":[{"inst":"PDQ-39","nr":"34","stichwort":"Sprechprobleme"}],"nurUntersuchung":false}],"_a0":11.649999999999999,"_a1":13.649999999999999},{"id":"b5","titel":"Funktionen des Verdauungs-, Stoffwechsel- und endokrinen Systems","kurz":"Verdauung · Stoffw.","comp":"b","codes":[{"code":"b510","titel":"Funktionen der Nahrungsaufnahme","items":[],"nurUntersuchung":true},{"code":"b550","titel":"Funktionen der Wärmeregulation","items":[{"inst":"PDQ-39","nr":"39","stichwort":"Unangenehm heiß oder kalt"}],"nurUntersuchung":false}],"_a0":14.349999999999998,"_a1":16.349999999999998},{"id":"b7","titel":"Neuromuskuloskeletale und bewegungsbezogene Funktionen","kurz":"Bewegung","comp":"b","codes":[{"code":"b735","titel":"Funktionen des Muskeltonus","items":[],"nurUntersuchung":true},{"code":"b760","titel":"Funktionen der Kontrolle von Willkürbewegungen","items":[],"nurUntersuchung":true},{"code":"b765","titel":"Funktionen der unwillkürlichen Bewegungen","items":[],"nurUntersuchung":true},{"code":"b770","titel":"Funktionen der Bewegungsmuster beim Gehen","items":[],"nurUntersuchung":true},{"code":"b780","titel":"Mit den Funktionen der Muskeln und der Bewegung in Zusammenhang stehende Empfindungen","items":[{"inst":"PDQ-39","nr":"37","stichwort":"Schmerzhafte Muskelkrämpfe/-spasmen"}],"nurUntersuchung":false}],"_a0":17.049999999999997,"_a1":22.049999999999997},{"id":"d1","titel":"Lernen und Wissensanwendung","kurz":"Lernen","comp":"d","codes":[{"code":"d155","titel":"Sich Fertigkeiten aneignen","items":[{"inst":"WHODAS 2.0","nr":"D1.4","stichwort":"Neue Aufgabe lernen"}],"nurUntersuchung":false},{"code":"d160","titel":"Aufmerksamkeit fokussieren","items":[{"inst":"WHODAS 2.0","nr":"D1.1","stichwort":"Konzentration 10 Minuten"}],"nurUntersuchung":false},{"code":"d170","titel":"Schreiben","items":[{"inst":"PDQ-39","nr":"14","stichwort":"Leserlich schreiben"}],"nurUntersuchung":false},{"code":"d175","titel":"Probleme lösen","items":[{"inst":"WHODAS 2.0","nr":"D1.3","stichwort":"Alltagsprobleme lösen"}],"nurUntersuchung":false}],"_a0":23.849999999999998,"_a1":27.849999999999998},{"id":"d2","titel":"Allgemeine Aufgaben und Anforderungen","kurz":"Aufgaben","comp":"d","codes":[{"code":"d210","titel":"Eine Einzelaufgabe übernehmen","items":[{"inst":"WHODAS 2.0","nr":"D5.2","stichwort":"Wichtigste Hausarbeiten gut erledigen"},{"inst":"WHODAS 2.0","nr":"D5.3","stichwort":"Alle Hausarbeiten erledigen"},{"inst":"WHODAS 2.0","nr":"D5.4","stichwort":"Hausarbeit schnell genug erledigen"},{"inst":"WHODAS 2.0","nr":"D5.6","stichwort":"Wichtigste Arbeitsaufgaben gut erledigen"},{"inst":"WHODAS 2.0","nr":"D5.7","stichwort":"Alle Arbeit erledigen"},{"inst":"WHODAS 2.0","nr":"D5.8","stichwort":"Arbeit schnell genug erledigen"}],"nurUntersuchung":false},{"code":"d220","titel":"Mehrfachaufgaben übernehmen","items":[{"inst":"WHODAS 2.0","nr":"D5.2","stichwort":"Wichtigste Hausarbeiten gut erledigen"},{"inst":"WHODAS 2.0","nr":"D5.3","stichwort":"Alle Hausarbeiten erledigen"},{"inst":"WHODAS 2.0","nr":"D5.4","stichwort":"Hausarbeit schnell genug erledigen"},{"inst":"WHODAS 2.0","nr":"D5.6","stichwort":"Wichtigste Arbeitsaufgaben gut erledigen"},{"inst":"WHODAS 2.0","nr":"D5.7","stichwort":"Alle Arbeit erledigen"},{"inst":"WHODAS 2.0","nr":"D5.8","stichwort":"Arbeit schnell genug erledigen"}],"nurUntersuchung":false}],"_a0":28.549999999999997,"_a1":30.549999999999997},{"id":"d3","titel":"Kommunikation","kurz":"Kommunikation","comp":"d","codes":[{"code":"d310","titel":"Kommunizieren als Empfänger gesprochener Mitteilungen","items":[{"inst":"WHODAS 2.0","nr":"D1.5","stichwort":"Andere verstehen"}],"nurUntersuchung":false},{"code":"d330","titel":"Sprechen","items":[{"inst":"PDQ-39","nr":"34","stichwort":"Sprechprobleme"},{"inst":"PDQ-39","nr":"35","stichwort":"Nicht richtig kommunizieren können"}],"nurUntersuchung":false},{"code":"d350","titel":"Konversation","items":[{"inst":"PDQ-39","nr":"35","stichwort":"Nicht richtig kommunizieren können"},{"inst":"WHODAS 2.0","nr":"D1.6","stichwort":"Gespräch beginnen und führen"}],"nurUntersuchung":false}],"_a0":31.249999999999996,"_a1":34.25},{"id":"d4","titel":"Mobilität","kurz":"Mobilität","comp":"d","codes":[{"code":"d410","titel":"Eine elementare Körperposition wechseln","items":[{"inst":"WHODAS 2.0","nr":"D2.2","stichwort":"Aus dem Sitzen aufstehen"}],"nurUntersuchung":false},{"code":"d415","titel":"In einer Körperposition verbleiben","items":[{"inst":"WHODAS 2.0","nr":"D2.1","stichwort":"Lange stehen (30 Min.)"}],"nurUntersuchung":false},{"code":"d430","titel":"Gegenstände anheben und tragen","items":[{"inst":"PDQ-39","nr":"3","stichwort":"Einkaufstaschen tragen"}],"nurUntersuchung":false},{"code":"d440","titel":"Feinmotorischer Handgebrauch","items":[{"inst":"PDQ-39","nr":"13","stichwort":"Knöpfe oder Schnürsenkel schließen"},{"inst":"PDQ-39","nr":"14","stichwort":"Leserlich schreiben"},{"inst":"PDQ-39","nr":"15","stichwort":"Essen schneiden"},{"inst":"PDQ-39","nr":"16","stichwort":"Getränk halten ohne zu verschütten"}],"nurUntersuchung":false},{"code":"d450","titel":"Gehen","items":[{"inst":"PDQ-39","nr":"4","stichwort":"Längere Strecke (ca. 800 m) gehen"},{"inst":"PDQ-39","nr":"5","stichwort":"Kurze Strecke (ca. 100 m) gehen"},{"inst":"WHODAS 2.0","nr":"D2.5","stichwort":"Lange Strecke (1 km) gehen"}],"nurUntersuchung":false},{"code":"d460","titel":"Sich in verschiedenen Umgebungen fortbewegen","items":[{"inst":"PDQ-39","nr":"6","stichwort":"In der Wohnung fortbewegen"},{"inst":"PDQ-39","nr":"7","stichwort":"Sich in der Öffentlichkeit fortbewegen"},{"inst":"PDQ-39","nr":"8","stichwort":"Begleitung beim Ausgehen nötig"},{"inst":"PDQ-39","nr":"9","stichwort":"Sorge vor Sturz in der Öffentlichkeit"},{"inst":"WHODAS 2.0","nr":"D2.3","stichwort":"In der Wohnung fortbewegen"},{"inst":"WHODAS 2.0","nr":"D2.4","stichwort":"Das Haus verlassen"}],"nurUntersuchung":false}],"_a0":34.95,"_a1":40.95},{"id":"d5","titel":"Selbstversorgung","kurz":"Selbstversorgung","comp":"d","codes":[{"code":"d510","titel":"Sich waschen","items":[{"inst":"PDQ-39","nr":"11","stichwort":"Sich waschen"},{"inst":"WHODAS 2.0","nr":"D3.1","stichwort":"Ganzen Körper waschen"}],"nurUntersuchung":false},{"code":"d540","titel":"Sich kleiden","items":[{"inst":"PDQ-39","nr":"12","stichwort":"Sich anziehen"},{"inst":"PDQ-39","nr":"13","stichwort":"Knöpfe oder Schnürsenkel schließen"},{"inst":"WHODAS 2.0","nr":"D3.2","stichwort":"Sich anziehen"}],"nurUntersuchung":false},{"code":"d550","titel":"Essen","items":[{"inst":"PDQ-39","nr":"15","stichwort":"Essen schneiden"},{"inst":"PDQ-39","nr":"24","stichwort":"Essen/Trinken in Öffentlichkeit meiden"},{"inst":"WHODAS 2.0","nr":"D3.3","stichwort":"Essen"}],"nurUntersuchung":false},{"code":"d560","titel":"Trinken","items":[{"inst":"PDQ-39","nr":"16","stichwort":"Getränk halten ohne zu verschütten"},{"inst":"PDQ-39","nr":"24","stichwort":"Essen/Trinken in Öffentlichkeit meiden"}],"nurUntersuchung":false}],"_a0":41.650000000000006,"_a1":45.650000000000006},{"id":"d6","titel":"Häusliches Leben","kurz":"Haushalt","comp":"d","codes":[{"code":"d620","titel":"Waren und Dienstleistungen des täglichen Bedarfs beschaffen","items":[{"inst":"PDQ-39","nr":"3","stichwort":"Einkaufstaschen tragen"}],"nurUntersuchung":false},{"code":"d630","titel":"Mahlzeiten vorbereiten","items":[{"inst":"PDQ-39","nr":"2","stichwort":"Haushalt versorgen"}],"nurUntersuchung":false},{"code":"d640","titel":"Hausarbeiten erledigen","items":[{"inst":"PDQ-39","nr":"2","stichwort":"Haushalt versorgen"},{"inst":"WHODAS 2.0","nr":"D5.2","stichwort":"Wichtigste Hausarbeiten gut erledigen"},{"inst":"WHODAS 2.0","nr":"D5.3","stichwort":"Alle Hausarbeiten erledigen"},{"inst":"WHODAS 2.0","nr":"D5.4","stichwort":"Hausarbeit schnell genug erledigen"}],"nurUntersuchung":false},{"code":"d650","titel":"Haushaltsgegenstände pflegen","items":[{"inst":"PDQ-39","nr":"2","stichwort":"Haushalt versorgen"}],"nurUntersuchung":false}],"_a0":46.35000000000001,"_a1":50.35000000000001},{"id":"d7","titel":"Interpersonelle Interaktionen und Beziehungen","kurz":"Beziehungen","comp":"d","codes":[{"code":"d720","titel":"Komplexe interpersonelle Interaktionen","items":[{"inst":"WHODAS 2.0","nr":"D4.4","stichwort":"Neue Freunde finden"}],"nurUntersuchung":false},{"code":"d730","titel":"Mit Fremden umgehen","items":[{"inst":"WHODAS 2.0","nr":"D4.1","stichwort":"Mit Fremden umgehen"}],"nurUntersuchung":false},{"code":"d750","titel":"Informelle soziale Beziehungen","items":[{"inst":"WHODAS 2.0","nr":"D4.2","stichwort":"Freundschaft aufrechterhalten"},{"inst":"WHODAS 2.0","nr":"D4.3","stichwort":"Mit nahestehenden Menschen auskommen"},{"inst":"WHODAS 2.0","nr":"D4.4","stichwort":"Neue Freunde finden"}],"nurUntersuchung":false},{"code":"d760","titel":"Familienbeziehungen","items":[{"inst":"PDQ-39","nr":"27","stichwort":"Probleme in engen Beziehungen"},{"inst":"WHODAS 2.0","nr":"D4.3","stichwort":"Mit nahestehenden Menschen auskommen"}],"nurUntersuchung":false},{"code":"d770","titel":"Intime Beziehungen","items":[{"inst":"PDQ-39","nr":"27","stichwort":"Probleme in engen Beziehungen"},{"inst":"PDQ-39","nr":"28","stichwort":"Fehlende Unterstützung durch Partner/in"},{"inst":"WHODAS 2.0","nr":"D4.3","stichwort":"Mit nahestehenden Menschen auskommen"},{"inst":"WHODAS 2.0","nr":"D4.5","stichwort":"Sexuelle Aktivitäten"}],"nurUntersuchung":false}],"_a0":51.05000000000001,"_a1":56.05000000000001},{"id":"d8","titel":"Bedeutende Lebensbereiche","kurz":"Arbeit · Bildung","comp":"d","codes":[{"code":"d820","titel":"Schulbildung","items":[{"inst":"WHODAS 2.0","nr":"D5.5","stichwort":"Tägliche Arbeit/Ausbildung"},{"inst":"WHODAS 2.0","nr":"D5.6","stichwort":"Wichtigste Arbeitsaufgaben gut erledigen"},{"inst":"WHODAS 2.0","nr":"D5.7","stichwort":"Alle Arbeit erledigen"},{"inst":"WHODAS 2.0","nr":"D5.8","stichwort":"Arbeit schnell genug erledigen"}],"nurUntersuchung":false},{"code":"d825","titel":"Theoretische Berufsausbildung","items":[{"inst":"WHODAS 2.0","nr":"D5.5","stichwort":"Tägliche Arbeit/Ausbildung"},{"inst":"WHODAS 2.0","nr":"D5.6","stichwort":"Wichtigste Arbeitsaufgaben gut erledigen"},{"inst":"WHODAS 2.0","nr":"D5.7","stichwort":"Alle Arbeit erledigen"},{"inst":"WHODAS 2.0","nr":"D5.8","stichwort":"Arbeit schnell genug erledigen"}],"nurUntersuchung":false},{"code":"d830","titel":"Höhere Bildung und Ausbildung","items":[{"inst":"WHODAS 2.0","nr":"D5.5","stichwort":"Tägliche Arbeit/Ausbildung"},{"inst":"WHODAS 2.0","nr":"D5.6","stichwort":"Wichtigste Arbeitsaufgaben gut erledigen"},{"inst":"WHODAS 2.0","nr":"D5.7","stichwort":"Alle Arbeit erledigen"},{"inst":"WHODAS 2.0","nr":"D5.8","stichwort":"Arbeit schnell genug erledigen"}],"nurUntersuchung":false},{"code":"d850","titel":"Bezahlte Tätigkeit","items":[{"inst":"WHODAS 2.0","nr":"D5.5","stichwort":"Tägliche Arbeit/Ausbildung"},{"inst":"WHODAS 2.0","nr":"D5.6","stichwort":"Wichtigste Arbeitsaufgaben gut erledigen"},{"inst":"WHODAS 2.0","nr":"D5.7","stichwort":"Alle Arbeit erledigen"},{"inst":"WHODAS 2.0","nr":"D5.8","stichwort":"Arbeit schnell genug erledigen"}],"nurUntersuchung":false},{"code":"d870","titel":"Wirtschaftliche Eigenständigkeit","items":[{"inst":"WHODAS 2.0","nr":"D6.6","stichwort":"Finanzielle Belastung"}],"nurUntersuchung":false}],"_a0":56.750000000000014,"_a1":61.750000000000014},{"id":"d9","titel":"Gemeinschafts-, soziales und staatsbürgerliches Leben","kurz":"Gemeinschaft","comp":"d","codes":[{"code":"d910","titel":"Gemeinschaftsleben","items":[{"inst":"WHODAS 2.0","nr":"D6.1","stichwort":"An Gemeinschaftsaktivitäten teilnehmen"}],"nurUntersuchung":false},{"code":"d920","titel":"Erholung und Freizeit","items":[{"inst":"PDQ-39","nr":"1","stichwort":"Freizeitaktivitäten ausüben"},{"inst":"PDQ-39","nr":"24","stichwort":"Essen/Trinken in Öffentlichkeit meiden"},{"inst":"WHODAS 2.0","nr":"D6.8","stichwort":"Allein entspannen/Freude haben"}],"nurUntersuchung":false},{"code":"d940","titel":"Menschenrechte","items":[{"inst":"WHODAS 2.0","nr":"D6.3","stichwort":"In Würde leben"}],"nurUntersuchung":false}],"_a0":62.45000000000002,"_a1":65.45000000000002},{"id":"e3","titel":"Unterstützung und Beziehungen","kurz":"Unterstützung","comp":"e","codes":[{"code":"e310","titel":"Engster Familienkreis","items":[{"inst":"PDQ-39","nr":"28","stichwort":"Fehlende Unterstützung durch Partner/in"},{"inst":"PDQ-39","nr":"29","stichwort":"Fehlende Unterstützung Familie/Freunde"}],"nurUntersuchung":false},{"code":"e320","titel":"Freunde","items":[{"inst":"PDQ-39","nr":"29","stichwort":"Fehlende Unterstützung Familie/Freunde"}],"nurUntersuchung":false},{"code":"e399","titel":"Unterstützung und Beziehungen, nicht näher bezeichnet","items":[{"inst":"PDQ-39","nr":"8","stichwort":"Begleitung beim Ausgehen nötig"}],"nurUntersuchung":false}],"_a0":67.25000000000001,"_a1":70.25000000000001},{"id":"e4","titel":"Einstellungen","kurz":"Einstellungen","comp":"e","codes":[{"code":"e460","titel":"Gesellschaftliche Einstellungen","items":[{"inst":"PDQ-39","nr":"23","stichwort":"Erkrankung verbergen müssen"},{"inst":"PDQ-39","nr":"25","stichwort":"Verlegenheit wegen Erkrankung"}],"nurUntersuchung":false},{"code":"e499","titel":"Einstellungen, nicht näher bezeichnet","items":[{"inst":"PDQ-39","nr":"26","stichwort":"Sorge um Reaktionen anderer"},{"inst":"PDQ-39","nr":"36","stichwort":"Sich von anderen ignoriert fühlen"}],"nurUntersuchung":false}],"_a0":70.95000000000002,"_a1":72.95000000000002}]};
+let DATEN = {"hinweis":"FIKTIVER BEISPIELVERLAUF – keine echten Patientendaten","format":"pdq39: Item 1–39 → 0–4 (0 nie … 4 immer/kann gar nicht); whodas: Item D1.1–D6.8 → 1–5 (1 keine … 5 extrem/nicht möglich), null = nicht zutreffend; gas: ICF-Codes der GAS-Ziele des Aufenthalts","patient":{"bezeichnung":"Beispielpatient (fiktiv)","erstdiagnose":"2019"},"ereignisse":[{"typ":"stationaer","von":"2023-02-22","bis":"2023-03-10","label":"PKT-Aufenthalt 1"},{"typ":"stationaer","von":"2025-07-14","bis":"2025-07-25","label":"stationär nach Sturz"},{"typ":"pn","datum":"2023-03-24","label":"Telefon-Follow-up PN"},{"typ":"arzt","datum":"2023-06-20","label":"Parkinson-Ambulanz"},{"typ":"arzt","datum":"2023-10-17","label":"Parkinson-Ambulanz"},{"typ":"pn","datum":"2024-01-23","label":"Telefon-Follow-up PN"},{"typ":"arzt","datum":"2024-06-11","label":"Parkinson-Ambulanz"},{"typ":"arzt","datum":"2024-11-19","label":"Parkinson-Ambulanz"},{"typ":"arzt","datum":"2025-05-06","label":"Parkinson-Ambulanz"},{"typ":"pn","datum":"2025-08-12","label":"Telefon-Follow-up PN"},{"typ":"arzt","datum":"2025-09-09","label":"Parkinson-Ambulanz"},{"typ":"arzt","datum":"2026-01-27","label":"Parkinson-Ambulanz"},{"typ":"arzt","datum":"2026-05-19","label":"Parkinson-Ambulanz"},{"typ":"arzt","datum":"2026-09-01","label":"Parkinson-Ambulanz: Anmeldung PKT"}],"zeitpunkte":[{"id":"t1","datum":"2023-02-01","label":"02/23","anlass":"vor PKT-Aufenthalt 1 (Pre-Admission)","gas":["d450","d460","d920"],"pdq39":{"1":2,"2":1,"3":1,"4":3,"5":2,"6":1,"7":2,"8":1,"9":2,"10":1,"11":0,"12":1,"13":2,"14":2,"15":1,"16":1,"17":1,"18":0,"19":0,"20":1,"21":2,"22":2,"23":1,"24":0,"25":1,"26":1,"27":1,"28":0,"29":0,"30":1,"31":1,"32":0,"33":0,"34":0,"35":0,"36":0,"37":2,"38":2,"39":1},"whodas":{"D1.1":2,"D1.2":1,"D1.3":1,"D1.4":2,"D1.5":1,"D1.6":1,"D2.1":3,"D2.2":2,"D2.3":2,"D2.4":2,"D2.5":4,"D3.1":1,"D3.2":2,"D3.3":1,"D3.4":1,"D4.1":1,"D4.2":2,"D4.3":1,"D4.4":2,"D4.5":2,"D5.1":2,"D5.2":2,"D5.3":2,"D5.4":3,"D5.5":null,"D5.6":null,"D5.7":null,"D5.8":null,"D6.1":2,"D6.2":2,"D6.3":1,"D6.4":2,"D6.5":2,"D6.6":1,"D6.7":2,"D6.8":2}},{"id":"t2","datum":"2023-03-10","label":"03/23","anlass":"Entlassung PKT-Aufenthalt 1","gas":[],"pdq39":{"1":1,"2":1,"3":1,"4":2,"5":1,"6":0,"7":1,"8":0,"9":1,"10":0,"11":0,"12":1,"13":1,"14":2,"15":1,"16":1,"17":1,"18":0,"19":0,"20":0,"21":1,"22":2,"23":1,"24":0,"25":1,"26":1,"27":1,"28":0,"29":0,"30":1,"31":1,"32":0,"33":0,"34":0,"35":0,"36":0,"37":1,"38":1,"39":1},"whodas":{"D1.1":2,"D1.2":1,"D1.3":1,"D1.4":2,"D1.5":1,"D1.6":1,"D2.1":2,"D2.2":2,"D2.3":1,"D2.4":2,"D2.5":3,"D3.1":1,"D3.2":2,"D3.3":1,"D3.4":1,"D4.1":1,"D4.2":1,"D4.3":1,"D4.4":2,"D4.5":2,"D5.1":2,"D5.2":2,"D5.3":2,"D5.4":2,"D5.5":null,"D5.6":null,"D5.7":null,"D5.8":null,"D6.1":2,"D6.2":2,"D6.3":1,"D6.4":2,"D6.5":2,"D6.6":1,"D6.7":2,"D6.8":2}},{"id":"t3","datum":"2024-03-15","label":"03/24","anlass":"Jahreserhebung Nachsorge","gas":[],"pdq39":{"1":2,"2":1,"3":1,"4":3,"5":2,"6":1,"7":2,"8":1,"9":2,"10":1,"11":1,"12":1,"13":2,"14":2,"15":1,"16":1,"17":1,"18":1,"19":0,"20":1,"21":2,"22":2,"23":1,"24":1,"25":1,"26":1,"27":1,"28":0,"29":0,"30":1,"31":1,"32":1,"33":0,"34":1,"35":1,"36":0,"37":1,"38":2,"39":1},"whodas":{"D1.1":2,"D1.2":2,"D1.3":1,"D1.4":2,"D1.5":1,"D1.6":2,"D2.1":3,"D2.2":2,"D2.3":2,"D2.4":2,"D2.5":4,"D3.1":2,"D3.2":2,"D3.3":1,"D3.4":1,"D4.1":1,"D4.2":2,"D4.3":1,"D4.4":2,"D4.5":2,"D5.1":2,"D5.2":2,"D5.3":3,"D5.4":3,"D5.5":null,"D5.6":null,"D5.7":null,"D5.8":null,"D6.1":3,"D6.2":2,"D6.3":1,"D6.4":2,"D6.5":2,"D6.6":1,"D6.7":2,"D6.8":2}},{"id":"t4","datum":"2025-03-15","label":"03/25","anlass":"Jahreserhebung Nachsorge","gas":[],"pdq39":{"1":3,"2":2,"3":2,"4":3,"5":2,"6":2,"7":3,"8":2,"9":3,"10":2,"11":1,"12":1,"13":2,"14":3,"15":2,"16":1,"17":2,"18":1,"19":1,"20":1,"21":2,"22":3,"23":1,"24":1,"25":2,"26":1,"27":1,"28":0,"29":1,"30":2,"31":1,"32":1,"33":0,"34":2,"35":1,"36":1,"37":1,"38":2,"39":1},"whodas":{"D1.1":2,"D1.2":2,"D1.3":2,"D1.4":2,"D1.5":2,"D1.6":2,"D2.1":4,"D2.2":3,"D2.3":2,"D2.4":3,"D2.5":4,"D3.1":2,"D3.2":2,"D3.3":2,"D3.4":2,"D4.1":2,"D4.2":2,"D4.3":2,"D4.4":3,"D4.5":3,"D5.1":3,"D5.2":3,"D5.3":3,"D5.4":3,"D5.5":null,"D5.6":null,"D5.7":null,"D5.8":null,"D6.1":3,"D6.2":3,"D6.3":2,"D6.4":3,"D6.5":3,"D6.6":2,"D6.7":3,"D6.8":3}},{"id":"t5","datum":"2026-10-01","label":"10/26","anlass":"vor PKT-Aufenthalt 2 (Pre-Admission)","gas":["d350","d460","d910"],"pdq39":{"1":3,"2":2,"3":2,"4":4,"5":3,"6":2,"7":3,"8":3,"9":4,"10":3,"11":1,"12":2,"13":2,"14":3,"15":2,"16":2,"17":2,"18":2,"19":1,"20":1,"21":3,"22":3,"23":1,"24":2,"25":2,"26":2,"27":1,"28":1,"29":1,"30":2,"31":2,"32":2,"33":1,"34":3,"35":2,"36":2,"37":2,"38":2,"39":1},"whodas":{"D1.1":3,"D1.2":3,"D1.3":2,"D1.4":3,"D1.5":2,"D1.6":3,"D2.1":4,"D2.2":3,"D2.3":3,"D2.4":4,"D2.5":5,"D3.1":2,"D3.2":3,"D3.3":2,"D3.4":2,"D4.1":2,"D4.2":3,"D4.3":2,"D4.4":3,"D4.5":3,"D5.1":3,"D5.2":3,"D5.3":4,"D5.4":4,"D5.5":null,"D5.6":null,"D5.7":null,"D5.8":null,"D6.1":4,"D6.2":3,"D6.3":2,"D6.4":3,"D6.5":3,"D6.6":2,"D6.7":3,"D6.8":3}}]};
+const byCode = {}; MODEL.sectors.forEach(s => s.codes.forEach(c => byCode[c.code] = { ...c, sektor: s }));
+const STUFE = ['kein Problem', 'leicht', 'mäßig', 'erheblich', 'voll ausgeprägt'];
+let W;
+function render() {
+  W = icfWerte(MODEL, DATEN);
+  const z = DATEN.zeitpunkte;
+  document.getElementById('chart').innerHTML = icfKreisSVG(MODEL, DATEN, {
+    zentrum1: DATEN.patient?.bezeichnung?.split(' ')[0] || 'Patient',
+    aria: 'ICF-Kreis, ' + z.length + ' Erhebungen von ' + z[0].label + ' bis ' + z[z.length - 1].label + '. Tabellenansicht über die Schaltfläche verfügbar.'
+  });
+  document.getElementById('quelle').style.display = DATEN.hinweis ? '' : 'none';
+  // Tabelle
+  let h = '<table><thead><tr><th>Code</th><th>Kategorie</th>' + z.map(t => '<th>' + t.label + '</th>').join('') + '</tr></thead><tbody>';
+  MODEL.sectors.forEach(s => s.codes.forEach(c => {
+    h += '<tr><td>' + c.code + '</td><td>' + c.titel + '</td>' + W[c.code].map((w, i) => '<td class="v">' + (c.nurUntersuchung ? 'U' : w.mittel == null ? '–' : w.mittel.toFixed(1)) + ((z[i].gas || []).includes(c.code) ? ' ◆' : '') + '</td>').join('') + '</tr>';
+  }));
+  document.getElementById('table').innerHTML = h + '</tbody></table><p class="muted" style="font-size:12.5px">U = nur durch Untersuchung erfassbar · – = keine Angabe · ◆ = GAS-Ziel</p>';
+  wire();
+}
+function info(code, ti) {
+  const c = byCode[code], t = DATEN.zeitpunkte[ti], w = W[code][ti];
+  let wert = c.nurUntersuchung ? 'nicht aus Fragebögen ableitbar (Untersuchung, z. B. MDS-UPDRS III, Schluckscreening)' : w.mittel == null ? 'keine Angabe' : w.mittel.toFixed(1) + ' · ' + STUFE[w.stufe] + (w.max >= 3 ? ' · jenseits der Grenze (Item ≥ 3)' : '');
+  return { c, t, w, wert };
+}
+function wire() {
+  const svg = document.querySelector('#chart svg'), tip = document.getElementById('tip');
+  svg.querySelectorAll('.ik-cell').forEach(p => {
+    p.addEventListener('mousemove', e => {
+      const { c, t, wert } = info(p.dataset.code, +p.dataset.t);
+      tip.innerHTML = '<b>' + c.code + ' ' + c.titel + '</b><br>' + t.label + ' · ' + (t.anlass || '') + '<br>' + wert;
+      tip.style.display = 'block';
+      tip.style.left = Math.min(e.clientX + 14, innerWidth - 300) + 'px'; tip.style.top = (e.clientY + 14) + 'px';
+    });
+    p.addEventListener('mouseleave', () => tip.style.display = 'none');
+    p.addEventListener('click', () => select(p.dataset.code, +p.dataset.t));
+  });
+}
+function select(code, ti) {
+  const { c, t, w, wert } = info(code, ti);
+  const svg = document.querySelector('#chart svg');
+  svg.classList.add('hl'); svg.querySelectorAll('.ik-cell').forEach(p => p.classList.toggle('on', p.dataset.code === code));
+  document.getElementById('d-title').textContent = c.code + ' ' + c.titel;
+  document.getElementById('d-sub').textContent = c.sektor.id + ' ' + c.sektor.titel;
+  let h = '<h3>VERLAUF</h3>' + DATEN.zeitpunkte.map((z, i) => { const x = W[code][i]; return '<div class="row"><span>' + z.label + ((z.gas || []).includes(code) ? ' ◆' : '') + '</span><b>' + (c.nurUntersuchung ? 'U' : x.mittel == null ? '–' : x.mittel.toFixed(1)) + '</b></div>'; }).join('');
+  h += '<h3>ITEMS ' + t.label.toUpperCase() + ' (' + wert + ')</h3>';
+  h += c.items.length ? c.items.map(it => { const v = w.items.find(x => x.inst === it.inst && x.nr === it.nr); return '<div class="row"><span>' + it.inst + ' ' + it.nr + ' · ' + it.stichwort + '</span><b>' + (v ? v.wert : '–') + '</b></div>'; }).join('') : '<p class="muted" style="font-size:13px">Kein Fragebogen-Item verknüpft.</p>';
+  document.getElementById('detail').innerHTML = h;
+}
+document.getElementById('file').addEventListener('change', async e => {
+  const f = e.target.files[0]; if (!f) return;
+  try { const d = JSON.parse(await f.text()); if (!Array.isArray(d.zeitpunkte) || !d.zeitpunkte.length) throw new Error('„zeitpunkte“ fehlt'); DATEN = d; render(); }
+  catch (err) { alert('Datei konnte nicht gelesen werden: ' + err.message); }
+});
+document.getElementById('tbl').addEventListener('click', e => { const b = e.currentTarget, on = b.getAttribute('aria-pressed') !== 'true'; b.setAttribute('aria-pressed', on); document.getElementById('table').hidden = !on; });
+function theme() { const r = document.documentElement, dark = r.classList.contains('dark') || (!r.classList.contains('light') && matchMedia('(prefers-color-scheme: dark)').matches); r.classList.toggle('dark', !dark); r.classList.toggle('light', dark); }
+document.getElementById('theme').addEventListener('click', theme);
+addEventListener('keydown', e => { if (e.key === 't' || e.key === 'T') theme(); });
+render();
+</script>
+</body>
+</html>

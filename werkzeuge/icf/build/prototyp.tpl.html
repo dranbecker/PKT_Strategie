@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ICF-Kreis – Prototyp (PKT 3.0)</title>
+<link rel="icon" href="data:,">
+<style>
+:root{--lim:#d70015;--bg:#fff;--ink:#1d1d1f;--ink2:#424245;--mut:#6e6e73;--card:#f5f5f7;--line:#d2d2d7;--acc:#0071e3;color-scheme:light dark}
+@media (prefers-color-scheme:dark){:root:not(.light){--lim:#ff453a;--bg:#000;--ink:#f5f5f7;--ink2:#d2d2d7;--mut:#a1a1a6;--card:#1c1c1e;--line:#38383a;--acc:#2997ff}}
+:root.dark{--lim:#ff453a;--bg:#000;--ink:#f5f5f7;--ink2:#d2d2d7;--mut:#a1a1a6;--card:#1c1c1e;--line:#38383a;--acc:#2997ff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif}
+main{max-width:1320px;margin:0 auto;padding:28px 32px 48px}
+h1{font-size:34px;letter-spacing:-.02em;margin:4px 0 6px}
+.kicker{color:var(--acc);font-weight:600;margin:0}
+.muted{color:var(--mut)}
+.warn{display:inline-block;background:rgba(255,159,10,.14);color:#c25700;font-weight:600;border-radius:8px;padding:2px 10px;font-size:13px}
+@media (prefers-color-scheme:dark){:root:not(.light) .warn{color:#ff9f0a}}:root.dark .warn{color:#ff9f0a}
+.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:16px 0 8px}
+button,label.btn{font:inherit;font-size:14px;font-weight:600;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 14px;cursor:pointer}
+button[aria-pressed=true]{background:var(--acc);border-color:var(--acc);color:#fff}
+.wrap{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:28px;align-items:start}
+.panel{background:var(--card);border-radius:20px;padding:18px 20px;position:sticky;top:16px}
+.panel h2{font-size:18px;margin:0 0 4px}.panel h3{font-size:13px;color:var(--mut);margin:14px 0 6px;font-weight:600;letter-spacing:.02em}
+.legend{display:flex;flex-direction:column;gap:6px;font-size:13.5px}
+.legend span{display:flex;align-items:center;gap:8px}
+.sw{width:22px;height:14px;border-radius:4px;display:inline-block;flex:none}
+.ik-legend{--q0:#ececf0;--q1:#f2a65e;--q2:#e07a22;--q3:#b8560a;--q4:#7a3305}
+@media (prefers-color-scheme:dark){:root:not(.light) .ik-legend{--q0:#2c2c2e;--q1:#7d4012;--q2:#b85c12;--q3:#ec8420;--q4:#ffbd6b}}
+:root.dark .ik-legend{--q0:#2c2c2e;--q1:#7d4012;--q2:#b85c12;--q3:#ec8420;--q4:#ffbd6b}
+#detail .row{display:flex;justify-content:space-between;gap:10px;font-size:13.5px;padding:3px 0;border-bottom:1px solid var(--line)}
+#detail .row b{font-variant-numeric:tabular-nums}
+#tip{position:fixed;pointer-events:none;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:8px 12px;font-size:13px;box-shadow:0 6px 24px rgba(0,0,0,.25);display:none;max-width:280px;z-index:5}
+table{border-collapse:collapse;width:100%;font-size:13px;margin-top:14px}
+th,td{padding:5px 8px;border-bottom:1px solid var(--line);text-align:left}
+td.v{text-align:center;font-variant-numeric:tabular-nums}
+th{color:var(--mut);font-weight:600;font-size:12px}
+details{margin-top:28px}summary{cursor:pointer;font-weight:600}
+code{font-size:13px}
+/*CSS*/
+:root.light .ik{--q0:#ececf0;--q1:#f2a65e;--q2:#e07a22;--q3:#b8560a;--q4:#7a3305;--qline:#d2d2d7;--ik-b:#0071e3;--ik-d:#1f8a3b;--ik-e:#8944ab;--ik-ink:#1d1d1f;--ik-mut:#6e6e73;--ik-surf:#ffffff;--ik-gas:#1d1d1f;--ik-lim:#d70015}
+:root.dark .ik{--q0:#2c2c2e;--q1:#7d4012;--q2:#b85c12;--q3:#ec8420;--q4:#ffbd6b;--qline:#48484a;--ik-b:#2997ff;--ik-d:#30d158;--ik-e:#bf5af2;--ik-ink:#f5f5f7;--ik-mut:#a1a1a6;--ik-surf:#000;--ik-gas:#f5f5f7;--ik-lim:#ff453a}
+.ik-cell{cursor:pointer}
+@media (max-width:980px){.wrap{grid-template-columns:1fr}.panel{position:static}}
+</style>
+</head>
+<body>
+<main>
+  <p class="kicker">PKT 3.0 · Werkzeug · Status: Konzept (Prototyp)</p>
+  <h1>ICF-Kreis</h1>
+  <p class="muted" style="max-width:860px;margin:0">Langzeitverlauf der Funktionsfähigkeit auf einen Blick: Segmente = ICF-Kapitel, Speichen = ICF-Codes, Ringe = Erhebungen (innen die erste, außen die letzte). Die Farbe zeigt die Ausprägung des Problems, berechnet aus PDQ-39 und WHODAS 2.0.</p>
+  <p id="quelle" style="margin:10px 0 0"><span class="warn">Fiktiver Beispielverlauf – keine echten Patientendaten</span></p>
+  <div class="bar">
+    <label class="btn">Eigene Daten laden (JSON)<input type="file" id="file" accept=".json,application/json" hidden></label>
+    <button id="tbl" aria-pressed="false">Tabellenansicht</button>
+    <button id="theme">Hell/Dunkel (T)</button>
+    <span class="muted" style="font-size:13px">Daten werden nur lokal im Browser gelesen, nichts wird übertragen.</span>
+  </div>
+  <div class="wrap">
+    <div id="chart"></div>
+    <aside class="panel">
+      <h2 id="d-title">Feld antippen</h2>
+      <p class="muted" id="d-sub" style="margin:0;font-size:13.5px">Zeigt Wert, Zeitpunkt und die zugrunde liegenden Fragebogen-Items.</p>
+      <div id="detail"></div>
+      <h3>AUSPRÄGUNG (Mittel der verknüpften Items, 0–4)</h3>
+      <div class="legend ik-legend">
+        <span><i class="sw" style="background:var(--q0)"></i>0 · kein Problem</span>
+        <span><i class="sw" style="background:var(--q1)"></i>1 · leicht</span>
+        <span><i class="sw" style="background:var(--q2)"></i>2 · mäßig</span>
+        <span><i class="sw" style="background:var(--q3)"></i>3 · erheblich</span>
+        <span><i class="sw" style="background:var(--q4)"></i>4 · voll ausgeprägt</span>
+        <span><i class="sw" style="border:1px dashed var(--line)"></i>keine Angabe (z. B. nicht berufstätig)</span>
+        <span><i class="sw" style="border:1px solid var(--line)"></i>nicht aus Fragebogen – nur durch Untersuchung</span>
+        <span><svg width="22" height="14" viewBox="-11 -7 22 14"><path d="M0 -6l6 6l-6 6l-6 -6Z" fill="var(--bg)" stroke="var(--ink)" stroke-width="2"/></svg>GAS-Ziel dieses Aufenthalts</span>
+        <span><svg width="22" height="14"><path d="M1 7H21" stroke="var(--bg)" stroke-width="6"/><path d="M1 7H21" stroke="var(--lim)" stroke-width="2.4"/></svg>Grenze erheblich: mind. ein Item ≥ 3<br>(Orientierungswert, nicht validiert)</span>
+      </div>
+      <h3>VERSORGUNG (obere Lücke, Zeit von innen nach außen)</h3>
+      <div class="legend">
+        <span><svg width="22" height="14"><path d="M4 7H18" stroke="var(--ink)" stroke-width="7" stroke-linecap="round"/></svg>stationärer Aufenthalt (gestrichelter Ring)</span>
+        <span><svg width="22" height="14"><circle cx="11" cy="7" r="4" fill="var(--mut)"/></svg>ärztlicher Kontakt (Ambulanz)</span>
+        <span><svg width="22" height="14"><circle cx="11" cy="7" r="4" fill="var(--bg)" stroke="var(--mut)" stroke-width="1.6"/></svg>Kontakt Parkinson Nurse</span>
+      </div>
+      <h3>KOMPONENTEN</h3>
+      <div class="legend">
+        <span><i class="sw" style="background:var(--acc)"></i>b · Körperfunktionen</span>
+        <span><i class="sw" style="background:#30a14e"></i>d · Aktivitäten und Teilhabe</span>
+        <span><i class="sw" style="background:#a35bc7"></i>e · Umweltfaktoren (Barriere)</span>
+      </div>
+    </aside>
+  </div>
+  <div id="table" hidden></div>
+  <details>
+    <summary>Berechnung und Datenformat</summary>
+    <ul>
+      <li><b>Wert je Code und Erhebung</b> = Mittelwert aller Items, die auf diesen ICF-Code verlinkt sind. PDQ-39 wird direkt genutzt (0 nie … 4 immer/kann gar nicht), WHODAS 2.0 als Antwort − 1 (1 keine … 5 extrem → 0–4). Die Farbstufe ist der gerundete Mittelwert. Die Skala ist an die Stufen des ICF-Beurteilungsmerkmals angelehnt, ersetzt es aber nicht.</li>
+      <li><b>Linking:</b> <code>werkzeuge/icf/icf-mapping-pdq39-whodas.json</code> (WHODAS nach WHO-Zuordnung, PDQ-39 eigene Zuordnung, geprüft). Pauschale WHODAS-Items (D3.4, D5.1, D6.2) und PDQ-39 Item 10 gehen nicht in einzelne Codes ein.</li>
+      <li><b>Grenzlinie:</b> umrandet alle Felder, in denen mindestens ein verknüpftes Item ≥ 3 ist (erheblich). So geht kein schweres Einzelproblem im Mittelwert unter. Wo die Linie nach innen springt, wurde die Grenze früher überschritten. <b>Orientierungswert, nicht validiert:</b> PDQ-39 misst die Häufigkeit, WHODAS 2.0 den Schweregrad.</li>
+      <li><b>Offen:</b> Ob Ambulanzkontakte mit MDS-UPDRS III die Motorik-Speichen (b735, b760, b765, b770) füllen, wird nach dem Pilot entschieden.</li>
+      <li><b>Versorgung:</b> Aufenthalte und Kontakte stehen in der oberen Lücke. Ihre Lage wird zwischen den Erhebungen zeitlich interpoliert – die Ringe sind gleich breit, die Zeitachse ist deshalb nicht maßstäblich.</li>
+      <li><b>Umweltfaktoren (e):</b> Der Wert zeigt das Ausmaß der Barriere (z. B. fehlende Unterstützung).</li>
+      <li><b>Datenformat:</b> <code>{"patient":{…},"zeitpunkte":[{"label":"02/23","anlass":"…","pdq39":{"1":0…},"whodas":{"D1.1":1…},"gas":["d450"]}],"ereignisse":[{"typ":"stationaer","von":"2023-02-22","bis":"2023-03-10"},{"typ":"arzt|pn","datum":"…","label":"…"}]}</code> – siehe <code>beispiel-verlauf-fiktiv.json</code>.</li>
+    </ul>
+  </details>
+</main>
+<div id="tip"></div>
+<script>
+/*SHARED*/
+const MODEL = /*MODEL*/;
+let DATEN = /*DATEN*/;
+const byCode = {}; MODEL.sectors.forEach(s => s.codes.forEach(c => byCode[c.code] = { ...c, sektor: s }));
+const STUFE = ['kein Problem', 'leicht', 'mäßig', 'erheblich', 'voll ausgeprägt'];
+let W;
+function render() {
+  W = icfWerte(MODEL, DATEN);
+  const z = DATEN.zeitpunkte;
+  document.getElementById('chart').innerHTML = icfKreisSVG(MODEL, DATEN, {
+    zentrum1: DATEN.patient?.bezeichnung?.split(' ')[0] || 'Patient',
+    aria: 'ICF-Kreis, ' + z.length + ' Erhebungen von ' + z[0].label + ' bis ' + z[z.length - 1].label + '. Tabellenansicht über die Schaltfläche verfügbar.'
+  });
+  document.getElementById('quelle').style.display = DATEN.hinweis ? '' : 'none';
+  // Tabelle
+  let h = '<table><thead><tr><th>Code</th><th>Kategorie</th>' + z.map(t => '<th>' + t.label + '</th>').join('') + '</tr></thead><tbody>';
+  MODEL.sectors.forEach(s => s.codes.forEach(c => {
+    h += '<tr><td>' + c.code + '</td><td>' + c.titel + '</td>' + W[c.code].map((w, i) => '<td class="v">' + (c.nurUntersuchung ? 'U' : w.mittel == null ? '–' : w.mittel.toFixed(1)) + ((z[i].gas || []).includes(c.code) ? ' ◆' : '') + '</td>').join('') + '</tr>';
+  }));
+  document.getElementById('table').innerHTML = h + '</tbody></table><p class="muted" style="font-size:12.5px">U = nur durch Untersuchung erfassbar · – = keine Angabe · ◆ = GAS-Ziel</p>';
+  wire();
+}
+function info(code, ti) {
+  const c = byCode[code], t = DATEN.zeitpunkte[ti], w = W[code][ti];
+  let wert = c.nurUntersuchung ? 'nicht aus Fragebögen ableitbar (Untersuchung, z. B. MDS-UPDRS III, Schluckscreening)' : w.mittel == null ? 'keine Angabe' : w.mittel.toFixed(1) + ' · ' + STUFE[w.stufe] + (w.max >= 3 ? ' · jenseits der Grenze (Item ≥ 3)' : '');
+  return { c, t, w, wert };
+}
+function wire() {
+  const svg = document.querySelector('#chart svg'), tip = document.getElementById('tip');
+  svg.querySelectorAll('.ik-cell').forEach(p => {
+    p.addEventListener('mousemove', e => {
+      const { c, t, wert } = info(p.dataset.code, +p.dataset.t);
+      tip.innerHTML = '<b>' + c.code + ' ' + c.titel + '</b><br>' + t.label + ' · ' + (t.anlass || '') + '<br>' + wert;
+      tip.style.display = 'block';
+      tip.style.left = Math.min(e.clientX + 14, innerWidth - 300) + 'px'; tip.style.top = (e.clientY + 14) + 'px';
+    });
+    p.addEventListener('mouseleave', () => tip.style.display = 'none');
+    p.addEventListener('click', () => select(p.dataset.code, +p.dataset.t));
+  });
+}
+function select(code, ti) {
+  const { c, t, w, wert } = info(code, ti);
+  const svg = document.querySelector('#chart svg');
+  svg.classList.add('hl'); svg.querySelectorAll('.ik-cell').forEach(p => p.classList.toggle('on', p.dataset.code === code));
+  document.getElementById('d-title').textContent = c.code + ' ' + c.titel;
+  document.getElementById('d-sub').textContent = c.sektor.id + ' ' + c.sektor.titel;
+  let h = '<h3>VERLAUF</h3>' + DATEN.zeitpunkte.map((z, i) => { const x = W[code][i]; return '<div class="row"><span>' + z.label + ((z.gas || []).includes(code) ? ' ◆' : '') + '</span><b>' + (c.nurUntersuchung ? 'U' : x.mittel == null ? '–' : x.mittel.toFixed(1)) + '</b></div>'; }).join('');
+  h += '<h3>ITEMS ' + t.label.toUpperCase() + ' (' + wert + ')</h3>';
+  h += c.items.length ? c.items.map(it => { const v = w.items.find(x => x.inst === it.inst && x.nr === it.nr); return '<div class="row"><span>' + it.inst + ' ' + it.nr + ' · ' + it.stichwort + '</span><b>' + (v ? v.wert : '–') + '</b></div>'; }).join('') : '<p class="muted" style="font-size:13px">Kein Fragebogen-Item verknüpft.</p>';
+  document.getElementById('detail').innerHTML = h;
+}
+document.getElementById('file').addEventListener('change', async e => {
+  const f = e.target.files[0]; if (!f) return;
+  try { const d = JSON.parse(await f.text()); if (!Array.isArray(d.zeitpunkte) || !d.zeitpunkte.length) throw new Error('„zeitpunkte“ fehlt'); DATEN = d; render(); }
+  catch (err) { alert('Datei konnte nicht gelesen werden: ' + err.message); }
+});
+document.getElementById('tbl').addEventListener('click', e => { const b = e.currentTarget, on = b.getAttribute('aria-pressed') !== 'true'; b.setAttribute('aria-pressed', on); document.getElementById('table').hidden = !on; });
+function theme() { const r = document.documentElement, dark = r.classList.contains('dark') || (!r.classList.contains('light') && matchMedia('(prefers-color-scheme: dark)').matches); r.classList.toggle('dark', !dark); r.classList.toggle('light', dark); }
+document.getElementById('theme').addEventListener('click', theme);
+addEventListener('keydown', e => { if (e.key === 't' || e.key === 'T') theme(); });
+render();
+</script>
+</body>
+</html>
